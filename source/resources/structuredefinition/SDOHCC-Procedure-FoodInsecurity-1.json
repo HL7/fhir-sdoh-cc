@@ -1,0 +1,442 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-Procedure-FoodInsecurity-1",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-01-28T12:20:14.000-05:00"
+	},
+	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1",
+	"name": "SDOHCC_Procedure_FoodInsecurity_1",
+	"status": "draft",
+	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Procedures related to: Food Insecurity.",
+	"fhirVersion": "4.0.0",
+	"mapping": [
+		{
+			"identity": "workflow",
+			"uri": "http://hl7.org/fhir/workflow",
+			"name": "Workflow Pattern"
+		},
+		{
+			"identity": "rim",
+			"uri": "http://hl7.org/v3",
+			"name": "RIM Mapping"
+		},
+		{
+			"identity": "w5",
+			"uri": "http://hl7.org/fhir/fivews",
+			"name": "FiveWs Pattern Mapping"
+		},
+		{
+			"identity": "v2",
+			"uri": "http://hl7.org/v2",
+			"name": "HL7 v2 Mapping"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "Procedure",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Procedure.identifier.assigner",
+				"path": "Procedure.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.basedOn",
+				"path": "Procedure.basedOn",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.basedOn.identifier.assigner",
+				"path": "Procedure.basedOn.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.partOf",
+				"path": "Procedure.partOf",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.partOf.identifier.assigner",
+				"path": "Procedure.partOf.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.status",
+				"path": "Procedure.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Procedure.code",
+				"path": "Procedure.code",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Procedure.code.coding",
+				"path": "Procedure.code.coding",
+				"min": 1,
+				"max": "1",
+				"binding": {
+					"strength": "required",
+					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964"
+				}
+			},
+			{
+				"id": "Procedure.code.coding.system",
+				"path": "Procedure.code.coding.system",
+				"min": 1,
+				"fixedUri": "http://snomed.info/sct"
+			},
+			{
+				"id": "Procedure.code.coding.code",
+				"path": "Procedure.code.coding.code",
+				"min": 1,
+				"binding": {
+					"strength": "required",
+					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964"
+				}
+			},
+			{
+				"id": "Procedure.code.coding.display",
+				"path": "Procedure.code.coding.display",
+				"min": 1
+			},
+			{
+				"id": "Procedure.subject",
+				"path": "Procedure.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+							"http://hl7.org/fhir/StructureDefinition/Group"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Procedure.subject.identifier.assigner",
+				"path": "Procedure.subject.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.encounter",
+				"path": "Procedure.encounter",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.encounter.identifier.assigner",
+				"path": "Procedure.encounter.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.performed[x]",
+				"path": "Procedure.performed[x]",
+				"min": 1,
+				"type": [
+					{
+						"code": "dateTime"
+					},
+					{
+						"code": "Period"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Procedure.recorder",
+				"path": "Procedure.recorder",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.recorder.identifier.assigner",
+				"path": "Procedure.recorder.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.asserter",
+				"path": "Procedure.asserter",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.asserter.identifier.assigner",
+				"path": "Procedure.asserter.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.performer",
+				"path": "Procedure.performer",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Procedure.performer.actor",
+				"path": "Procedure.performer.actor",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.performer.actor.identifier.assigner",
+				"path": "Procedure.performer.actor.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.performer.onBehalfOf",
+				"path": "Procedure.performer.onBehalfOf",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.performer.onBehalfOf.identifier.assigner",
+				"path": "Procedure.performer.onBehalfOf.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.location",
+				"path": "Procedure.location",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.location.identifier.assigner",
+				"path": "Procedure.location.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.reasonReference",
+				"path": "Procedure.reasonReference",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Observation_FoodInsecurity_1",
+							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Condition_FoodInsecurity_1",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.reasonReference.identifier.assigner",
+				"path": "Procedure.reasonReference.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.bodySite",
+				"path": "Procedure.bodySite",
+				"max": "0"
+			},
+			{
+				"id": "Procedure.report",
+				"path": "Procedure.report",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Composition",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.report.identifier.assigner",
+				"path": "Procedure.report.identifier.assigner",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "Procedure.complication",
+				"path": "Procedure.complication",
+				"max": "0"
+			},
+			{
+				"id": "Procedure.complicationDetail",
+				"path": "Procedure.complicationDetail",
+				"max": "0"
+			},
+			{
+				"id": "Procedure.note.author[x]",
+				"path": "Procedure.note.author[x]",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+						]
+					},
+					{
+						"code": "string"
+					}
+				]
+			},
+			{
+				"id": "Procedure.focalDevice",
+				"path": "Procedure.focalDevice",
+				"max": "0"
+			},
+			{
+				"id": "Procedure.usedReference",
+				"path": "Procedure.usedReference",
+				"max": "0"
+			},
+			{
+				"id": "Procedure.usedCode",
+				"path": "Procedure.usedCode",
+				"max": "0"
+			}
+		]
+	}
+}
