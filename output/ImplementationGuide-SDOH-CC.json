@@ -1,0 +1,314 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "SDOH-CC",
+  "meta": {
+    "versionId": "478",
+    "lastUpdated": "2020-02-03T08:00:36.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SDOH_CC</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.maxmd.org/fhir/us/maxmd/ImplementationGuide/SDOH-CC</pre><div><table class=\"grid\">\n<thead>\n<tr><th><strong>IG Realm:</strong></th><th><strong>US</strong></th></tr>\n</thead>\n<tbody>\n<tr><td><strong>IG Type:</strong></td><td><strong>STU</strong></td></tr>\n<tr><td><strong>Exchange Methods:</strong></td><td><strong>RESTful Query, Messaging, Documents, Tasks</strong></td></tr>\n</tbody>\n</table>\n<p>{:class=&quot;table table-bordered&quot;}\n{:.table-striped}</p>\n<p>&lt;br&gt;</p>\n<p><strong>IG Dependencies</strong>\nThis IG utilizes and adopts guidance developed in several other FHIR&amp;reg; Implementation Guides.</p>\n<p>Additional information regarding the conformance to guidance developed in these IGs is available in the Overview of Data Sharing Transactions section and Capability Statement section of this IG.</p>\n<table class=\"grid\">\n<thead>\n<tr><th>Implementation Guide Name</th><th>IG Code</th><th>Version</th></tr>\n</thead>\n<tbody>\n<tr><td>HL7 FHIR US Core</td><td><a href=\"http://hl7.org/fhir/us/core/2019Sep/\">US Core</a></td><td>Version 3.1.0 - FHIR R4</td></tr>\n<tr><td>Structured Data Capture</td><td><a href=\"http://build.fhir.org/ig/HL7/sdc/\">SDC</a></td><td>V3.0.2</td></tr>\n<tr><td>C-CDA on FHIR R4</td><td><a href=\"https://build.fhir.org/ig/HL7/ccda-on-fhir-r4/\">C-CDA on FHIR</a></td><td>Version (1.1.0)</td></tr>\n<tr><td>DaVinci Clinical Data exchange</td><td><a href=\"http://hl7.org/fhir/us/davinci-cdex/2019Jun/\">CDex</a></td><td>Version (1.0.0)</td></tr>\n<tr><td>Bidirectional Services eReferrals</td><td><a href=\"http://build.fhir.org/ig/HL7/bser/\">BSer</a></td><td>Version (0.2.0) for FHIR R3</td></tr>\n</tbody>\n</table>\n<p>{:class=&quot;table table-bordered&quot;}\n{:.table-striped}</p>\n<p>&lt;br&gt;</p>\n<h2>Purpose</h2>\n<p>This HL7&amp;reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It supports the following use cases:</p>\n<ol>\n<li>Document SDOH data in conjunction with the patient encounter,</li>\n<li>Document and track SDOH related interventions to completion,</li>\n<li>Gather and aggregate SDOH data for uses beyond the point of care (e.g. population health, quality reporting, risk adjustment/risk stratification, and research.\nThe IG defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs, or for other purposes such as population health, quality assessment, and research.</li>\n</ol>\n<p>&lt;br&gt;</p>\n<h2>Latest Changes</h2>\n<table class=\"grid\">\n<thead>\n<tr><th>Number</th><th>Description</th></tr>\n</thead>\n<tbody>\n<tr><td>4</td><td>Added notes for Profiles</td></tr>\n<tr><td>3</td><td>Updates to Use Case 1</td></tr>\n<tr><td>2</td><td>Update naming conventions to sdohcc</td></tr>\n<tr><td>1</td><td>Redesign chapters</td></tr>\n</tbody>\n</table>\n<p>{:class=&quot;table table-bordered&quot;}\n{:.table-striped}</p>\n<p>&lt;br&gt;</p>\n<h2>Note to Reviewers and Balloters</h2>\n<p>Review of version 0.0.2 of the IG is intended to gather high-level comments about the overall approach to the Implementation Guide and its positioning in terms of supporting the use cases defined for the Gravity Project. It also is aimed at identifying omissions that impact the quality of the IG.</p>\n<p>Feedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net between January 30, 2020  and  February 20, 2020</p>\n<p>&lt;br&gt;</p>\n<h2>How to Read This Guide</h2>\n<p>This Guide is divided into several pages which are listed at the top of each page in the menu bar.</p>\n<ul>\n<li>TOC: The TOC page lists the available pages for quick navigation to the available pages of content</li>\n<li><a href=\"index.html\">Home</a>: The home page contains the narrative implementer guidance that makes up this FHIR IG. It contains an introduction to the implementation guide</li>\n<li><a href=\"Background.html\">Background</a>: Provides background of The Gravity Project.</li>\n<li><a href=\"SDOH_Content.html\">SDOH</a> Content: Lists types of information that is relevant when exchanging clinical information or doing a referral .</li>\n<li><a href=\"Personas_and_Patient_Stories.html\">Personas and Patient Stories</a>: Summarizes the actors and transactions used to accomplish the use cases</li>\n<li><a href=\"Use_Cases.html\">Use Cases</a>: Overview of the use cases covered.</li>\n<li><a href=\"Profiles_used_in_this_IG.html\">Profiles Used in this IG</a>: Lists and briefly describes all the profiles, extensions and value sets defined in this IG as well as the other profiles used to accomplish the covered use cases but defined in other IGs.</li>\n<li><a href=\"Security_and_Consent.html\">Security and Consent</a>: Links to relevant material are provided below and conformance constraints specific to this IG are described.</li>\n<li><a href=\"Conformance_Guidance.html\">Conformance Guidance</a>: Includes important terms, definitions, interpretations, assumptions and conformance requirements relevant to this guide.</li>\n<li><a href=\"profiles.html\">Profiles and Extensions</a>: This area of the IG describes the set of machine processable FHIR profiles and extension that are defined in this guide. These are profiles and extensions that have been specifically to exchange SDOH data defined for discrete representation through the Gravity Community collaboration process. Each Profile page includes a narrative introduction to explain the profile, a formal definition and a Quick Start guide to describe relevant mechanisms to query for the resource.</li>\n<li><a href=\"terminology.html\">Terminology</a>: This area of the IG describes the set of machine-processable FHIR value set definitions for the value sets used in the profiles and extensions defined in this IG. It also holds machine processable value set definitions for value sets that may be used with profiles and extensions defined in other IGs. During development and testing of the Implementation guide, the value set definitions reference a placeholder code system that holds placeholder codes. Placeholder codes are temporary codes which exist solely for the purpose of development and testing. They are fully defined in terms of the intended Code System for their eventual representation and in terms of the specific representational definition required by that intended coded system. Placeholder codes evaporate prior to the IG being published.  They are replaced with real codes established by each Standards Development Organization (SDO) authorized to update the intended code systems.  The value set definitions also are updated prior to publication and the IG is updated to include links to the value set expansions intended to be used when implementing according to the specifications of the published IG.</li>\n<li><a href=\"capstatements.html\">Capability Statements</a>: This area of the IG describes the machine processable FHIR capability statements for each of the system actors identified in the use cases.</li>\n<li><a href=\"other.html\">Other</a>: This area of the IG contains explanations of and links to all the examples used in this guide.</li>\n<li><a href=\"downloads.html\">Downloads</a>: This page provides links to the downloadable machine processable artifacts described in the other areas of the IG.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<h2>How to Use This Guide: Practical Guidance for Implementers at All Levels of Standards Adoption</h2>\n<p>This area is reserved for content being developed by Lisa and Corey. It will describe the following scenarios:</p>\n<ol>\n<li>Implementers who have already developed mechanisms for gathering and sharing (providing and receiving) SDOH related information and have systems in production use of this information today.</li>\n<li>Implementers who currently are developing new systems that gather and share SDOH related information and plan to deploy them within the next 12-18 months (before 2021).</li>\n<li>Implementers who currently do not gather or share SDOH information.\na. Implementers who gather and produce C-CDA documents to support sharing of clinical encounter or patient summary information but have not yet implemented FHIR application interfaces (APIs) or support for the use of FHIR APIs offered by other systems to facilitate the sharing of clinical information.\nb. Implementers who gather clinical encounter or patient summary information but do not yet produce C-CDA documents to support sharing of that information and have not yet implemented FHIR application interfaces (APIs) or support for the use of FHIR APIs offered by other systems to facilitate the sharing of clinical information.</li>\n</ol>\n<p>&lt;br&gt;</p>\n<h2>Acknowledgements</h2>\n<p>Reserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.</p>\n<p>There may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.</p>\n<p>The Placeholder Code Creation process was originally developed for Elimu profiles and SMART app development. It was modified in the context of creating this IG to make it more broadly applicable.</p>\n<p>&lt;br&gt;</p>\n<h2>Authors</h2>\n<p>Reserve this area to include authors of this guide.</p>\n</div></div>"
+  },
+  "url": "http://hl7.maxmd.org/fhir/us/maxmd/ImplementationGuide/SDOH-CC",
+  "version": "0.0.2",
+  "name": "SDOH_CC",
+  "title": "SDOH Clinical Care",
+  "status": "draft",
+  "date": "2020-02-10T13:52:44-05:00",
+  "description": "\n\n\n|**IG Realm:**         | **US**                                        |\n|--------------------------|--------------------------------------------|\n|**IG Type:**             | **STU**                                         |\n|**Exchange Methods:**     | **RESTful Query, Messaging, Documents, Tasks** |\n{:class=\"table table-bordered\"}\n{:.table-striped}\n\n<br>\n\n**IG Dependencies**\nThis IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. \n\nAdditional information regarding the conformance to guidance developed in these IGs is available in the Overview of Data Sharing Transactions section and Capability Statement section of this IG.  \n\n\n| Implementation Guide Name                                                               |  IG Code         | Version                      |\n|-----------------------------------------------------------------|-------------------------------------------|-------------------------------------|\n| HL7 FHIR US Core               |  [US Core]( http://hl7.org/fhir/us/core/2019Sep/)                | Version 3.1.0 - FHIR R4      |\n| Structured Data Capture                         |   [SDC]( http://build.fhir.org/ig/HL7/sdc/)        | V3.0.2                       |\n| C-CDA on FHIR R4     |     [C-CDA on FHIR](https://build.fhir.org/ig/HL7/ccda-on-fhir-r4/)           | Version (1.1.0)              |\n| DaVinci Clinical Data exchange            | [CDex](http://hl7.org/fhir/us/davinci-cdex/2019Jun/) | Version (1.0.0)              |\n| Bidirectional Services eReferrals                      |  [BSer](http://build.fhir.org/ig/HL7/bser/) | Version (0.2.0) for FHIR R3  |\n{:class=\"table table-bordered\"}\n{:.table-striped}\n\n\n<br>\n##  Purpose\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It supports the following use cases:\n1. Document SDOH data in conjunction with the patient encounter,\n2. Document and track SDOH related interventions to completion,\n3. Gather and aggregate SDOH data for uses beyond the point of care (e.g. population health, quality reporting, risk adjustment/risk stratification, and research.\nThe IG defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs, or for other purposes such as population health, quality assessment, and research.\n\n<br>\n## Latest Changes\n\n| Number         | Description                                                                                                                                                              |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 4             | Added notes for Profiles                                       |\n| 3             | Updates to Use Case 1                                       |\n| 2             | Update naming conventions to sdohcc                                        |\n| 1             | Redesign chapters                                         |\n{:class=\"table table-bordered\"}\n{:.table-striped}\n\n<br>\n## Note to Reviewers and Balloters\n\nReview of version 0.0.2 of the IG is intended to gather high-level comments about the overall approach to the Implementation Guide and its positioning in terms of supporting the use cases defined for the Gravity Project. It also is aimed at identifying omissions that impact the quality of the IG.\n\nFeedback on V0.0.2 of the IG should be sent to gravityproject@emiadvisors.net between January 30, 2020  and  February 20, 2020\n\n<br>\n##  How to Read This Guide\n\nThis Guide is divided into several pages which are listed at the top of each page in the menu bar.\n* TOC: The TOC page lists the available pages for quick navigation to the available pages of content\n* [Home](index.html): The home page contains the narrative implementer guidance that makes up this FHIR IG. It contains an introduction to the implementation guide\n* [Background](Background.html): Provides background of The Gravity Project.\n* [SDOH](SDOH_Content.html) Content: Lists types of information that is relevant when exchanging clinical information or doing a referral .\n* [Personas and Patient Stories](Personas_and_Patient_Stories.html): Summarizes the actors and transactions used to accomplish the use cases\n* [Use Cases](Use_Cases.html): Overview of the use cases covered.\n* [Profiles Used in this IG](Profiles_used_in_this_IG.html): Lists and briefly describes all the profiles, extensions and value sets defined in this IG as well as the other profiles used to accomplish the covered use cases but defined in other IGs.\n* [Security and Consent](Security_and_Consent.html): Links to relevant material are provided below and conformance constraints specific to this IG are described.\n* [Conformance Guidance](Conformance_Guidance.html): Includes important terms, definitions, interpretations, assumptions and conformance requirements relevant to this guide.\n* [Profiles and Extensions](profiles.html): This area of the IG describes the set of machine processable FHIR profiles and extension that are defined in this guide. These are profiles and extensions that have been specifically to exchange SDOH data defined for discrete representation through the Gravity Community collaboration process. Each Profile page includes a narrative introduction to explain the profile, a formal definition and a Quick Start guide to describe relevant mechanisms to query for the resource.\n* [Terminology](terminology.html): This area of the IG describes the set of machine-processable FHIR value set definitions for the value sets used in the profiles and extensions defined in this IG. It also holds machine processable value set definitions for value sets that may be used with profiles and extensions defined in other IGs. During development and testing of the Implementation guide, the value set definitions reference a placeholder code system that holds placeholder codes. Placeholder codes are temporary codes which exist solely for the purpose of development and testing. They are fully defined in terms of the intended Code System for their eventual representation and in terms of the specific representational definition required by that intended coded system. Placeholder codes evaporate prior to the IG being published.  They are replaced with real codes established by each Standards Development Organization (SDO) authorized to update the intended code systems.  The value set definitions also are updated prior to publication and the IG is updated to include links to the value set expansions intended to be used when implementing according to the specifications of the published IG.\n* [Capability Statements](capstatements.html): This area of the IG describes the machine processable FHIR capability statements for each of the system actors identified in the use cases.\n* [Other](other.html): This area of the IG contains explanations of and links to all the examples used in this guide.\n* [Downloads](downloads.html): This page provides links to the downloadable machine processable artifacts described in the other areas of the IG.\n\n<br>\n## How to Use This Guide: Practical Guidance for Implementers at All Levels of Standards Adoption\n\nThis area is reserved for content being developed by Lisa and Corey. It will describe the following scenarios:\n\n1. Implementers who have already developed mechanisms for gathering and sharing (providing and receiving) SDOH related information and have systems in production use of this information today.\n2. Implementers who currently are developing new systems that gather and share SDOH related information and plan to deploy them within the next 12-18 months (before 2021).\n3. Implementers who currently do not gather or share SDOH information.\n  a. Implementers who gather and produce C-CDA documents to support sharing of clinical encounter or patient summary information but have not yet implemented FHIR application interfaces (APIs) or support for the use of FHIR APIs offered by other systems to facilitate the sharing of clinical information.\n  b. Implementers who gather clinical encounter or patient summary information but do not yet produce C-CDA documents to support sharing of that information and have not yet implemented FHIR application interfaces (APIs) or support for the use of FHIR APIs offered by other systems to facilitate the sharing of clinical information.\n\n<br>\n\n## Acknowledgements\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\nThe Placeholder Code Creation process was originally developed for Elimu profiles and SMART app development. It was modified in the context of creating this IG to make it more broadly applicable.\n\n<br>\n## Authors\n\nReserve this area to include authors of this guide.\n\n",
+  "packageId": "SDOH-Clinical-Care",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.0"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Bundle-example-task-list-questionnaire.html"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/example-task-list-questionnaire"
+        },
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Questionnaire"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Questionnaire-04ba3565-2a9b-46ff-ab19-b67e918890d4.html"
+          }
+        ],
+        "reference": {
+          "reference": "Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4",
+          "display": "example-hunger-vital-sign-screening"
+        },
+        "name": "example-hunger-vital-sign-screening",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
+          "display": "sdohcc_ValueSet_ContextValue_1"
+        },
+        "name": "sdohcc_ValueSet_ContextValue_1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8",
+          "display": "sdohcc_ValueSet_FoodInsecurity_1"
+        },
+        "name": "sdohcc_ValueSet_FoodInsecurity_1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CodeSystem-sdohcc-sctt.html"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/sdohcc-sctt",
+          "display": "Placeholder_SNOMED_CT"
+        },
+        "name": "Placeholder_SNOMED_CT",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/SDOHCC-Observation-FoodInsecurity-1",
+          "display": "SDOHCC_Observation_FoodInsecurity_1"
+        },
+        "name": "SDOHCC_Observation_FoodInsecurity_1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+          "display": "SDOHCC_Condition_FoodInsecurity_1"
+        },
+        "name": "SDOHCC_Condition_FoodInsecurity_1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/SDOHCC-Goal-FoodInsecurity-1",
+          "display": "SDOHCC_Goal_FoodInsecurity_1"
+        },
+        "name": "SDOHCC_Goal_FoodInsecurity_1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1",
+          "display": "SDOHCC_Procedure_FoodInsecurity_1"
+        },
+        "name": "SDOHCC_Procedure_FoodInsecurity_1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
+          "display": "sdohcc_ValueSet_FoodInsecurityIntervention_1"
+        },
+        "name": "sdohcc_ValueSet_FoodInsecurityIntervention_1",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.md",
+      "title": "Table of Contents",
+      "generation": "generated",
+      "page": [
+        {
+          "nameUrl": "Background.html",
+          "title": "Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "SDOH_Content.html",
+          "title": "SDOH Content",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Personas_and_Patient_Stories.html",
+          "title": "Personas and Patient Stories",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "Patient_Story_1_Personas.html",
+              "title": "Patient Story 1 Personas",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Patient_Story_1.html",
+              "title": "Patient Story 1",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "Use_Cases.html",
+          "title": "Use Cases",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "Use_Case_1.html",
+              "title": "Use Case 1",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Use_Case_2.html",
+              "title": "Use Case 2",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Use_Case_3.html",
+              "title": "Use Case 3",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "Profiles_used_in_this_IG.html",
+          "title": "Profiles used in this IG",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "Notes_for_SDOHCC_Condition_FoodInsecurity_1.html",
+              "title": "Notes for SDOHCC_Condition_FoodInsecurity_1",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Notes_for_SDOHCC_Goal_FoodInsecurity_1.html",
+              "title": "Notes for SDOHCC_Goal_FoodInsecurity_1",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Notes_for_SDOHCC_Observation_FoodInsecurity_1.html",
+              "title": "Notes for SDOHCC_Observation_FoodInsecurity_1",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Notes_for_SDOHCC_Procedure_FoodInsecurity_1.html",
+              "title": "Notes for SDOHCC_Procedure_FoodInsecurity_1",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "Security_and_Consent.html",
+          "title": "Security and Consent",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Conformance_Guidance.html",
+          "title": "Conformance Guidance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Naming_Conventions_for_Gravity_FHIR_Artifacts_and_Placeholder_Codes.html",
+          "title": "Naming Conventions for Gravity FHIR Artifacts and Placeholder Codes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Placeholder_Code_Systems,_Codes,_and_Value_Sets.html",
+          "title": "Placeholder Code Systems, Codes, and Value Sets",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Local_Identifier_Systems.html",
+          "title": "Local Identifier Systems",
+          "generation": "markdown"
+        }
+      ]
+    }
+  }
+}

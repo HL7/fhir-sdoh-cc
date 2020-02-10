@@ -27,16 +27,20 @@ active: profiles
 </thead>
 <tbody>
 <tr>
-<td><a href="StructureDefinition-Gravity-Condition-FoodInsecurity-1.html">Gravity_Condition_FoodInsecurity_1</a></td>
-<td>{% capture profile-intro %}{% include Gravity-Condition-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+<td><a href="StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html">SDOHCC_Condition_FoodInsecurity_1</a></td>
+<td>{% capture profile-intro %}{% include SDOHCC-Condition-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-Gravity-Goal-FoodInsecurity-1.html">Gravity_Goal_FoodInsecurity_1</a></td>
-<td>{% capture profile-intro %}{% include Gravity-Goal-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+<td><a href="StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html">SDOHCC_Goal_FoodInsecurity_1</a></td>
+<td>{% capture profile-intro %}{% include SDOHCC-Goal-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-Gravity-Observation-FoodInsecurity-1.html">Gravity_Observation_FoodInsecurity_1</a></td>
-<td>{% capture profile-intro %}{% include Gravity-Observation-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+<td><a href="StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html">SDOHCC_Observation_FoodInsecurity_1</a></td>
+<td>{% capture profile-intro %}{% include SDOHCC-Observation-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html">SDOHCC_Procedure_FoodInsecurity_1</a></td>
+<td>{% capture profile-intro %}{% include SDOHCC-Procedure-FoodInsecurity-1-intro.md id="{{[id]}}" %}{% endcapture %}{{ profile-intro | markdownify }}</td>
 </tr>
 </tbody>
 </table>

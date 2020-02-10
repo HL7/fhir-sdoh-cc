@@ -1,0 +1,904 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 4, errors = 154, warn = 86, info = 2 -->
+<head>
+  <title>SDOH_CC : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for SDOH_CC</h1>
+ <p>Generated Mon Feb 10 13:54:36 EST 2020, FHIR version 4.0.1 for SDOH-Clinical-Care#0.0.2 (canonical = <a href="http://hl7.maxmd.org/fhir/us/maxmd">http://hl7.maxmd.org/fhir/us/maxmd</a> (<a href="http://hl7.maxmd.org/fhir/us/maxmd/history.html">history</a>))</p>
+<p>IG Publisher Version: v1.0.62-SNAPSHOT</p>
+<p>No Suppressed Errors</p>
+ <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
+
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>3</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_bundle_example-task-list-questionnaire"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\bundle\example-task-list-questionnaire</b></a></td><td><b>12</b></td><td><b>5</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_codesystem_sdohcc-sctt"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\codesystem\sdohcc-sctt</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_implementationguide_SDOH-CC"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\implementationguide\SDOH-CC</b></a></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_questionnaire_04ba3565-2a9b-46ff-ab19-b67e918890d4"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\questionnaire\04ba3565-2a9b-46ff-ab19-b67e918890d4</b></a></td><td><b>3</b></td><td><b>4</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Condition-FoodInsecurity-1"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Condition-FoodInsecurity-1</b></a></td><td><b>30</b></td><td><b>15</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Goal-FoodInsecurity-1"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Goal-FoodInsecurity-1</b></a></td><td><b>20</b></td><td><b>13</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Observation-FoodInsecurity-1"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Observation-FoodInsecurity-1</b></a></td><td><b>24</b></td><td><b>13</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Procedure-FoodInsecurity-1"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Procedure-FoodInsecurity-1</b></a></td><td><b>62</b></td><td><b>34</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_valueset_sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\valueset\sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8</b></a></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_valueset_sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\valueset\sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964</b></a></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_valueset_sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa"><b>C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\valueset\sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa</b></a></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide.id</b></td><td><b>warning</b></td><td><b>The Implementation Guide Resource id should be SDOH-Clinical-Care</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Conformance_Guidance.html#858e36d4-c1b9-45d8-b9ba-2862e5c8b494">Conformance_Guidance.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 237, column 101</a></b></td><td><b>error</b></td><td><b>The link '/http://hl7.org/fhir/R4/conformance-rules.html' for &quot;FHIR Conformance Rules&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="SDOH_Content.html#2296185c-09a9-431d-b15c-50c340eb6a2a">SDOH_Content.html#/html/head/link/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 354, column 23</a></b></td><td><b>error</b></td><td><b>The link 'SDOHCC-Condition-FoodInsecurity-1.html' for &quot;SDOHCC_Condition_FoodInsecurity_1&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="SDOH_Content.html#ec463f70-c0d2-4b5d-99e4-ba0e3f85c2cf">SDOH_Content.html#/html/head/link/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 359, column 19</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-SDOHCC-Goal-FoodInsecurity_1.html' for &quot;SDOHCC_Goal_FoodInsecurity_1&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_bundle_example-task-list-questionnaire"> </a>
+<h2><a href="Bundle-example-task-list-questionnaire.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\bundle\example-task-list-questionnaire.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle</b></td><td><b>error</b></td><td><b>bdl-3: entry.request mandatory for batch/transaction/history, otherwise prohibited [entry.all(request.exists() = ((%resource.type = 'batch') or (%resource.type = 'transaction') or (%resource.type = 'history')))]</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[0].resource</b></td><td><b>warning</b></td><td><b>que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[0].resource.extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaire-endpoint is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[0].resource.extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaire-endpoint' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[0].resource.item[0].item[0].code[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Within the past 12Mo we worried whether our food would run out before we got money to buy more&quot; is not a valid display for the code {http://loinc.org}88122-7 - should be one of [&quot;Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]&quot;,]</b> (<a href="qa-tx.html#l4">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[0].resource.item[0].item[1].code[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Within the past 12Mo the food we bought just didn't last and we didn't have money to get more&quot; is not a valid display for the code {http://loinc.org}88123-5 - should be one of [&quot;Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]&quot;,]</b> (<a href="qa-tx.html#l5">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[1].resource</b></td><td><b>error</b></td><td><b>Profile http://hl7.org/fhir/StructureDefinition/List, Element 'Bundle.entry[1].resource.mode': minimum required = 1, but only found 0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[1].resource.entry[0].item</b></td><td><b>error</b></td><td><b>Relative URLs must be of the format [ResourceName]/[id].  Encountered Patient?given=Alice&amp;family=Newman&amp;address-postalcode=97006&amp;birthdate=1970-05-01</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[1].resource.entry[0].item</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'Patient?given=Alice&amp;family=Newman&amp;address-postalcode=97006&amp;birthdate=1970-05-01'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[1].resource.entry[1].item</b></td><td><b>error</b></td><td><b>Relative URLs must be of the format [ResourceName]/[id].  Encountered Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[1].resource.entry[1].item</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[3].resource</b></td><td><b>error</b></td><td><b>Profile http://hl7.org/fhir/StructureDefinition/Task, Element 'Bundle.entry[3].resource.intent': minimum required = 1, but only found 0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[3].resource.extension[0]</b></td><td><b>error</b></td><td><b>The extension https://www.maxmddirect.com/fhir/extension/sdc/task/type is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[3].resource.extension[0].value.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI 'https://www.maxmddirect.com/fhir/code/sdc/task/type' is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[3].resource.code.coding[0]</b></td><td><b>information</b></td><td><b>Code System URI 'http://grv.hl7t-tasks.tmp/grv-hl7t-tasks' is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[3].resource.for</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'List/0bddd887-b878-4795-9964-378b3ca0d7e1'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/example-task-list-questionnaire: Bundle.entry[3].resource.requester</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'Organization/3c26f307-1aa1-4701-ac43-3267ca601470'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_codesystem_sdohcc-sctt"> </a>
+<h2><a href="CodeSystem-sdohcc-sctt.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\codesystem\sdohcc-sctt.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem/sdohcc-sctt: CodeSystem</b></td><td><b>warning</b></td><td><b>csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_implementationguide_SDOH-CC"> </a>
+<h2><a href="ImplementationGuide-SDOH-CC.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\implementationguide\sdoh-cc.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_questionnaire_04ba3565-2a9b-46ff-ab19-b67e918890d4"> </a>
+<h2><a href="Questionnaire-04ba3565-2a9b-46ff-ab19-b67e918890d4.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\questionnaire\04ba3565-2a9b-46ff-ab19-b67e918890d4.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire</b></td><td><b>warning</b></td><td><b>que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire.meta.profile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire.extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaire-endpoint is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire.extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaire-endpoint' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire.item[0].item[0].code[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Within the past 12Mo we worried whether our food would run out before we got money to buy more&quot; is not a valid display for the code {http://loinc.org}88122-7 - should be one of [&quot;Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]&quot;,]</b> (<a href="qa-tx.html#l4">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire.item[0].item[1].code[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Within the past 12Mo the food we bought just didn't last and we didn't have money to get more&quot; is not a valid display for the code {http://loinc.org}88123-5 - should be one of [&quot;Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]&quot;,]</b> (<a href="qa-tx.html#l5">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire/04ba3565-2a9b-46ff-ab19-b67e918890d4: Questionnaire.meta.profile[0]</b></td><td><b>warning</b></td><td><b>Profile reference 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7' could not be resolved, so has not been checked</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Condition-FoodInsecurity-1"> </a>
+<h2><a href="StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Condition-FoodInsecurity-1.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.subject</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.subject.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.encounter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.encounter.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.recorder</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.recorder</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.recorder.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.asserter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.asserter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.asserter.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.evidence.detail</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Observation_FoodInsecurity_1 is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.evidence.detail.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1#Condition.note.author[x]</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[48].fixed.ofType(uri)</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[50].binding.valueSet</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[68].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[81].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[83].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[96].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[101].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[101].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[114].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[116].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[116].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[129].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[156].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.snapshot.element[161].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[1].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[15].fixed.ofType(uri)</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[16].binding.valueSet</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[25].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[26].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[27].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[28].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[31].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[31].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[32].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[33].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[33].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[34].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[38].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Condition-FoodInsecurity-1: StructureDefinition.differential.element[39].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Goal-FoodInsecurity-1"> </a>
+<h2><a href="StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Goal-FoodInsecurity-1.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.subject</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.subject.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.expressedBy</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.expressedBy</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.expressedBy.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.addresses</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Condition_FoodInsecurity_1 is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.addresses</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.addresses.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.note.author[x]</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.outcomeReference</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Observation_FoodInsecurity_1 is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1#Goal.outcomeReference.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[45].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[58].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[92].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[92].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[105].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[107].type[0].targetProfile[2]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[120].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[125].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.snapshot.element[142].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[1].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[14].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[15].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[31].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[31].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[32].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[33].type[0].targetProfile[2]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[34].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[35].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Goal-FoodInsecurity-1: StructureDefinition.differential.element[38].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Observation-FoodInsecurity-1"> </a>
+<h2><a href="StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Observation-FoodInsecurity-1.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.subject</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.subject.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.encounter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.encounter.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.performer</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.performer</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.performer.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.note.author[x]</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.derivedFrom</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaireresponse is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.derivedFrom</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1#Observation.derivedFrom.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[45].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[58].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[61].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[74].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[78].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[78].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[91].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[121].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[139].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaireresponse' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[139].type[0].targetProfile[2]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.snapshot.element[152].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[1].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[16].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[17].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[19].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[20].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[22].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[22].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[23].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[34].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[41].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaireresponse' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[41].type[0].targetProfile[2]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Observation-FoodInsecurity-1: StructureDefinition.differential.element[42].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_structuredefinition_SDOHCC-Procedure-FoodInsecurity-1"> </a>
+<h2><a href="StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\structuredefinition\SDOHCC-Procedure-FoodInsecurity-1.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.basedOn</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.basedOn.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.partOf</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.partOf.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.subject</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.subject.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.encounter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.encounter.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.recorder</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.recorder</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.recorder.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.asserter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.asserter</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.asserter.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.performer.actor</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.performer.actor</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.performer.actor</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.performer.actor.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.performer.onBehalfOf</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.performer.onBehalfOf.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.location</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-location is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.location.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.reasonReference</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Observation_FoodInsecurity_1 is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.reasonReference</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Condition_FoodInsecurity_1 is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.reasonReference</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.reasonReference</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.reasonReference</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.reasonReference.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.report</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.report.identifier.assigner</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.note.author[x]</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1#Procedure.note.author[x]</b></td><td><b>warning</b></td><td><b>Connect check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[17].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[20].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[33].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[35].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[48].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[65].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[78].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[80].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[93].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[96].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[96].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[109].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[111].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[111].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[124].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[131].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[131].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[131].type[0].targetProfile[2]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[144].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[146].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[159].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[161].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[174].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[177].type[0].targetProfile[3]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[177].type[0].targetProfile[4]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[177].type[0].targetProfile[5]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[190].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[194].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[207].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[215].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.snapshot.element[215].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[1].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[2].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[3].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[4].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[5].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[12].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[13].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[14].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[15].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[17].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[17].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[18].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[19].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[19].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[20].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[22].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[22].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[22].type[0].targetProfile[2]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[23].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[24].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[25].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[26].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[27].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[28].type[0].targetProfile[3]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[28].type[0].targetProfile[4]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[28].type[0].targetProfile[5]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[29].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[31].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[32].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[35].type[0].targetProfile[0]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1: StructureDefinition.differential.element[35].type[0].targetProfile[1]</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_valueset_sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"> </a>
+<h2><a href="ValueSet-sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\valueset\sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8: ValueSet</b></td><td><b>warning</b></td><td><b>vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8</b></td><td><b>error</b></td><td><b>Error from server: Expansion Parameters Error: the version &quot;11000243100&quot; is inconsistent with the version &quot;http://snomed.info/sct/731000124108&quot; required by the profile</b> (<a href="qa-tx.html#l14">see Tx log</a>)</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_valueset_sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964"> </a>
+<h2><a href="ValueSet-sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\valueset\sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964: ValueSet</b></td><td><b>warning</b></td><td><b>vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964</b></td><td><b>error</b></td><td><b>Error from server: Expansion Parameters Error: the version &quot;11000243100&quot; is inconsistent with the version &quot;http://snomed.info/sct/731000124108&quot; required by the profile</b> (<a href="qa-tx.html#l16">see Tx log</a>)</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__Windows_Temp_tmp-548829n3B6S3Hinh_source_resources_valueset_sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa"> </a>
+<h2><a href="ValueSet-sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa.html">C:\Windows\Temp\tmp-548829n3B6S3Hinh\source\resources\valueset\sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa: ValueSet</b></td><td><b>warning</b></td><td><b>vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa</b></td><td><b>error</b></td><td><b>Error from server: Expansion Parameters Error: the version &quot;11000243100&quot; is inconsistent with the version &quot;http://snomed.info/sct/731000124108&quot; required by the profile</b> (<a href="qa-tx.html#l12">see Tx log</a>)</td>
+   </tr>
+</table>
+</body>
+</html>

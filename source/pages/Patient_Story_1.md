@@ -6,7 +6,7 @@ active: Patient Story 1
 
 [Previous Page](Patient_Story_1_Personas.html)
 
-## Patient Story 1
+
 *The following is a detailed story around the Patient Persona of Rebecca Smith.  It provides context around the interactions between and among Rebecca and her care team for the purpose of illustrating the Use Cases defined in this document.  Some of the scenarios herein may not fully align with every role or experience in a real-world situation.  Please refer to Patient Story 1 Personas for background information around the following four primary roles:  patient, physician, care coordinator, and clinical staff member.*
 
 Rebecca schedules an appointment for her annual well visit with her primary care physician, Dr. Carla Sanchez.  While making the appointment, the scheduler verifies Rebeccas insurance and finds that it covers an SDOH screening.  The scheduler confirms Rebeccas preferences for communication.  Rebecca consents to use of her email and text for office communications and provides her email address and cell phone number.  The scheduler mentions the practice offers a secure patient portal for sharing of clinical information such as test results and visit summaries.  She offers Rebecca the opportunity to learn more about the patient portal during the upcoming office visit.  Rebecca agrees and the scheduler adds fifteen minutes extra to the appointment for set-up. 
@@ -99,4 +99,4 @@ Ms. Shah reviews Rebeccas progress toward the goals set during the last encounte
 * Acknowledgment and error-handling messages will be handled by standard IT protocols and will not be addressed within the scope of this Use Case Package.
 
 
-[Next Page](FHIR_Artifact_Naming_Conventions.html)
+[Next Page](Use_Cases.html)
