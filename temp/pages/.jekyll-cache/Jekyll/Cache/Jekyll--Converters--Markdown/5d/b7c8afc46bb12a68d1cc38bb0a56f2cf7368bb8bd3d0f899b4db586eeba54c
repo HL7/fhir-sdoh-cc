@@ -1,0 +1,207 @@
+I"�/
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#core-clinical-content" id="markdown-toc-core-clinical-content">Core Clinical Content</a></li>
+  <li><a href="#sdoh-food-insecurity-content" id="markdown-toc-sdoh-food-insecurity-content">SDOH Food Insecurity Content</a></li>
+  <li><a href="#message-transaction-and-workflow-content" id="markdown-toc-message-transaction-and-workflow-content">Message, Transaction and Workflow Content</a></li>
+</ul>
+
+</div>
+<p><a href="PatientStory1.html">Previous Page - Patient Story 1</a></p>
+
+<p>The following types of information are relevant when Exchanging Clinical Information or Doing a Referral.</p>
+
+<h3 id="core-clinical-content">Core Clinical Content</h3>
+<p>Following a clinical encounter, an encounter summary is used to exchange the clinical information documented in and relevant to the patient visit. A Discharge Summary, History and Physical note, or Progress Note are common types of encounter summaries. A Continuity of Care Document is a summary of the patient’s relevant health history over a span of time.  It is a common type of structured document used to share clinical information. Structured documents contain standardized sections of information that include well defined clinical data such as: Problem List, Allergies, Procedures, Test Results, Medication List and clinical assessment and treatment plan information.</p>
+
+<p>It is however important to note, when doing a referral for community-based services, a summary of the patient’s full clinical history or full clinical encounter notes may not be needed to supply a community-based organization (CBO) with the information needed to initiate the referral. The Referral Note document treats all the standardized structured section content as optional, allowing information exchange to be limited to include only the information needed to support the referral. Additionally, in some situations only small amounts of very specific data may be needed. Both a document exchange paradigm and a data exchange paradigm may be needed when exchanging clinical information or doing a referral for services.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Type of Information</th>
+      <th>Description</th>
+      <th>Resource: Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient</td>
+      <td>Basic patient demographics, name, birthdate, gender, address, telecom.</td>
+      <td>Patient: US Core Patient</td>
+    </tr>
+    <tr>
+      <td>Practitioner</td>
+      <td>Practitioner information, name, role, NPI number, organization associated with, gender, address, telecom, location where seen.</td>
+      <td>PractitionerRole: US Core PractitionerRole,<br /> PractitionerRole: US Core Practitioner, <br />PractitionerRole:US Core Organization,<br /> PractitionerRole:US Core Location</td>
+    </tr>
+    <tr>
+      <td>Care Plan Information</td>
+      <td>Issues being addressed, goals established for those issues, interventions already provided, planned interventions.</td>
+      <td>CarePlan: US Core CarePlan</td>
+    </tr>
+    <tr>
+      <td>Clinical Note</td>
+      <td>Any SOAP Note type of visit summary documentation containing relevant patient information gathered &lt;during a patient encounter and &lt;needed when initiating a referral for SDOH services.</td>
+      <td>Bundle (Document): C-CDA on FHIR Composition (such as Progress Note Document, or Discharge Document)<br /> Bundle (Collection): SDOH Referral Data Collection</td>
+    </tr>
+    <tr>
+      <td>Referral Note</td>
+      <td>Who is referring to whom, and the digital contact points to be used for each, Patient Demographics, Reason for the referral, Requested Intervention to be performed, other information relevant to the organization receiving the referral.</td>
+      <td>Composition: C-CDA on FHIR Referral Note (Note: for this type of C-CDA document the section content is optional, so the information exchange can be limited to include only the information needed to support the referral.)</td>
+    </tr>
+    <tr>
+      <td>Assessment Observation</td>
+      <td>Clinical assessment of specific SDOH Issue, i.e. Food Insecurity Absent/Present/Unknown. Clinical narrative note with relevant info about the patients situation.</td>
+      <td>Observation: SDOH Food Insecurity Observation 1 (may include a Note Comment) (used to initially assess if food insecurity is present or absent and can be the evidence for assigning a diagnosis. Later, this observation can be used to assess goal achievement status.) <br />DocumentReference: US Core DocumentReference</td>
+    </tr>
+    <tr>
+      <td>Screening Information</td>
+      <td>A Standardized screening questionnaire with associated responses</td>
+      <td>SDC QuestionnaireResponse and associated SDC Questionnaire (for representing screening information)</td>
+    </tr>
+    <tr>
+      <td>Care Plan</td>
+      <td>Overall picture of what interventions are planned or have been completed to make progress toward a goal that was set for addressing a patient’s condition (needs).</td>
+      <td>CarePlan: SDOH CarePlan (a further constraint on US Core CarePlan) <br />Condition: SDOH Condition (a further constraint on US Core Condition), <br />Goal: SDOH Goal (a further constrain on US Core Goal), <br />Procedure: SDOH Procedure (a further constraint on US Core Procedure) (for completed or planned interventions) <br />ServiceRequest: SDOH ServiceRequest (a further constraint on BSeR ServiceRequest (for services requested/completed)</td>
+    </tr>
+    <tr>
+      <td>Patient Care Team</td>
+      <td>Care team members responsible for services being delivered to the patient. It tells who each is, what organization each works for, and how to communication by phone, secure fax, or secure email (Direct) and data processing endpoints</td>
+      <td>CareTeam: US Core CareTeam <br />PractionerRole: US Core PractitionerRole <br />Practitioner: US Core Practitioner <br />Organization: US Core Organization <br />Location: US Core Location<br /> Endpoint: Endpoint</td>
+    </tr>
+    <tr>
+      <td>Consent Information</td>
+      <td>Information that indicates what sharing has been consented to or what information sharing restrictions have been established.</td>
+      <td>Consent: SDOH Consent</td>
+    </tr>
+    <tr>
+      <td>Progress Note</td>
+      <td>A collection of information produced following a patient encounter where progress is noted regarding existing issues are documented.</td>
+      <td>C-CDA Progress Note or <br />C-CDA on FHIR Progress Notes</td>
+    </tr>
+    <tr>
+      <td>Patient Summary</td>
+      <td>A collection of information that summarizes a patient’s health history over a range of time.</td>
+      <td>C-CDA CCD <br />C-CDA on FHIR CCD</td>
+    </tr>
+    <tr>
+      <td>Discharge Summary</td>
+      <td>A collection of information produced following an Inpatient stay or Emergency Room visit.</td>
+      <td>C-CDA Discharge Summary<br /> C-CDA on FHIR Discharge Summary</td>
+    </tr>
+    <tr>
+      <td>Referral Note</td>
+      <td>A collection of information provided when requesting services to be provided or performed.</td>
+      <td>C-CDA Referral Note or <br />C-CDA on FHIR Referral Note (could be the payload of the referral.)</td>
+    </tr>
+    <tr>
+      <td>Consultation Note</td>
+      <td>A collection of information produced following a patient encounter that was performed at the request of someone else. It is the collection of information returned to the requesting party.</td>
+      <td>C-CDA Consultation Note or <br />C-CDA on FHIR Consultation Note (could be the payload of the response to the completed referral.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+<h3 id="sdoh-food-insecurity-content">SDOH Food Insecurity Content</h3>
+<p>SDOH content can also be shared in the context of a clinical encounter and to support broader whole-person care.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Type of Information</th>
+      <th>Description</th>
+      <th>Resource: Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Screening Tool</td>
+      <td>A set of standardized questions and answers developed as a screening instrument that may be used to inform a clinical assessment of the patient’s situation.  <br /> In addition, a screening instrument may include derived interpretations which are defined as a computational expression based on the answers to the questions in the instrument. This type of observation is computed after the screening responses have been gathered. They are included as additional observations referenced by the questionnaire response.</td>
+      <td><a href="http://hl7.org/fhir/us/sdc/sdc-questionnaire.html">SDC Questionaire</a><br />QuestionnaireResponse: <a href="http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html">SDC Questionnaire Response</a>, Observation</td>
+    </tr>
+    <tr>
+      <td>Assessment Observation</td>
+      <td>Uses clinical judgment to make an observation of the situation</td>
+      <td>Observation: <a href="StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html">SDOHCC_Observation_FoodInsecurity_1</a></td>
+    </tr>
+    <tr>
+      <td>Clinical Diagnosis</td>
+      <td>Adds a diagnosis or health concern to be followed up on that is an SDOH concern</td>
+      <td>Condition: <a href="StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html">SDOHCC_Condition_FoodInsecurity_1</a></td>
+    </tr>
+    <tr>
+      <td>Patient-centered Goal</td>
+      <td>Clarifies and documents the goal</td>
+      <td>Goal:  <a href="StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html">SDOHCC_Goal_FoodInsecurity_1</a></td>
+    </tr>
+    <tr>
+      <td>Planned /Complete Interventions</td>
+      <td>Identify the actions to be taken</td>
+      <td>Procedure: <a href="StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html">SDOHCC_Procedure_FoodInsecurity_1</a></td>
+    </tr>
+    <tr>
+      <td>Requested/Performed Services</td>
+      <td>Intervention activities</td>
+      <td>Procedure</td>
+    </tr>
+    <tr>
+      <td>Referral</td>
+      <td>A special type of intervention that involves requesting for services (intervention activities) to be performed by another organization</td>
+      <td>ServiceRequest: BSeR ServiceRequest</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+<h3 id="message-transaction-and-workflow-content">Message, Transaction and Workflow Content</h3>
+<p>Additional types of content are needed to support the gathering and sharing SDOH information in the context of delivering clinical care and when referring a patient for community-based services.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Type of Information</th>
+      <th>Description</th>
+      <th>Resource: Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>List of Patients to be Screened</td>
+      <td>A list of patients for whom screening of a certain type (using a designated questionnaire) is being requested.</td>
+      <td>SDOH Patient List</td>
+    </tr>
+    <tr>
+      <td>Patient Screening Task</td>
+      <td>A task requesting a certain questionnaire be given to a provided list of patients</td>
+      <td>SDOH Screening Task</td>
+    </tr>
+    <tr>
+      <td>Task-List-Questionnaire</td>
+      <td>A Bundle of type message which holds the Task (Screen PT), Questionnaire, and List of Patients.</td>
+      <td>Bundle (type=message)</td>
+    </tr>
+    <tr>
+      <td>Patient Consent</td>
+      <td>A consent describing what type of information sharing has been consented by the patient.</td>
+      <td>SDOH Info Sharing Consent</td>
+    </tr>
+    <tr>
+      <td>Solicited Communication</td>
+      <td>Information shared with another organization after performing an intervention that was requested to be performed (solicited)</td>
+      <td>CDex Communication Request<br /> CDex Communication</td>
+    </tr>
+    <tr>
+      <td>Unsolicited Communication</td>
+      <td>A communication of information performed without being requested (unsolicited)</td>
+      <td>CDex Communication</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><a href="GravityProjectUseCases.html">Next Page - Gravity Project Use Cases</a></p>
+
+:ET

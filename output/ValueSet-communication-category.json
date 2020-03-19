@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "communication-category",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2020-03-19T14:53:17.189+00:00",
+    "source": "#E4F88yojZbIgRg4P"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SDOHCC_Communication_Category</h2><ul><li>Include these codes as defined in <code>https://www.maxmddirect.com/fhir/CodeSystem/communication-category</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>ScreenRequest</td><td>ScreenRequest</td><td/></tr></table></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/communication-category",
+  "version": "0.0.3",
+  "name": "SDOHCC_Communication_Category",
+  "title": "SDOHCC_Communication_Category",
+  "status": "draft",
+  "date": "2020-03-19T15:18:18+00:00",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.maxmddirect.com/fhir/CodeSystem/communication-category",
+        "concept": [
+          {
+            "code": "ScreenRequest",
+            "display": "ScreenRequest"
+          }
+        ]
+      }
+    ]
+  }
+}

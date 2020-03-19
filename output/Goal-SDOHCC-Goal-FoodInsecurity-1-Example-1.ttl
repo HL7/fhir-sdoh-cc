@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.maxmd.org/fhir/us/maxmd/Goal/SDOHCC-Goal-FoodInsecurity-1-Example-1> a fhir:Goal;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "SDOHCC-Goal-FoodInsecurity-1-Example-1"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-12T20:51:41.685+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#M7f43tEJiEVDc56W" ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: SDOHCC-Goal-FoodInsecurity-1-Example-1</p><p><b>meta</b>: </p><p><b>lifecycleStatus</b>: completed</p><p><b>achievementStatus</b>: Achieved <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/goal-achievement code 'achieved' = 'Achieved', given as 'Achieved'})</span></p><p><b>description</b>: Food security <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code 'sdohcc-sctt-91000243106' = 'sdohcc-sctt-91000243106', given as 'Food security (finding)'})</span></p><p><b>subject</b>: <a href=\"Patient/patientExample1\">Patient/patientExample1</a></p><h3>Targets</h3><table class=\"grid\"><tr><td>-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td></tr><tr><td>*</td><td>Food insecurity <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '733423003' = 'Food insecurity', given as 'Food insecurity (finding)'})</span></td><td>Known absent <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '410516002' = 'Known absent (qualifier value)', given as 'Known absent (qualifier value)'})</span></td></tr></table><p><b>statusDate</b>: 2012-10-27</p><p><b>addresses</b>: <a href=\"{{[type]}}-{{[id]}}.html\">Generated Summary: id: SDOHCC-Condition-FoodInsecurity-1-Example-1; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical inactive}\">Inactive</span>; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span>; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-category health-concern}\">Health Concern</span>; <span title=\"Codes: {http://snomed.info/sct 733423003}\">Food insecurity</span>; onset: May 1, 2012 12:00:00 AM; abatement: Oct 27, 2012 12:00:00 AM</a></p><p><b>outcomeReference</b>: <a href=\"{{[type]}}-{{[id]}}.html\">Generated Summary: id: SDOHCC-Observation-FoodInsecurity-1-Example-2; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social History</span>; <span title=\"Codes: {http://snomed.info/sct 733423003}\">Food insecurity</span>; effective: Oct 27, 2012 12:00:00 AM; <span title=\"Codes: {http://snomed.info/sct 410516002}\">Known absent</span></a></p></div>"
+  ];
+  fhir:Goal.lifecycleStatus [ fhir:value "completed"];
+  fhir:Goal.achievementStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/goal-achievement" ];
+       fhir:Coding.code [ fhir:value "achieved" ];
+       fhir:Coding.display [ fhir:value "Achieved" ]
+     ]
+  ];
+  fhir:Goal.description [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:sdohcc-sctt-91000243106;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "sdohcc-sctt-91000243106" ];
+       fhir:Coding.display [ fhir:value "Food security (finding)" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Food security" ]
+  ];
+  fhir:Goal.subject [
+     fhir:link <http://hl7.maxmd.org/fhir/us/maxmd/Patient/patientExample1>;
+     fhir:Reference.reference [ fhir:value "Patient/patientExample1" ]
+  ];
+  fhir:Goal.target [
+     fhir:index 0;
+     fhir:Goal.target.measure [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:733423003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "733423003" ];
+         fhir:Coding.display [ fhir:value "Food insecurity (finding)" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Food insecurity" ]
+     ];
+     fhir:Goal.target.detailCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:410516002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "410516002" ];
+         fhir:Coding.display [ fhir:value "Known absent (qualifier value)" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Known absent" ]
+     ]
+  ];
+  fhir:Goal.statusDate [ fhir:value "2012-10-27"^^xsd:date];
+  fhir:Goal.addresses [
+     fhir:index 0;
+     fhir:link <http://hl7.maxmd.org/fhir/us/maxmd/Condition/SDOHCC-Condition-FoodInsecurity-1-Example-1>;
+     fhir:Reference.reference [ fhir:value "Condition/SDOHCC-Condition-FoodInsecurity-1-Example-1" ]
+  ];
+  fhir:Goal.outcomeReference [
+     fhir:index 0;
+     fhir:link <http://hl7.maxmd.org/fhir/us/maxmd/Observation/SDOHCC-Observation-FoodInsecurity-1-Example-2>;
+     fhir:Reference.reference [ fhir:value "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-2" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.maxmd.org/fhir/us/maxmd/Goal/SDOHCC-Goal-FoodInsecurity-1-Example-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

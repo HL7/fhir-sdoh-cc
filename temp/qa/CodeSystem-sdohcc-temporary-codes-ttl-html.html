@@ -1,0 +1,93 @@
+﻿<html>
+<head>
+  <title>CodeSystem-sdohcc-temporary-codes-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:CodeSystem;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;sdohcc-temporary-codes&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">fhir:Meta.versionId</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;7&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2020-03-18T16:14:08.712+00:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">fhir:Meta.source</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;#UogLsusV3WO91uKB&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;SDOHCC Temporary Codes&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The SDOHCC-Temporary-Codes code system is a local code system defined within the context of the SDOH-CC IG.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;&lt;b&gt;Copyright Statement:&lt;/b&gt; (c) 2020 HL7.org&lt;/p&gt;&lt;p&gt;This code system http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-sctt-21000243108&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-sctt-21000243108\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mild food insecurity (finding)&lt;/td&gt;&lt;td&gt;TBD:  Gravity Content Team&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-sctt-31000243105&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-sctt-31000243105\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Moderate food insecurity (finding)&lt;/td&gt;&lt;td&gt;TBD: Gravity Content Team&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-sctt-41000243104&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-sctt-41000243104\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Severe food insecurity (finding)&lt;/td&gt;&lt;td&gt;TBD: Gravity Content Team&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-sctt-111000243109&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-sctt-111000243109\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Assistance with application for Supplemental Nutrition Assistance Program (procedure)&lt;/td&gt;&lt;td&gt;TBD: Gravity Content Team&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-sctt-101000243107&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-sctt-101000243107\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)&lt;/td&gt;&lt;td&gt;TBD: Gravity Content Team&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-sctt-91000243106&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-sctt-91000243106\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Food security (finding)&lt;/td&gt;&lt;td&gt;TBD: Gravity Content Team&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-hl7t-screening_task-request&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-hl7t-screening_task-request\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;screening task request&lt;/td&gt;&lt;td&gt;Indicates a message that is a screening task request as defined by the Gravity SDOH-CC IG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-hl7t-screening-response&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-hl7t-screening-response\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;screening response&lt;/td&gt;&lt;td&gt;Indicates a message that is a screening response as defined by the Gravity SDOH-CC IG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;sdohcc-hl7t-screening-response-taskStatusUpdate&lt;a name=\&quot;sdohcc-temporary-codes-sdohcc-hl7t-screening-response-taskStatusUpdate\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;screening task response TaskStatusUpdate&lt;/td&gt;&lt;td&gt;Indicates a message that is response providing a TaskStatusUpdate as defined by the Gravity SDOH-CC IG&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">fhir:CodeSystem.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.0.3&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">fhir:CodeSystem.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDOHCC_Temporary_Codes&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">fhir:CodeSystem.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDOHCC Temporary Codes&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">fhir:CodeSystem.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">fhir:CodeSystem.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">fhir:CodeSystem.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-03-19T15:18:18+00:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">fhir:CodeSystem.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The SDOHCC-Temporary-Codes code system is a local code system defined within the context of the SDOH-CC IG. &quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.purpose">fhir:CodeSystem.purpose</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen prior to the IG being published by HL7.&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.copyright">fhir:CodeSystem.copyright</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;(c) 2020 HL7.org&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">fhir:CodeSystem.content</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">fhir:CodeSystem.concept</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-sctt-21000243108&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Mild food insecurity (finding)&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TBD:  Gravity Content Team&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-sctt-31000243105&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Moderate food insecurity (finding)&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TBD: Gravity Content Team&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-sctt-41000243104&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Severe food insecurity (finding)&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TBD: Gravity Content Team&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-sctt-111000243109&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Assistance with application for Supplemental Nutrition Assistance Program (procedure)&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TBD: Gravity Content Team&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-sctt-101000243107&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TBD: Gravity Content Team&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-sctt-91000243106&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Food security (finding)&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TBD: Gravity Content Team&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-hl7t-screening_task-request&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;screening task request&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Indicates a message that is a screening task request as defined by the Gravity SDOH-CC IG&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-hl7t-screening-response&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;screening response&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Indicates a message that is a screening response as defined by the Gravity SDOH-CC IG&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sdohcc-hl7t-screening-response-taskStatusUpdate&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;screening task response TaskStatusUpdate&quot; ];
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Indicates a message that is response providing a TaskStatusUpdate as defined by the Gravity SDOH-CC IG&quot; ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+This structure is derived from US Core Condition. However, the bindings are not necessarily compliant with US Core. 

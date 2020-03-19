@@ -1,0 +1,41 @@
+I"	
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#capability-statements-for-use-case-1" id="markdown-toc-capability-statements-for-use-case-1">Capability Statements for Use Case 1<br /></a>    <ul>
+      <li><a href="#pmehr-actor-capability-statement" id="markdown-toc-pmehr-actor-capability-statement">PMEHR Actor Capability Statement<br /></a></li>
+      <li><a href="#screening-apppatient-app-actor-capabilitystatement" id="markdown-toc-screening-apppatient-app-actor-capabilitystatement">Screening App/Patient App Actor CapabilityStatement<br /></a></li>
+      <li><a href="#clinical-data-registryrepository-actor-capabilitystatement" id="markdown-toc-clinical-data-registryrepository-actor-capabilitystatement">Clinical Data Registry/Repository Actor CapabilityStatement</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<p><a href="AdditionalConformanceConsiderations.html">Previous Page - Additional Conformance Considerations</a></p>
+
+<p><strong>This page is under development</strong> <br /></p>
+
+<h2 id="capability-statements-for-use-case-1">Capability Statements for Use Case 1<br /></h2>
+
+<h3 id="pmehr-actor-capability-statement">PMEHR Actor Capability Statement<br /></h3>
+
+<p><strong>Server Capabilities</strong><br />
+                                                Explain them here.<br />
+<strong>Client Capabilities</strong><br />
+                                                Explain them here.       <br /></p>
+
+<h3 id="screening-apppatient-app-actor-capabilitystatement">Screening App/Patient App Actor CapabilityStatement<br /></h3>
+<p><strong>Server Capabilities</strong><br />
+                                                Explain them here.<br />
+<strong>Client Capabilities</strong><br />
+                                                Explain them here<br />
+<br /></p>
+
+<h3 id="clinical-data-registryrepository-actor-capabilitystatement">Clinical Data Registry/Repository Actor CapabilityStatement</h3>
+<p><strong>Server Capabilities</strong> <br />
+                                                Explain them here.<br />
+<strong>Client Capabilities</strong><br />
+                                                Explain them here<br /></p>
+
+<p><a href="NamingConventionsforImplementationGuideArtifacts.html">Next Page - Naming Conventions for Implementation Guide Artifacts</a></p>
+
+:ET

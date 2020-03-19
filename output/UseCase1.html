@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>SDOH-CC\Use Case 1 - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+     
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+  
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/hl7.css"/>
+    <link rel="stylesheet" href="assets/css/fhir.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+  
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"2.5.1"}
+    h3,h4,h5,h6{--heading-prefix:"2.5.1"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+        
+        <div id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="http://hl7.org">
+            <img src="assets/images/hl7-logo-header.png" alt="Visit the HL7 website" height="50"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir/search.cfm"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">SDOH Clinical Care</span><br/>0.0.3 - CI Build</p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a name="6355ae20-b918-43e1-8e14-f7037d1e2372">​</a><a href="toc.md"><b>Table of Contents</b></a></li><li><a href="GravityProjectUseCases.html"><b>Gravity Project Use Cases</b></a></li><li><b>Use Case 1</b></li>
+        </ul>  
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SDOH Clinical Care - Local Development build (v0.0.3). See the <a href="http://hl7.maxmd.org/fhir/us/maxmd/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Use Case 1</h2>
+  
+  
+  
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#use-case-1-messages-and-transactions" id="markdown-toc-use-case-1-messages-and-transactions">Use Case 1 Messages and Transactions</a></li>
+  <li><a href="#use-case-1-actors" id="markdown-toc-use-case-1-actors">Use Case 1 Actors</a></li>
+  <li><a href="#use-case-1-elements" id="markdown-toc-use-case-1-elements">Use Case 1 Elements</a></li>
+  <li><a href="#use-case-1-part-1" id="markdown-toc-use-case-1-part-1">Use Case 1, Part 1</a></li>
+  <li><a href="#use-case-1-part-2" id="markdown-toc-use-case-1-part-2">Use Case 1, Part 2</a></li>
+  <li><a href="#use-case-1-part-3" id="markdown-toc-use-case-1-part-3">Use Case 1, Part 3</a></li>
+</ul>
+
+</div>
+<p><a href="GravityProjectUseCases.html">Previous Page - Gravity Project Use Cases</a></p>
+
+<p>This use case is relevant to how coded SDOH data are captured in a health care system and how data are shared with other systems.  SDOH data are documented either as part of screening or assessment/ diagnosis activities and may be the reason for ordering care activities.</p>
+
+<p><br/><br/></p>
+
+<h3 id="use-case-1-messages-and-transactions">Use Case 1 Messages and Transactions</h3>
+<p>This Actor Transaction diagram shows the technical system roles and information exchange transaction for Use Case 1:</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Transaction</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.	Initiate Screening Task<br/></td>
+      <td>BundleMessage-NewTask-Example-1</td>
+    </tr>
+    <tr>
+      <td>2.	Return Screen<br/></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>2.1.	Consent provided by patient<br/></td>
+      <td>BundleMessage_ReturnScreen_Example_1</td>
+    </tr>
+    <tr>
+      <td>2.2.	Consent not provided by patient <br/></td>
+      <td>BundleMessage_ReturnScreen_Example_1</td>
+    </tr>
+    <tr>
+      <td>3.	Update Screening Task<br/></td>
+      <td>BundleMessage_TaskUpdate_Example_1</td>
+    </tr>
+    <tr>
+      <td>4.	Communication Request<br/></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>4.1.	CDA document request<br/></td>
+      <td>BundleTransaction_CDEX_Request_Example_1</td>
+    </tr>
+    <tr>
+      <td>4.2.	FHIR composition resource request<br/></td>
+      <td>BundleTransaction_CDEX_Request_Example_2</td>
+    </tr>
+    <tr>
+      <td>4.3.	FHIR Screening questionnaire request<br/></td>
+      <td>BundleTransaction_CDEX_Request_Example_3</td>
+    </tr>
+    <tr>
+      <td>5.	Communication Response<br/></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>5.1.	CDA document response<br/></td>
+      <td>BundleTransaction_CDEX_Response_Example_4</td>
+    </tr>
+    <tr>
+      <td>5.2.	FHIR composition resource response<br/></td>
+      <td>BundleTransaction_CDEX_Response_Example_5</td>
+    </tr>
+    <tr>
+      <td>5.3.	FHIR Screening questionnaire response<br/></td>
+      <td>BundleTransaction_CDEX_Response_Example_6.xml</td>
+    </tr>
+    <tr>
+      <td>Questionnaire Resource Example</td>
+      <td>Questionnaire_Hunger_Vital_ Sign_Example_1</td>
+    </tr>
+  </tbody>
+</table>
+
+<table><tr><td><img src="Use Case 1 Gather and Share SDOH Data in a Clinical Care Setting.png"/></td></tr></table>
+
+<p><br/><br/></p>
+<h3 id="use-case-1-actors">Use Case 1 Actors</h3>
+<p><strong>Practice Management/EHR (PMEHR)</strong> - gathers and shares SDOH information in a clinical care setting.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>FHIR API resources and operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Initiate a screening task for a a list of patients and a specivic screening tool to be used [1].  Recieve individual patient consent and screening information as it becomes available [2]. Associate received information from a patient’s chart. Recieve a confirmation when a screening task has been completed [3].</td>
+      <td>[base]/$process-message <br/> <a href="https://www.hl7.org/fhir/messageheader.html">Bundle MessageHeader</a>, <a href="https://www.hl7.org/fhir/task.html">Task</a> <br/> <a href="https://www.hl7.org/fhir/list.html">List</a>, <a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html">US Core Patient</a> <br/><a href="http://hl7.org/fhir/us/sdc/sdc-questionnaire.html">SDC Questionnaire</a> <br/><a href="http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html">SDC QuestionnaireResponse</a>, <a href="https://www.hl7.org/fhir/observation.html">Observation</a></td>
+    </tr>
+    <tr>
+      <td>Enable review of received screening information associated with a patient’s medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient’s problem list. Include a structured SDOH goal in the patient’s documentation to facilitate outcome tracking. Document planned or completed activities to address SDOH needs using structured data</td>
+      <td><a href="StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html">SDOHCC_Observation_FoodInsecurity_1</a> <br/> <a href="StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html">SDOHCC_Condition_FoodInsecurity_1</a><br/> <a href="StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html">SDOHCC_Goal_FoodInsecurity_1</a> <br/> <a href="StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html">SDOHCC_Procedure_FoodInsecurity_1</a></td>
+    </tr>
+    <tr>
+      <td>Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH information as structured data or using a standard visit summary [5].</td>
+      <td><a href="http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html">CDEX Communication Request</a>  <br/> <a href="http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html">CDEX Communication</a><br/><a href="http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html">C-CDA on FHIR Composition</a> <br/> [base]/Composition/[id]/$document <br/> Or <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">C-CDA document</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/><br/></p>
+
+<p><strong>Screening App Actor</strong> - receives and executes the screening task by interacting with the patient and PMEHR.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>FHIR API resources and operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Upon receiving request [1], initiate the requesed screening task for the list of patients, using the supplied questionnaire. <br/>Interface with the user to gather the needed data sharing consent and collect the screening responses and compute the screening interpretation.</td>
+      <td><a href="https://www.hl7.org/fhir/task.html">Task</a>, <a href="https://www.hl7.org/fhir/list.html">List</a>,  <a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html">US Core Patient</a> <br/><a href="http://hl7.org/fhir/us/sdc/sdc-questionnaire.html">SDC Questionnaire</a></td>
+    </tr>
+    <tr>
+      <td>Return the consent and screening information to the screening task initiator [2]. If the patient does not consent to share screening information, return SDOH screening indicating patient preference not to participate [2.1]</td>
+      <td><a href="https://www.hl7.org/fhir/consent.html">Consent</a>, <a href="http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html">SDC QuestionnaireResponse</a>, <br/> <a href="https://www.hl7.org/fhir/observation.html">Observation</a></td>
+    </tr>
+    <tr>
+      <td>Update the task initiator when the task is completed [3]</td>
+      <td><a href="https://www.hl7.org/fhir/task.html">Task</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/><br/></p>
+
+<p><strong>Clinical R/R Actor</strong> - any actor needing to request SDOH information gathered during a clinical encounter to support treatment, payment, or operations.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>FHIR API resources and operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Initiate a communication request for SDOH information gathered during a clinical encounter [4.1], [4.2], [4.3]</td>
+      <td><a href="http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html">CDEX CommunicationRequest</a></td>
+    </tr>
+    <tr>
+      <td>Receive information that was requested [5.1], [5.2], [5.3].</td>
+      <td><a href="https://build.fhir.org/ig/HL7/davinci-ecdx/branches/master/StructureDefinition-cdex-communication-definitions.html">CDEX Communication</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/><br/></p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Human Actor</th>
+      <th>Business Actor</th>
+      <th>System Actor</th>
+      <th>Technical Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(Not specific to a System Actor)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Patient</td>
+      <td>n/a</td>
+      <td>Screening App</td>
+      <td>Initiate Screening Task Recipient, <br/> Return Screen Initiator, <br/>Screening Task Update Initiator</td>
+    </tr>
+    <tr>
+      <td>Clinical Staff Member</td>
+      <td>PCP Practice</td>
+      <td>EHR</td>
+      <td>Initiate Screening Task Initiator,<br/> Return Screen Recipient,<br/> Screening Task Update Recipient,<br/>Communication Request Receiver,<br/> Communication Sender</td>
+    </tr>
+    <tr>
+      <td>Care Coordinator,<br/>Researcher,<br/> Population Health Worker</td>
+      <td>Payor,<br/> Research Org,<br/> HIE</td>
+      <td>Clinical Data R-R</td>
+      <td>Communication Request Requestor,<br/> Communication Recipient</td>
+    </tr>
+  </tbody>
+</table>
+<p><br/></p>
+
+<h3 id="use-case-1-elements">Use Case 1 Elements</h3>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Use Case Element</th>
+      <th>Initiate Screening Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assumptions</strong></td>
+      <td>Practice determines appropriate questions to address patient consent to share SDOH information and offers options to gather patient preferences regarding whether the patient: <br/>  does not want to answer the survey; <br/>would prefer to answer the survey on paper at the appointment;<br/> would prefer to discuss these questions with a care coordinator at the appointment; <br/>would prefer to discuss these questions with his or her provider at the appointment; and,<br/> needs assistance to translate or interpret the questions.  <br/>Patient demographic data is up to date.</td>
+    </tr>
+    <tr>
+      <td><strong>Preconditions</strong></td>
+      <td>A list of patients to be screened is known, and the screening questions and answers to be used is expressed in a Questionnaire Resource. The Consent languaged has been agreed.</td>
+    </tr>
+    <tr>
+      <td><strong>Transaction #  1</strong></td>
+      <td>Initiate Screening Task</td>
+    </tr>
+    <tr>
+      <td><strong>Message Content (Payload)</strong></td>
+      <td>A message bundle that includes a Screening Task to be initiated with the list of patients and the Questionnaire</td>
+    </tr>
+    <tr>
+      <td><strong>Post Condition</strong></td>
+      <td>The screening task is initiated and each patient in the list has been asked to consent to share SDOH questionnaire results, and to  take the questionnaire.</td>
+    </tr>
+    <tr>
+      <td><strong>Alternate Flow (Paper Form)</strong></td>
+      <td>The person my choose not to consent to share the information and the screening is not performed.</td>
+    </tr>
+  </tbody>
+</table>
+<p><br/></p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Use Case Element</th>
+      <th>Return Screen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assumptions</strong></td>
+      <td>The person is who they puport to be – they have a known and trusted identity.</td>
+    </tr>
+    <tr>
+      <td><strong>Preconditions</strong></td>
+      <td>Patient has completed the consent and the Questionnaire.</td>
+    </tr>
+    <tr>
+      <td><strong>Transaction #  2</strong></td>
+      <td>The QuestionnaireResponse and the Consent are returned together as a Composition to the organization that initiated the Screening Request.</td>
+    </tr>
+    <tr>
+      <td><strong>Message Content (Payload)</strong></td>
+      <td>Message Bundle, Composition, Consent, QuestionnaireResponse, Questionnaire</td>
+    </tr>
+    <tr>
+      <td><strong>Post Condition</strong></td>
+      <td>The recipient system recieves the screening information and indexes it into it’s document repository.</td>
+    </tr>
+    <tr>
+      <td><strong>Alternate Flow (Paper Form)</strong></td>
+      <td>The message indicates the person did not consent to sharing their SDOH information and the screening was not performed.</td>
+    </tr>
+  </tbody>
+</table>
+<p><br/></p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Use Case Element</th>
+      <th>Update Screening Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assumptions</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>Preconditions</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>Transaction #  3</strong></td>
+      <td>The message indicates a new status for the Screening Task</td>
+    </tr>
+    <tr>
+      <td><strong>Message Content (Payload)</strong></td>
+      <td>The Screening Task with an updated status to Completed.</td>
+    </tr>
+    <tr>
+      <td><strong>Post Condition</strong></td>
+      <td>The status of the screening task on the requesting system has been updated to completed.</td>
+    </tr>
+    <tr>
+      <td><strong>Alternate Flow (Paper Form)</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/></p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Use Case Element</th>
+      <th>Communication Request</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assumptions</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>Preconditions</strong></td>
+      <td>Requester system initiates a request for a specific type of document or for a type of data.</td>
+    </tr>
+    <tr>
+      <td><strong>Transaction #  4</strong></td>
+      <td><strong>Communication Request</strong> <br/>Requester system (Clinical R-R) sends Communication Request to the PMEHR</td>
+    </tr>
+    <tr>
+      <td><strong>Message Content (Payload)</strong></td>
+      <td>Communication Request</td>
+    </tr>
+    <tr>
+      <td><strong>Post Condition</strong></td>
+      <td>PMEHR receives the CommunicationRequest..</td>
+    </tr>
+    <tr>
+      <td><strong>Alternate Flow (Paper Form)</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/></p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Use Case Element</th>
+      <th>Communication Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assumptions</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>Preconditions</strong></td>
+      <td>The system receiving the CommunicationRequest keeps track of document available for sharing using the DocumentReference Resource.</td>
+    </tr>
+    <tr>
+      <td><strong>Transaction #  5</strong></td>
+      <td><strong>Communication Response</strong> <br/>PMEHR sends the requested documents to the Recipient(s) indicated in the request.</td>
+    </tr>
+    <tr>
+      <td><strong>Message Content (Payload)</strong></td>
+      <td>Payload depends on what the request requested.</td>
+    </tr>
+    <tr>
+      <td><strong>Post Condition</strong></td>
+      <td>The recipient system(s) receive the requested documents or data.</td>
+    </tr>
+    <tr>
+      <td><strong>Alternate Flow (Paper Form)</strong></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/></p>
+
+<table><tr><td><img src="UC1 flow.png"/></td></tr></table>
+
+<p><br/></p>
+<h3 id="use-case-1-part-1">Use Case 1, Part 1</h3>
+<p>In Use Case 1, part 1, the Practice Management/EHR (PMEHR) system initiates the task to request screening information be collected from a patient.  The PMEHR system selects the screening form to be used and supplies patient information for the list of patients to be screened by a certain data. The Screening App system receives the task and executes a sub-task for each patient, notifying the person at their selected telecom address, prepopulating the questionnaireResponse, and collected the completed questionnaireResponse. The Patient App can be a mobile app that interacts as a client to the Screening App system, or it can be a simple e-mail client with browser capabilities to launch a link supplied to email.</p>
+
+<p>As each questionnaireResponse is completed, the Screening App forwards the completed QuestionnaireResponse to the task requester (PMEHR). The PMEHR attaches the received QuestionnaireResponse to the appropriate patient record and allows the user to view the screening results that were received. As each sub-task is completed, the Screening App updates the progress for the larger task.  If the deadline for the Task runs out, or when all sub-tasks are completed, the Screening App notifies the system that initiated the task of the completion. The system that initiated the task can query the Screening App to gather statistics about the task that was completed (number of sub-tasks initiated, number completed successfully, number started by not completed, number not completed.)</p>
+
+<p><br/></p>
+<h3 id="use-case-1-part-2">Use Case 1, Part 2</h3>
+<p>In Use Case 1 part 2, the PMEHR allows the user to gather other SDOH related information during the course of the clinical visit.  The practitioner can record a Clinical Assessment Observation, for example to indicate if Food Insecurity is present or absent, based on the screening information and other information gained during the patient encounter. The practitioner determines if the patient agrees there is a problem (condition) or risk of a problem regarding, for example Food Insecurity which the patient would like to see addressed.  The condition or risk can be added to the patients Problem List or noted as a Health Concern that should be tracked and addressed.  A care plan to address the condition or risk can be established by identifying a goal and the interventions that can be completed to make progress toward that goal. The Practitioner can document the planned interventions and any that are performed, or referred to be performed by a different organization. The interventions demonstrated initially in this use case are relevant to addressing SDOH Food Insecurity. At a subsequent visit, the practitioner can record if planned interventions had been completed based on responses received to earlier service requests, or based on information provided by the patient.  After each visit, the PMEHR system can provide a summary of the patient encounter or a snapshot of the care plan established to address the patients conditions/needs.  Outside systems can query for the care plan data or the encounter or care plan documents. Alternatively, outside systems can request to have this information sent to them, and the PMEHR system can respond to those requests, or send the data or document to a systems that has subscribed to the information, or has a business agreement to receive the information.</p>
+
+<p><br/></p>
+<h3 id="use-case-1-part-3">Use Case 1, Part 3</h3>
+<p>In Use Case 1, part 3, an outside systems queries for or requests information to be communicated from the clinical setting. Two options are supported. First, FHIR RESTful mechanisms can be used to query and retrieve the relevant data or documents.  Second, a Communication Request message can be used to request the data or encounter documents. The Communication message can be used to respond to a Communication Request (solicited communication). Alternatively, a Communication message can be used  to send the documents to a known recipient (unsolicited communication).</p>
+
+<p><a href="UseCase2.html">Next Page - Use Case 2</a></p>
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+      <div class="inner-wrapper">
+        <p><a name="214bef34-f536-4ecc-ad4c-01b91f847cb6">​</a>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="null"></a>.  Package SDOH-CC#0.0.3 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 19, 2020 15:18+0000">2020-03-19</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" href="http://hl7.maxmd.org/fhir/us/maxmd/history.html" target="_blank">Version History <img src="external.png" alt="external" style="vertical-align: baseline"/></a> |
+                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> |
+                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change <img src="external.png" alt="external" style="vertical-align: baseline"/></a>
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

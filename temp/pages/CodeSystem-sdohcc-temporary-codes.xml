@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="sdohcc-temporary-codes"/>
+  <meta>
+    <versionId value="7"/>
+    <lastUpdated value="2020-03-18T16:14:08.712+00:00"/>
+    <source value="#UogLsusV3WO91uKB"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SDOHCC Temporary Codes</h2><div><p>The SDOHCC-Temporary-Codes code system is a local code system defined within the context of the SDOH-CC IG.</p>
+</div><p><b>Copyright Statement:</b> (c) 2020 HL7.org</p><p>This code system http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">sdohcc-sctt-21000243108<a name="sdohcc-temporary-codes-sdohcc-sctt-21000243108"> </a></td><td>Mild food insecurity (finding)</td><td>TBD:  Gravity Content Team</td></tr><tr><td style="white-space:nowrap">sdohcc-sctt-31000243105<a name="sdohcc-temporary-codes-sdohcc-sctt-31000243105"> </a></td><td>Moderate food insecurity (finding)</td><td>TBD: Gravity Content Team</td></tr><tr><td style="white-space:nowrap">sdohcc-sctt-41000243104<a name="sdohcc-temporary-codes-sdohcc-sctt-41000243104"> </a></td><td>Severe food insecurity (finding)</td><td>TBD: Gravity Content Team</td></tr><tr><td style="white-space:nowrap">sdohcc-sctt-111000243109<a name="sdohcc-temporary-codes-sdohcc-sctt-111000243109"> </a></td><td>Assistance with application for Supplemental Nutrition Assistance Program (procedure)</td><td>TBD: Gravity Content Team</td></tr><tr><td style="white-space:nowrap">sdohcc-sctt-101000243107<a name="sdohcc-temporary-codes-sdohcc-sctt-101000243107"> </a></td><td>Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)</td><td>TBD: Gravity Content Team</td></tr><tr><td style="white-space:nowrap">sdohcc-sctt-91000243106<a name="sdohcc-temporary-codes-sdohcc-sctt-91000243106"> </a></td><td>Food security (finding)</td><td>TBD: Gravity Content Team</td></tr><tr><td style="white-space:nowrap">sdohcc-hl7t-screening_task-request<a name="sdohcc-temporary-codes-sdohcc-hl7t-screening_task-request"> </a></td><td>screening task request</td><td>Indicates a message that is a screening task request as defined by the Gravity SDOH-CC IG</td></tr><tr><td style="white-space:nowrap">sdohcc-hl7t-screening-response<a name="sdohcc-temporary-codes-sdohcc-hl7t-screening-response"> </a></td><td>screening response</td><td>Indicates a message that is a screening response as defined by the Gravity SDOH-CC IG</td></tr><tr><td style="white-space:nowrap">sdohcc-hl7t-screening-response-taskStatusUpdate<a name="sdohcc-temporary-codes-sdohcc-hl7t-screening-response-taskStatusUpdate"> </a></td><td>screening task response TaskStatusUpdate</td><td>Indicates a message that is response providing a TaskStatusUpdate as defined by the Gravity SDOH-CC IG</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+  <version value="0.0.3"/>
+  <name value="SDOHCC_Temporary_Codes"/>
+  <title value="SDOHCC Temporary Codes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2020-03-19T15:18:18+00:00"/>
+  <description value="The SDOHCC-Temporary-Codes code system is a local code system defined within the context of the SDOH-CC IG. "/>
+  <purpose value="The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen prior to the IG being published by HL7."/>
+  <copyright value="(c) 2020 HL7.org"/>
+  <content value="complete"/>
+  <concept>
+    <code value="sdohcc-sctt-21000243108"/>
+    <display value="Mild food insecurity (finding)"/>
+    <definition value="TBD:  Gravity Content Team"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-sctt-31000243105"/>
+    <display value="Moderate food insecurity (finding)"/>
+    <definition value="TBD: Gravity Content Team"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-sctt-41000243104"/>
+    <display value="Severe food insecurity (finding)"/>
+    <definition value="TBD: Gravity Content Team"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-sctt-111000243109"/>
+    <display value="Assistance with application for Supplemental Nutrition Assistance Program (procedure)"/>
+    <definition value="TBD: Gravity Content Team"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-sctt-101000243107"/>
+    <display value="Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)"/>
+    <definition value="TBD: Gravity Content Team"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-sctt-91000243106"/>
+    <display value="Food security (finding)"/>
+    <definition value="TBD: Gravity Content Team"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-hl7t-screening_task-request"/>
+    <display value="screening task request"/>
+    <definition value="Indicates a message that is a screening task request as defined by the Gravity SDOH-CC IG"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-hl7t-screening-response"/>
+    <display value="screening response"/>
+    <definition value="Indicates a message that is a screening response as defined by the Gravity SDOH-CC IG"/>
+  </concept>
+  <concept>
+    <code value="sdohcc-hl7t-screening-response-taskStatusUpdate"/>
+    <display value="screening task response TaskStatusUpdate"/>
+    <definition value="Indicates a message that is response providing a TaskStatusUpdate as defined by the Gravity SDOH-CC IG"/>
+  </concept>
+</CodeSystem>

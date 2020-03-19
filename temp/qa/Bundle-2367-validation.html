@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+  <title>Bundle-2367-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>structure</td><td>Bundle/2367: Bundle.entry[0].resource</td><td>Profile http://hl7.org/fhir/StructureDefinition/MessageHeader, Element 'Bundle.entry[0].resource.source': minimum required = 1, but only found 0</td><td></td></tr>
+<tr><td>error</td><td>structure</td><td>Bundle/2367: Bundle.entry[1].resource</td><td>Profile http://hl7.org/fhir/StructureDefinition/Task, Element 'Bundle.entry[1].resource.intent': minimum required = 1, but only found 0</td><td></td></tr>
+<tr><td>warning</td><td>invalid</td><td>Bundle/2367: Bundle.entry[0].resource.focus[0].display</td><td>value should not start or finish with whitespace</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Bundle/2367: Bundle.entry[0].resource.event.ofType(Coding)</td><td>Code System URI &quot;http://sdohcc-hl7t-messageHeader.tmp/sdohcc-screening_task&quot; is unknown so the code cannot be validated</td><td></td></tr>
+</table>
+</body>
+</html>

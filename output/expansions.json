@@ -1,8 +1,64 @@
 {
   "resourceType" : "Bundle",
-  "id" : "b7a9263a-856e-4571-b23f-8e79a7ca0375",
+  "id" : "ac87a4c3-6c67-40f1-b48a-3c4716a6696f",
   "meta" : {
-    "lastUpdated" : "2020-02-10T13:52:44.527-05:00"
+    "lastUpdated" : "2020-03-19T15:18:18.329+00:00"
   },
-  "type" : "collection"
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8",
+      "meta" : {
+        "versionId" : "6",
+        "lastUpdated" : "2020-03-19T14:38:32.072+00:00",
+        "source" : "#ajG4942fNk5Oznbt"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes version 0.0.3</p><p>All codes from system <a href=\"CodeSystem-sdohcc-temporary-codes.html\"><code>http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-733423003\"> </a><a href=\"CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-733423003\">733423003</a></td><td>Food insecurity (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-sdohcc-sctt-21000243108\"> </a><a href=\"CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-sdohcc-sctt-21000243108\">sdohcc-sctt-21000243108</a></td><td>Mild food insecurity (finding)</td><td>TBD:  Gravity Content Team</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-sdohcc-sctt-31000243105\"> </a><a href=\"CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-sdohcc-sctt-31000243105\">sdohcc-sctt-31000243105</a></td><td>Moderate food insecurity (finding)</td><td>TBD: Gravity Content Team</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-sdohcc-sctt-41000243104\"> </a><a href=\"CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-sdohcc-sctt-41000243104\">sdohcc-sctt-41000243104</a></td><td>Severe food insecurity (finding)</td><td>TBD: Gravity Content Team</td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8",
+      "version" : "0.0.3",
+      "name" : "Sdohcc_ValueSet_FoodInsecurity_1",
+      "title" : "Sdohcc_ValueSet_FoodInsecurity_1",
+      "status" : "draft",
+      "date" : "2020-03-19T15:18:18+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:b47b220c-d99e-4c1e-b759-8614a084db9e",
+        "timestamp" : "2020-03-19T15:18:32+00:00",
+        "total" : 4,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes|0.0.3"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+          "inactive" : true,
+          "code" : "733423003",
+          "display" : "Food insecurity (finding)"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+          "code" : "sdohcc-sctt-21000243108",
+          "display" : "Mild food insecurity (finding)"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+          "code" : "sdohcc-sctt-31000243105",
+          "display" : "Moderate food insecurity (finding)"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+          "code" : "sdohcc-sctt-41000243104",
+          "display" : "Severe food insecurity (finding)"
+        }]
+      }
+    }
+  }]
 }

@@ -2,14 +2,16 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Condition-FoodInsecurity-1",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-01-28T12:20:14.000-05:00"
+		"versionId": "23",
+		"lastUpdated": "2020-03-16T20:42:34.063+00:00",
+		"source": "#YGsIbyp58SdNEWYr"
 	},
+	"extension": [],
 	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
 	"name": "SDOHCC_Condition_FoodInsecurity_1",
 	"status": "draft",
 	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Conditions related to: Food insecurity, Mild food insecurity, Moderate food insecurity, or Severe food insecurity.",
-	"fhirVersion": "4.0.0",
+	"fhirVersion": "4.0.1",
 	"mapping": [
 		{
 			"identity": "workflow",
@@ -49,18 +51,6 @@
 	"derivation": "constraint",
 	"differential": {
 		"element": [
-			{
-				"id": "Condition.identifier.assigner",
-				"path": "Condition.identifier.assigner",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-						]
-					}
-				]
-			},
 			{
 				"id": "Condition.clinicalStatus",
 				"path": "Condition.clinicalStatus",
@@ -219,48 +209,16 @@
 				"mustSupport": true
 			},
 			{
-				"id": "Condition.subject.identifier.assigner",
-				"path": "Condition.subject.identifier.assigner",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-						]
-					}
-				]
-			},
-			{
 				"id": "Condition.encounter",
 				"path": "Condition.encounter",
-				"min": 1,
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-						]
-					}
-				]
-			},
-			{
-				"id": "Condition.encounter.identifier.assigner",
-				"path": "Condition.encounter.identifier.assigner",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-						]
-					}
-				]
+				"mustSupport": true
 			},
 			{
 				"id": "Condition.onset[x]",
 				"path": "Condition.onset[x]",
 				"type": [
 					{
-						"code": "Period"
+						"code": "dateTime"
 					}
 				]
 			},
@@ -270,9 +228,6 @@
 				"type": [
 					{
 						"code": "dateTime"
-					},
-					{
-						"code": "Period"
 					}
 				]
 			},
@@ -283,20 +238,8 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-						]
-					}
-				]
-			},
-			{
-				"id": "Condition.recorder.identifier.assigner",
-				"path": "Condition.recorder.identifier.assigner",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+							"http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+							"http://hl7.org/fhir/StructureDefinition/Practitioner"
 						]
 					}
 				]
@@ -308,20 +251,8 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-						]
-					}
-				]
-			},
-			{
-				"id": "Condition.asserter.identifier.assigner",
-				"path": "Condition.asserter.identifier.assigner",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+							"http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+							"http://hl7.org/fhir/StructureDefinition/Practitioner"
 						]
 					}
 				]
@@ -332,6 +263,11 @@
 				"max": "0"
 			},
 			{
+				"id": "Condition.evidence",
+				"path": "Condition.evidence",
+				"mustSupport": true
+			},
+			{
 				"id": "Condition.evidence.code",
 				"path": "Condition.evidence.code",
 				"max": "0"
@@ -339,24 +275,13 @@
 			{
 				"id": "Condition.evidence.detail",
 				"path": "Condition.evidence.detail",
+				"min": 1,
 				"max": "1",
 				"type": [
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC_Observation_FoodInsecurity_1"
-						]
-					}
-				]
-			},
-			{
-				"id": "Condition.evidence.detail.identifier.assigner",
-				"path": "Condition.evidence.detail.identifier.assigner",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
 						]
 					}
 				]
@@ -368,7 +293,7 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+							"http://hl7.org/fhir/StructureDefinition/Practitioner"
 						]
 					},
 					{
@@ -377,5 +302,6 @@
 				]
 			}
 		]
-	}
+	},
+	"title": "SDOHCC_Condition_FoodInsecurity_1"
 }

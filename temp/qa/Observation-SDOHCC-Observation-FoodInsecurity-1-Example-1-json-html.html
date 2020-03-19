@@ -1,0 +1,69 @@
+﻿<html>
+<head>
+  <title>Observation-SDOHCC-Observation-FoodInsecurity-1-Example-1-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "SDOHCC-Observation-FoodInsecurity-1-Example-1",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "2",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2020-03-12T20:52:03.318+00:00",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "#QTdAAfPCiqNNAAaO"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: SDOHCC-Observation-FoodInsecurity-1-Example-1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Social History &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'social-history' = 'Social History', given as 'Social History'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Food insecurity &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '733423003' = 'Food insecurity', given as 'Food insecurity (finding)'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient/patientExample1\&quot;&gt;Patient/patientExample1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Encounter/encounterExample1\&quot;&gt;Encounter/encounterExample1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: May 1, 2012 12:00:00 AM --&amp;gt; Jul 18, 2012 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a href=\&quot;Practitioner/practitionerExample1\&quot;&gt;Practitioner/practitionerExample1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: Known present &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '410515003' = 'Known present (qualifier value)', given as 'Known present (qualifier value)'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "social-history",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Social History"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "733423003",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Food insecurity (finding)"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Food insecurity"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/patientExample1"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.encounter">encounter</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/encounterExample1"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectivePeriod</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2012-05",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2012-07-18"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.performer">performer</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitionerExample1"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "410515003",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Known present (qualifier value)"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Known present"
+  }
+}</pre>
+</body>
+</html>
