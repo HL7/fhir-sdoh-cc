@@ -1,6 +1,5 @@
 ---
 title: Profiles used in this IG
-layout: default
 active: Profiles used in this IG
 ---
 

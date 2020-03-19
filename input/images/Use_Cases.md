@@ -1,6 +1,5 @@
 ---
 title: Use Cases
-layout: default
 active: Use Cases
 ---
 

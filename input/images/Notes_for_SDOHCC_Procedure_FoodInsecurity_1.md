@@ -1,6 +1,5 @@
 ---
 title: Notes for SDOHCC_Procedure_FoodInsecurity_1
-layout: default
 active: Notes for SDOHCC_Procedure_FoodInsecurity_1
 ---
 

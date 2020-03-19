@@ -1,6 +1,5 @@
 ---
 title: Conformance Guidance
-layout: default
 active: Conformance Guidance
 ---
 

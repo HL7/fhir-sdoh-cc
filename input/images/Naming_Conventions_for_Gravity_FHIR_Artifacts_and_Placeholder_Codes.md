@@ -1,6 +1,5 @@
 ---
 title: Naming Conventions for Gravity FHIR Artifacts and Placeholder Codes
-layout: default
 active: Naming Conventions for Gravity FHIR Artifacts and Placeholder Codes
 ---
 

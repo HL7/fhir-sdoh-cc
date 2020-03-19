@@ -1,6 +1,5 @@
 ---
 title: Background
-layout: default
 active: Background
 ---
 

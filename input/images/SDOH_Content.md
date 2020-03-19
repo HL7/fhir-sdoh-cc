@@ -1,6 +1,5 @@
 ---
 title: SDOH Content
-layout: default
 active: SDOH Content
 ---
 

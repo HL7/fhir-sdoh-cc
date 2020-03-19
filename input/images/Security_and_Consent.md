@@ -1,6 +1,5 @@
 ---
 title: Security and Consent
-layout: default
 active: Security and Consent
 ---
 
