@@ -1,6 +1,5 @@
 ---
 title: Personas and Patient Stories
-layout: default
 active: Personas and Patient Stories
 ---
 
