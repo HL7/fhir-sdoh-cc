@@ -1,9 +1,0 @@
-
-{"severity":"warning","code":"invariant","details":{"text":"Unable to find description for the resource Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec.  Descriptions are strongly encouraged to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[16]"]}
-,
-{"severity":"warning","code":"invariant","details":{"text":"Unable to find description for the resource Observation/43373ef0-8fe3-403d-a62c-feb79700e1d5.  Descriptions are strongly encouraged to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[17]"]}
-,
-{"severity":"warning","code":"invariant","details":{"text":"Unable to find description for the resource List/b1f72528-5501-4a6c-a5f3-9b86ec84264b.  Descriptions are strongly encouraged to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[18]"]}
-,
-{"severity":"warning","code":"invariant","details":{"text":"Unable to find description for the resource Consent/40bfeb51-6d03-4109-8ad8-936247175aec.  Descriptions are strongly encouraged to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[19]"]}
-,
