@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="sdohcc-sctt"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2020-01-27T10:59:09.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Placeholder_SNOMED_CT</h2><p>This code system http://sdohcc.sctt.tmp/sdohcc-sctt defines many codes, but they are not represented here</p></div>
+  </text>
+  <url value="http://sdohcc.sctt.tmp/sdohcc-sctt"/>
+  <version value="0.0.2"/>
+  <name value="Placeholder SNOMED CT Code System"/>
+  <title value="Placeholder_SNOMED_CT"/>
+  <status value="active"/>
+  <date value="2020-02-10T13:52:44-05:00"/>
+  <publisher value="Gravity Project"/>
+  <content value="not-present"/>
+</CodeSystem>
