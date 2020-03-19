@@ -1,0 +1,14 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "sdohcc-sctt",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-01-27T10:59:09.000-05:00"
+	},
+	"url": "http://sdohcc.sctt.tmp/sdohcc-sctt",
+	"name": "Placeholder SNOMED CT Code System",
+	"title": "Placeholder_SNOMED_CT",
+	"status": "active",
+	"publisher": "Gravity Project",
+	"content": "not-present"
+}

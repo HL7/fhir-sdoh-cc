@@ -1,0 +1,49 @@
+{
+	"resourceType": "Procedure",
+	"id": "SDOHCC-Procedure-FoodInsecurity-1-Example-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-03-12T20:51:47.897+00:00",
+		"source": "#BaLaHZZdDZexgAEA"
+	},
+	"status": "completed",
+	"category": {
+		"coding": [
+			{
+				"system": "http://hl7.org/fhir/ValueSet/procedure-category",
+				"code": "410606002",
+				"display": "Social service procedure (procedure)"
+			}
+		],
+		"text": "Social service procedure"
+	},
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "sdohcc-sctt-111000243109",
+				"display": "Assistance with application for Supplemental Nutrition Assistance Program (procedure)"
+			}
+		],
+		"text": "Assistance with application for Supplemental Nutrition Assistance Program"
+	},
+	"subject": {
+		"reference": "Patient/patientExample1"
+	},
+	"encounter": {
+		"reference": "Encounter/encounterExample2"
+	},
+	"performedDateTime": "2012-07-30",
+	"performer": [
+		{
+			"actor": {
+				"reference": "Practitioner/practitionerExample2"
+			}
+		}
+	],
+	"reasonReference": [
+		{
+			"reference": "Condition/SDOHCC-Condition-FoodInsecurity-1-Example-1"
+		}
+	]
+}

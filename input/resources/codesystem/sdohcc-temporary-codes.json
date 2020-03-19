@@ -1,0 +1,65 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "sdohcc-temporary-codes",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2020-03-18T16:14:08.712+00:00",
+		"source": "#UogLsusV3WO91uKB"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+	"name": "SDOHCC_Temporary_Codes",
+	"title": "SDOHCC Temporary Codes",
+	"status": "draft",
+	"experimental": true,
+	"description": "The SDOHCC-Temporary-Codes code system is a local code system defined within the context of the SDOH-CC IG. ",
+	"purpose": "The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen prior to the IG being published by HL7.",
+	"copyright": "(c) 2020 HL7.org",
+	"content": "complete",
+	"concept": [
+		{
+			"code": "sdohcc-sctt-21000243108",
+			"display": "Mild food insecurity (finding)",
+			"definition": "TBD:  Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-sctt-31000243105",
+			"display": "Moderate food insecurity (finding)",
+			"definition": "TBD: Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-sctt-41000243104",
+			"display": "Severe food insecurity (finding)",
+			"definition": "TBD: Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-sctt-111000243109",
+			"display": "Assistance with application for Supplemental Nutrition Assistance Program (procedure)",
+			"definition": "TBD: Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-sctt-101000243107",
+			"display": "Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)",
+			"definition": "TBD: Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-sctt-91000243106",
+			"display": "Food security (finding)",
+			"definition": "TBD: Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-hl7t-screening_task-request",
+			"display": "screening task request",
+			"definition": "Indicates a message that is a screening task request as defined by the Gravity SDOH-CC IG"
+		},
+		{
+			"code": "sdohcc-hl7t-screening-response",
+			"display": "screening response",
+			"definition": "Indicates a message that is a screening response as defined by the Gravity SDOH-CC IG"
+		},
+		{
+			"code": "sdohcc-hl7t-screening-response-taskStatusUpdate",
+			"display": "screening task response TaskStatusUpdate",
+			"definition": "Indicates a message that is response providing a TaskStatusUpdate as defined by the Gravity SDOH-CC IG"
+		}
+	]
+}

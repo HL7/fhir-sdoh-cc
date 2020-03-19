@@ -1,0 +1,75 @@
+{
+	"resourceType": "Condition",
+	"id": "SDOHCC-Condition-FoodInsecurity-1-Example-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-03-12T21:24:40.760+00:00",
+		"source": "#Ja3y4HfPNyswjIKA"
+	},
+	"text": {
+		"status": "generated"
+	},
+	"clinicalStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+				"code": "inactive",
+				"display": "Inactive"
+			}
+		]
+	},
+	"verificationStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+				"code": "confirmed",
+				"display": "Confirmed"
+			}
+		]
+	},
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+					"code": "health-concern",
+					"display": "Health Concern"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "733423003",
+				"display": "Food insecurity (finding)"
+			}
+		],
+		"text": "Food insecurity"
+	},
+	"subject": {
+		"reference": "Patient/patientExample1"
+	},
+	"encounter": {
+		"reference": "Encounter/encounterExample2"
+	},
+	"onsetDateTime": "2012-05",
+	"abatementDateTime": "2012-10-27",
+	"evidence": [
+		{
+			"detail": [
+				{
+					"reference": "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-1"
+				}
+			]
+		},
+		{
+			"detail": [
+				{
+					"reference": "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-2"
+				}
+			]
+		}
+	]
+}
