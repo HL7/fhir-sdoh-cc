@@ -1,0 +1,124 @@
+﻿<html>
+<head>
+  <title>table-implementationguides-json</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ <tr><td><a href="ImplementationGuide-SDOH-CC.json.html">SDOH Clinical Care</a> </td><td><table class="grid">
+<thead>
+<tr><th>IG Characteristic</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>FHIR Version:</strong></td><td>FHIR R4</td></tr>
+<tr><td><strong>IG Realm:</strong></td><td>US</td></tr>
+<tr><td><strong>IG Type:</strong></td><td>STU</td></tr>
+<tr><td><strong>Exchange Methods:</strong></td><td>RESTful Query, Messages, Transactions, Documents, Tasks</td></tr>
+<tr><td><strong>IG Dependencies:</strong></td><td>This IG utilizes and adopts guidance developed in several other FHIR&amp;reg; Implementation Guides.</td></tr>
+</tbody>
+</table>
+<p>{:.table-striped}</p>
+<table class="grid">
+<thead>
+<tr><th>Dependent IG Name</th><th>IG Code</th><th>Version</th></tr>
+</thead>
+<tbody>
+<tr><td>HL7 FHIR US Core</td><td><a href="http://hl7.org/fhir/us/core/STU3.1">US Core</a></td><td>Version 3.1.0</td></tr>
+<tr><td>Structured Data Capture</td><td><a href="http://hl7.org/fhir/uv/sdc/2019May">SDC</a></td><td>Version 2.7.0</td></tr>
+<tr><td>C-CDA on FHIR R4</td><td><a href="http://hl7.org/fhir/us/ccda/STU1">C-CDA on FHIR</a></td><td>Version 1.0.0</td></tr>
+<tr><td>DaVinci Clinical Data exchange</td><td><a href="http://hl7.org/fhir/us/davinci-cdex/2019Jun">CDex</a></td><td>Version 1.0.0</td></tr>
+<tr><td>Bidirectional Services eReferrals</td><td><a href="http://hl7.org/fhir/us/bser/">BSer</a></td><td>Version 1.0.0</td></tr>
+</tbody>
+</table>
+<p>{:.table-striped}</p>
+<p>Additional information regarding guidance developed in these IGs is available in the chapters of this IG titled Overview of Data Sharing Methods and Overview of Capability Statements.</p>
+<h3>Purpose</h3>
+<p>This HL7&amp;reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:</p>
+<ol>
+<li>Document SDOH data in conjunction with the patient encounter,</li>
+<li>Document and track SDOH related interventions to completion,</li>
+<li>Gather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)</li>
+</ol>
+<h3>How to Use This Guide</h3>
+<p>A FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.</p>
+<p>However, one caveat must be clear: this FHIR IG and the other FHIR IG's it depends upon are at low levels of maturity.  Changes to the specification can be major and may happen rapidly as Gravity Project incorporates the full scope of SDOH content domains. Plan accordingly and budget for exploration and potential rework.  For example, the solutions tested at one Connectathon may need to be substantially revised before testing at the next Connectathon. Early engagement in FHIR IG development and sustained collaboration will create the opportunity to have greater impact on the design of these emerging implementer standards.</p>
+<p>Additional details are provided in the chapter <a href="PracticalGuidanceforAllAudiences.html">Practical Guidance for All Audiences</a> for</p>
+<ul>
+<li><a href="PracticalGuidanceforAllAudiences.html#implementers-with-existing-systems-using-proprietary-data-exchange">Implementers with existing systems using proprietary data exchange</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#implementers-currently-developing-new-systems">Implementers currently developing new systems</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#implementers-considering-future-system-development">Implementers considering future system development</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#clinical-care-providers">Clinical care providers</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#community-based-organizations">Community based organizations</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#payers-and-public-health-organizations">Payer and public health organizations</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#researchers">Researchers</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#technology-buyers">Technology buyers</a></li>
+<li><a href="PracticalGuidanceforAllAudiences.html#patients-care-givers-and-patient-advocates">Patients, care givers, and patient advocates</a></li>
+</ul>
+<h3>Notes to Reviewers and Balloters</h3>
+<ul>
+<li>
+<p>Review of version 0.0.3 of the IG is intended to gather high-level comments about the overall approach to the Implementation Guide and its positioning in terms of supporting the use cases defined for the Gravity Project. It also is aimed at identifying omissions that impact the quality of the IG. It still contains major IG Build errors and reviewers should be aware of imperfections that still need to be addressed in version 0.0.4. It would be wise to consider the errors associated with a resource as you review the guidance supplied in this version of the IG. The IG Build errors are listed in the QA Report referenced in the footer of the IG. Of the current 199 build errors, there 181 that are considered approved. There are 4 build warnings for examples that lack descriptions. The list of the approved errors that can be disregarded for this version can be found on <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=66922000#GravityFHIRIG-ApprovedSDOHCCFHIRIGErrorsandWarnings">Confluence Gravity FHIR IG</a>.</p>
+</li>
+<li>
+<p>Temporary Codes used in this IG will be replaced with permanent codes when they become available and before the IG is published as a Standard for Trial Use (STU).</p>
+</li>
+<li>
+<p>For some profiles, value set bindings are set at the wrong level in the data structure.</p>
+</li>
+<li>
+<p>For some of the examples, there are known issues/errors with the way IG Publisher is rendering the narrative view of the content. Nonetheless, the narrative view is included (as is) because it is useful to facilitate a general understanding of the profile and may be helpful for generating feedback about how to improve the way narrative is rendered.</p>
+</li>
+<li>
+<p>Message, Transaction, and Workflow Content documentation is incomplete and some of the needed examples have not yet been loaded.</p>
+</li>
+<li>
+<p>Capability Statements have been sketched into the document but have not yet been developed and included in the IG.</p>
+</li>
+</ul>
+<p>Feedback on V0.0.3 of the IG should be sent to gravityproject@emiadvisors.net between March 20, 2020 and  April 5, 2020. All of the issues noted above will be addressed in version 0.0.4.</p>
+<h3>Latest Changes</h3>
+<table class="grid">
+<thead>
+<tr><th>Number</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>16</td><td>Created Must Support table</td></tr>
+<tr><td>15</td><td>Updated Overview of Data Sharing Methods</td></tr>
+<tr><td>14</td><td>Updated Security and Consent Considerations</td></tr>
+<tr><td>13</td><td>Updated Notes to Reviewers and Balloters</td></tr>
+<tr><td>12</td><td>Added page Practical Guidance for All Audiences</td></tr>
+<tr><td>11</td><td>Revisions to profiles and examples</td></tr>
+<tr><td>10</td><td>Updates to dependencies to this IG</td></tr>
+<tr><td>9</td><td>Updates to Use Case 1 and 2 tables</td></tr>
+<tr><td>8</td><td>Change Placeholder Codes to &quot;Temporary codes&quot; and re-work code system naming</td></tr>
+<tr><td>7</td><td>Update to How to Read this Guide to align with new publication algorithm</td></tr>
+<tr><td>6</td><td>Update to Naming Conventions for Implementation Guide Artifacts</td></tr>
+<tr><td>5</td><td>Update to Placeholder Code System page</td></tr>
+<tr><td>4</td><td>Added notes for Profiles</td></tr>
+<tr><td>3</td><td>Updates to Use Case 1</td></tr>
+<tr><td>2</td><td>Update naming conventions to sdohcc</td></tr>
+<tr><td>1</td><td>Redesign chapters</td></tr>
+</tbody>
+</table>
+<p>{:class=&quot;table table-bordered&quot;}
+{:.table-striped}</p>
+<h3>Acknowledgements</h3>
+<p><em>This section is still under development</em></p>
+<p>Reserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.</p>
+<p>There may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.</p>
+<p>The Placeholder Code Creation process was originally developed for Elimu profiles and SMART app development. It was modified in the context of creating this IG to make it more broadly applicable.</p>
+<h3>Authors</h3>
+<p><em>This section is still under development</em></p>
+<p>Reserve this area to include authors of this guide.</p>
+<table class="grid">
+<thead>
+<tr><th><strong>Name:</strong></th><th><strong>Org</strong></th></tr>
+</thead>
+<tbody>
+<tr><td><strong>TBD</strong></td><td><strong>TBD</strong></td></tr>
+</tbody>
+</table>
+<p>{:class=&quot;table table-bordered&quot;}
+{:.table-striped}</p>
+</td></tr>
+</body>
+</html>

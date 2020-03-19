@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2020-03-19T14:53:45.415+00:00"/>
+    <source value="#Bm6AeW5WUtbcDGeO"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>sdohcc_ValueSet_ContextValue_1</h2><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> version <code>11000243100</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=410516002">410516002</a></td><td>Known absent (qualifier value)</td><td/></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=410515003">410515003</a></td><td>Known present (qualifier value)</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa"/>
+  <version value="0.0.3"/>
+  <name value="sdohcc_ValueSet_ContextValue_1"/>
+  <title value="sdohcc_ValueSet_ContextValue_1"/>
+  <status value="draft"/>
+  <date value="2020-03-19T15:18:18+00:00"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="11000243100"/>
+      <concept>
+        <code value="410516002"/>
+        <display value="Known absent (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="410515003"/>
+        <display value="Known present (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

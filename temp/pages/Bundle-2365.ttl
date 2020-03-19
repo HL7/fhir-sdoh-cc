@@ -1,0 +1,157 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.maxmd.org/fhir/us/maxmd/Bundle/2365> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2365"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-03-11T21:00:30.312+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#abbAWIX5pmLlVEqN" ]
+  ];
+  fhir:Bundle.type [ fhir:value "message"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:1063cd2c-ecb4-49a8-8972-e508ab71917c" ];
+     fhir:Bundle.entry.resource <urn:uuid:1063cd2c-ecb4-49a8-8972-e508ab71917c>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "MessageHeader" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:a8d0f9c8-7757-4bee-a827-87a17dff0cbc" ];
+     fhir:Bundle.entry.resource <urn:uuid:a8d0f9c8-7757-4bee-a827-87a17dff0cbc>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Device" ];
+       fhir:Bundle.entry.request.ifNoneExist [ fhir:value "Device?identifier=identifier=https%3A%2F%2Fwww.maxmddirect.com%2Ffhir%2Fidentifier%2Fsdc%2Fapp%2FdeviceId%7CLocal-1" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:796bf892-9700-4f82-8d8f-887484e451cf" ];
+     fhir:Bundle.entry.resource <urn:uuid:796bf892-9700-4f82-8d8f-887484e451cf>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "QuestionnaireResponse" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:ce76cc42-ddd6-4265-888b-03db3585c624" ];
+     fhir:Bundle.entry.resource <urn:uuid:ce76cc42-ddd6-4265-888b-03db3585c624>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Consent" ]
+     ]
+  ] .
+
+<urn:uuid:1063cd2c-ecb4-49a8-8972-e508ab71917c> a fhir:MessageHeader;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>event</b>: screen-response (Details: http://sdohcc-hl7t-messageHeader.tmp/sdohcc-screening_task code sdohcc-hl7t-screening-response = 'sdohcc-hl7t-screening-response', stated as 'screen-response')</p><h3>Destinations</h3><table class=\"grid\"><tr><td>-</td><td><b>Endpoint</b></td></tr><tr><td>*</td><td><a href=\"https://ehr-sandbox.directmdemail.com:8443/fhir/baseR4\">https://ehr-sandbox.directmdemail.com:8443/fhir/baseR4</a></td></tr></table><p><b>focus</b>: </p><ul><li><a href=\"Task?identifier=https%3A%2F%2Fwww.maxmddirect.com%2Ffhir%2Fidentifier%2Fsdc%2Ftask%7Ctask-1583338756\">Questionnaire sent out to be completed - 3/4 </a></li><li><a href=\"#urnuuidce76cc42-ddd6-4265-888b-03db3585c624\">Consent. Generated Summary: unknown resource entry</a></li><li><a href=\"#urnuuid796bf892-9700-4f82-8d8f-887484e451cf\">QuestionnaireResponse. Generated Summary: unknown resource entry</a></li></ul></div>"
+  ];
+  fhir:MessageHeader.eventCoding [
+     fhir:Coding.system [ fhir:value "http://sdohcc-hl7t-messageHeader.tmp/sdohcc-screening_task" ];
+     fhir:Coding.code [ fhir:value "sdohcc-hl7t-screening-response" ];
+     fhir:Coding.display [ fhir:value "screen-response" ]
+  ];
+  fhir:MessageHeader.destination [
+     fhir:index 0;
+     fhir:MessageHeader.destination.endpoint [ fhir:value "https://ehr-sandbox.directmdemail.com:8443/fhir/baseR4" ]
+  ];
+  fhir:MessageHeader.focus [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "Task?identifier=https%3A%2F%2Fwww.maxmddirect.com%2Ffhir%2Fidentifier%2Fsdc%2Ftask%7Ctask-1583338756" ];
+     fhir:Reference.display [ fhir:value "Questionnaire sent out to be completed - 3/4 " ]
+  ], [
+     fhir:index 1;
+     fhir:Reference.reference [ fhir:value "urn:uuid:ce76cc42-ddd6-4265-888b-03db3585c624" ];
+     fhir:Reference.display [ fhir:value "Consent" ]
+  ], [
+     fhir:index 2;
+     fhir:Reference.reference [ fhir:value "urn:uuid:796bf892-9700-4f82-8d8f-887484e451cf" ];
+     fhir:Reference.display [ fhir:value "QuestionnaireResponse" ]
+  ] .
+
+<urn:uuid:a8d0f9c8-7757-4bee-a827-87a17dff0cbc> a fhir:Device;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>identifier</b>: Local-1</p><p><b>status</b>: active</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td></tr><tr><td>*</td><td>MaxMD APP</td></tr></table></div>"
+  ];
+  fhir:Device.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://www.maxmddirect.com/fhir/identifier/sdc/app/deviceId" ];
+     fhir:Identifier.value [ fhir:value "Local-1" ]
+  ];
+  fhir:Device.status [ fhir:value "active"];
+  fhir:Device.deviceName [
+     fhir:index 0;
+     fhir:Device.deviceName.name [ fhir:value "MaxMD APP" ]
+  ] .
+
+<urn:uuid:796bf892-9700-4f82-8d8f-887484e451cf> a fhir:QuestionnaireResponse;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>identifier</b>: 90</p><p><b>questionnaire</b>: <a href=\"Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec\">Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec</a></p><p><b>status</b>: stopped</p><p><b>subject</b>: <a href=\"Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01\">Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01</a></p><p><b>author</b>: <a href=\"#urnuuida8d0f9c8-7757-4bee-a827-87a17dff0cbc\">Generated Summary: unknown resource entry</a></p><p><b>source</b>: <a href=\"Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01\">Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01</a></p></div>"
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.system [ fhir:value "https://www.maxmddirect.com/fhir/identifier/sdc/userFormId" ];
+     fhir:Identifier.value [ fhir:value "90" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:value "Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec";
+     fhir:link <http://hl7.maxmd.org/fhir/us/maxmd/Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec>
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "stopped"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:Reference.reference [ fhir:value "Patient?given=Jeremy&family=Bates&address-postalcode=97006&birthdate=1980-08-01" ]
+  ];
+  fhir:QuestionnaireResponse.author [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a8d0f9c8-7757-4bee-a827-87a17dff0cbc" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:Reference.reference [ fhir:value "Patient?given=Jeremy&family=Bates&address-postalcode=97006&birthdate=1980-08-01" ]
+  ] .
+
+<urn:uuid:ce76cc42-ddd6-4265-888b-03db3585c624> a fhir:Consent;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>status</b>: rejected</p><p><b>scope</b>: Privacy Consent <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/consentscope code 'patient-privacy' = 'Privacy Consent', given as 'Privacy Consent'})</span></p><p><b>category</b>: information collection <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/v3-ActCode code 'ICOL' = 'information collection', given as 'information collection'})</span></p><p><b>patient</b>: <a href=\"Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01\">Patient?given=Jeremy&amp;family=Bates&amp;address-postalcode=97006&amp;birthdate=1980-08-01</a></p><p><b>dateTime</b>: Mar 4, 2020 4:30:15 PM</p><p><b>source</b>: <a href=\"#urnuuid796bf892-9700-4f82-8d8f-887484e451cf\">Generated Summary: unknown resource entry</a></p></div>"
+  ];
+  fhir:Consent.status [ fhir:value "rejected"];
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ];
+       fhir:Coding.code [ fhir:value "patient-privacy" ];
+       fhir:Coding.display [ fhir:value "Privacy Consent" ]
+     ]
+  ];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "ICOL" ];
+       fhir:Coding.display [ fhir:value "information collection" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:Reference.reference [ fhir:value "Patient?given=Jeremy&family=Bates&address-postalcode=97006&birthdate=1980-08-01" ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2020-03-04T10:30:15-06:00"^^xsd:dateTime];
+  fhir:Consent.sourceReference [
+     fhir:Reference.reference [ fhir:value "urn:uuid:796bf892-9700-4f82-8d8f-887484e451cf" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.maxmd.org/fhir/us/maxmd/Bundle/2365.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

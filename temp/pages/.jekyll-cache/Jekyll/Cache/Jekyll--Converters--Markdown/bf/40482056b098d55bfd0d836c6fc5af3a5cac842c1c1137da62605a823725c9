@@ -1,0 +1,130 @@
+I"�
+<h2 id="profile-design">Profile design</h2>
+<p>This profile is adapted from US Core Procedure. However, the value set bindings are not necessarily compliant.</p>
+
+<h2 id="additional-guidance">Additional Guidance</h2>
+
+<p>The FHIR Observation, Condition and Goal resources reference one another. Therefore, to support interoperability and analytics, similar approaches have been used in the structured representation of food insecurity observations, conditions and goals.</p>
+
+<p>The diagram below shows an example of a relationship between Observation, Condition and Goal.</p>
+
+<p>An initial Observation (1) is evidence for a Condition (2) that is addressed by a Goal (3) that has an outcome of a later Observation (4).</p>
+
+<table><tr><td><img src="Condition mindmap 2020.01.27.png" /></td></tr></table>
+
+<p>The sections that follow provide additional guidance on 1) specific elements of this profile and 2) efforts to align the profile with the following correlated Observation and Goal profiles:</p>
+<ul>
+  <li>SDOHCC_Observation_FoodInsecurity_1</li>
+  <li>SDOHCC_Goal_FoodInsecurity_1</li>
+</ul>
+
+<h3 id="conditionevidence">Condition.evidence</h3>
+
+<p>To align this food insecurity condition with the food insecurity observation that supports it, this element is constrained to Condition.evidence.detail which, in turn, is constrained to reference only SDOHCC_Observation_FoodInsecurity_1. When evidence for a food insecurity condition exists in the form of a food insecurity observation, decisions related to linking the condition to the relevant observation that may support it are up to the implementor.</p>
+
+<h3 id="conditioncode">Condition.code</h3>
+
+<p>This element references sdohcc_ValueSet_FoodInsecurity_1. This value set contains the SNOMED CT codes listed below.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Display</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>733423003</td>
+      <td>Food insecurity (finding)</td>
+    </tr>
+    <tr>
+      <td>sdohcc-sctt-21000243108</td>
+      <td>Mild food insecurity (finding)</td>
+    </tr>
+    <tr>
+      <td>sdohcc-sctt-31000243105</td>
+      <td>Moderate food insecurity (finding)</td>
+    </tr>
+    <tr>
+      <td>sdohcc-sctt-41000243104</td>
+      <td>Severe food insecurity (finding)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The above options allow a general Food insecurity condition or a more specific Food insecurity condition (e.g., mild, moderate, or severe).</p>
+
+<p><strong>1</strong>	This value set is also used for:</p>
+
+<ul>
+  <li>Observation.code in SDOHCC_Observation_FoodInsecurity_1</li>
+</ul>
+
+<p>The consistent use of similar codes for a condition and an observation referenced as evidence for that condition will facilitate analytics and interoperability between Condition and Observation.</p>
+
+<p><em>Example</em>:</p>
+
+<ul>
+  <li>SDOHCC_Condition_FoodInsecurity_1 modeled with:
+    <ul>
+      <li>Condition code = Mild food insecurity</li>
+    </ul>
+  </li>
+</ul>
+
+<p>aligns with the observation that this condition references (via Condition.evidence.detail):</p>
+
+<ul>
+  <li>SDOHCC_Observation_FoodInsecurity_1 modeled with:
+    <ul>
+      <li>Observation code = Mild food insecurity</li>
+      <li>Observation value = Known present</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>2</strong>	The Food insecurity (finding) code in this value set is also used as the value for:</p>
+
+<ul>
+  <li>Goal.target.measure in SDOHCC_Goal_FoodInsecurity_1</li>
+</ul>
+
+<p>The consistent use of similar codes for a condition and a goal that addresses that condition will facilitate analytics and interoperability between Condition and Goal.</p>
+
+<p><em>Example</em>:</p>
+<ul>
+  <li>SDOHCC_Condition_FoodInsecurity_1 modeled with:
+    <ul>
+      <li>Condition code = Food insecurity</li>
+    </ul>
+  </li>
+</ul>
+
+<p>aligns with the goal that address this condition (via Goal.addresses):</p>
+
+<ul>
+  <li>SDOHCC_Goal_FoodInsecurity_1 modeled with:
+    <ul>
+      <li>Goal description: Food security <br /> and <br /></li>
+      <li>Goal target measure = Food insecurity</li>
+      <li>Goal target detail = Known absent</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="conditionseverity">Condition.severity</h3>
+
+<p>This element is prohibited.</p>
+
+<p>In lieu of a value set of food insecurity codes with precoordinated severities, this profile could have allowed only “Condition.code = Food insecurity” and represented severity using Condition.severity. However, the FHIR Observation Resource does not provide a separate element for modifying the severity of Observation.code. Therefore, Observation.code for SDOHCC_Observation_FoodInsecurity_1 uses a value set of food insecurity codes that have precoordinated severity. To enable consistency across the Observation and Condition profiles, Condition.code and Observation.code use the same value set and Condition.Severity is prohibited.</p>
+
+<h3 id="conditiononset">Condition.onset</h3>
+
+<p>Condition.onset is constrained to dateTime. While it is recognized that “Food insecurity” is a state that may have its onset over a more extended (or fuzzy) period of time (e.g., the past month), dateTime was chosen over Period in part because dateTime is not open-ended whereas Period, when used without an end date, is open-ended. However, the fuzziness related to the exact onset of food insecurity is probably best handled by using a lower precision representation (e.g., month/year or year) for dateTime as opposed to a higher precision representation (e.g., year/month/date/hour/min).</p>
+
+<h3 id="conditionabatement">Condition.abatement</h3>
+
+<p>Condition.abatement is constrained to “dateTime”. Where the abatement period is somewhat fuzzy, this element might use month/year. However, since the condition of food insecurity may possibly end at a specific point in time (e.g., upon receipt of a paycheck from a new job or gaining eligibility to a food program) a higher precision representation (e.g., year/month/date/hour/min) might also be used for dateTime.</p>
+
+:ET

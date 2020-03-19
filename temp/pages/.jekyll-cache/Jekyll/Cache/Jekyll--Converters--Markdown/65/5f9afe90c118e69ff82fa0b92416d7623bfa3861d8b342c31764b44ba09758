@@ -1,0 +1,136 @@
+I"�
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#use-case-actors" id="markdown-toc-use-case-actors">Use Case Actors</a></li>
+  <li><a href="#utilization-of-other-fhir-igs" id="markdown-toc-utilization-of-other-fhir-igs">Utilization of other FHIR IG’s</a></li>
+</ul>
+
+</div>
+<p><a href="GravityProjectSDOHCodedContent.html">Previous Page - Gravity Project SDOH Coded Content</a></p>
+
+<p>The Gravity use cases focus on the functionality and interoperability required to allow an end-user to document, retrieve, send, exchange, and aggregate coded social risk data.  These use cases are high-level descriptions of the most value-add interactions between the various actors identified within <a href="PatientStory1.html">Patient Story 1</a>.</p>
+
+<p>This use case utilizes guidance provided for implementers in the FHIR Structured Data Capture Implementation Guide. This IG defines the profiles needed to constrain the FHIR Questionnaire and Questionnaire Response resources based on guidance supplied in the SDC IG and using coded SDOH content established by the Gravity Community for the Food Insecurity domain.</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Use Case</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="UseCase1.html">Use Case 1: Document SDOH Data</a></td>
+      <td>Document SDOH Data in Conjunction with the Patient Encounter</td>
+    </tr>
+    <tr>
+      <td><a href="UseCase2.html">Use Case 2: Track SDOH Interventions</a></td>
+      <td>Document and Track SDOH Related Interventions to Completion</td>
+    </tr>
+    <tr>
+      <td><a href="UseCase3.html">Use Case 3: Aggregate SDOH Data </a></td>
+      <td>Gather and Aggregate SDOH Data for Uses Beyond the Point of Care</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+<h2 id="use-case-actors">Use Case Actors</h2>
+
+<p>The following system actors are established to accomplish the use cases covered in this IG:</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>System Actor</th>
+      <th>Description of the Technical Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PMEHR (Practice Management/EHR)</td>
+      <td>The system that initiates the task to request patients to be screened using a certain screening questionnaire.</td>
+    </tr>
+    <tr>
+      <td>Screening App</td>
+      <td>The system that receives the screening request and then initiates screening of patient through the Patient App. This system sends completed questionnaire responses to the intended recipient.</td>
+    </tr>
+    <tr>
+      <td>Patient App</td>
+      <td>The system that enables a patient to complete a screening questionnaire.</td>
+    </tr>
+    <tr>
+      <td>Clinical Data R/R (Registry/Repository)</td>
+      <td>A system that requests clinical information which may include SDOH information also gathered during clinical care encounters.</td>
+    </tr>
+    <tr>
+      <td>Referral Initiator</td>
+      <td>A system that initiates a referral for services. This system also is a recipient of information returned from the Referral Recipient regarding a referral previously made.</td>
+    </tr>
+    <tr>
+      <td>Services Directory</td>
+      <td>A system that offers a directory of available services and the endpoints for sharing information with each organization in the directory.</td>
+    </tr>
+    <tr>
+      <td>Referral Recipient</td>
+      <td>A system that receives a referral for providing services to a patient. This system also sends information to the Referral Initiator system as activities associated with the referral are initiated or complete.</td>
+    </tr>
+    <tr>
+      <td>HIE</td>
+      <td>A system that receives information from a PMEHR. This system also may request information from a PMEHR.</td>
+    </tr>
+    <tr>
+      <td>Aggregator App</td>
+      <td>A system that receives or requests information from a PMEHR, aggregates/processes it, then outputs results and shares those results with another system.</td>
+    </tr>
+    <tr>
+      <td>Aggregate Data R/R (Registry/Repository)</td>
+      <td>A system that receives data that has been aggregated by another system.  <br /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each system actor may play the technical role of a FHIR server or a FHIR client as it fulfills the data exchange interactions required to support this use case.</p>
+
+<p><br /></p>
+<h2 id="utilization-of-other-fhir-igs">Utilization of other FHIR IG’s</h2>
+
+<p>Sharing SDOH content defined in this IG can be accomplished in a number of ways. The information flows described in this IG make use of mechanisms defined in other FHIR IGs.  The guidance included in this IG explains how to use those mechanisms (defined elsewhere) to accomplish the use cases covered in this guide.</p>
+
+<p>This IG utilizes this large body of prior work in order to accelerate alignment and interoperability throughout the healthcare IT ecosystem. It should however be noted that gaining a full appreciation for the material and technical mechanisms required to conform to this implementation guide requires significant investment of time and resources.</p>
+
+<p>The following FHIR IGs are utilized in this IG to support the three use cases:</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>FHIR IG</th>
+      <th>Summary of Transactions Utilized</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/sdc/index.html">Structured Data Capture (SDC)</a></td>
+      <td>This IG describes the data sharing mechanisms used to share, prepopulate, and submit data using structured forms.</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/davinci-cdex/2019Jun">Clinical Data Exchange (CDex)</a></td>
+      <td>This IG describes the data sharing mechanisms to use RESTful API calls to query for and post FHIR resources, and to create and share tasks that request specific types of data or documents to be returned to the requesting system.</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/bser/index.html">Bidirectional Service Exchange  (BSeR)</a></td>
+      <td>This IG describes how to establish a task to execute a serviceRequest for a procedure to be performed within another organization and then a response to be returned to indicate the status of the requested intervention as well as the relevant request information.</td>
+    </tr>
+    <tr>
+      <td><a href="http://hl7.org/fhir/us/ccda/STU1">CCDA on FHIR</a></td>
+      <td>This IG describes how represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR profiles.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><a href="UseCase1.html">Next Page - Use Case 1</a></p>
+
+:ET

@@ -1,0 +1,44 @@
+I"
+<div class="markdown-toc">
+
+</div>
+<p><a href="GravityProjectBackground.html">Previous Page - Gravity Project Background</a></p>
+
+<p>Personas are commonly used in user-centered design to describe a fictional character who would represent a user type that might use a site, brand, or product in a similar way.  Personas describe the fictional person in terms of their behaviors, skills, preferences, and needs.  From a data interoperability perspective, personas are used to visualize the data needs of a user type.</p>
+
+<p>The Gravity Project personas include:</p>
+<ul>
+  <li>Rebecca Smith (Patient)</li>
+  <li>Carla Sanchez (Primary Care Physician)</li>
+  <li>Reeza Shah (Care Coordinator)</li>
+  <li>Samir Patel (Clinical Staff Member)</li>
+  <li>Sylvia Torres (Front Office Staff Member)</li>
+  <li>Michael Frank (Community-Based Provider)</li>
+  <li>Quality Specialist/ Health Plan Care Manager</li>
+</ul>
+
+<p>The <a href="PatientStory1Personas.html">Gravity Project personas</a> are presented using the following descriptors:</p>
+<ul>
+  <li>First and last name</li>
+  <li>Role (e.g., patient, practitioner, caregiver)</li>
+  <li>Age</li>
+  <li>Ethnicity</li>
+  <li>Primary language</li>
+  <li>Highest education level (for patient and caregiver)</li>
+  <li>Qualifications (for practitioner role)</li>
+  <li>Employment status</li>
+  <li>Clinical health concerns and social risks (for patient role)</li>
+  <li>Brief description of persona that addresses their history with health and social conditions identified, marital status and family situation, activities they are currently engaged in, what worries them about their existing conditions or situation, and their preferences and needs.</li>
+  <li>Challenges and goals that address the primary issues or barriers faced at the most recent point in time</li>
+  <li>Brief description on what the persona wants from the health care system</li>
+</ul>
+
+<p><a href="PatientStory1.html">Patient Story 1</a> describes personas engaging with a service, technology, or setting over a period of time to accomplish a specific goal.  It summarizes the interactions among personas and specifies what information is captured, shared, and exchanged from a contextual perspective.  Patient Stories serve to illustrate examples of real-world applications of technical solutions.  Although Patient Stories may not fully represent every real-world scenario in every instance, they are presented in a manner that will support and illustrate the Use Cases defined in this document.</p>
+
+<p>From a data interoperability perspective, a patient story is used to identify the transactions where health information is shared between technical systems used by the personas in the story.</p>
+
+<p><br /></p>
+
+<p><a href="PatientStory1Personas.html">Next Page - Patient Story 1 Personas</a></p>
+
+:ET

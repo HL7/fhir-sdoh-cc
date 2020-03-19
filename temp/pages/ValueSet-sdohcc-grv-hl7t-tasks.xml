@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sdohcc-grv-hl7t-tasks"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2020-03-19T14:53:00.567+00:00"/>
+    <source value="#lDBfuFKDUgwuu3jm"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SDOHCC-GRV-HL7t-Tasks</h2><ul><li>Include these codes as defined in <code>http://grv.hl7t-tasks.tmp/grv-hl7t-tasks</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>grv-hl7-tasks-20191209143500ET</td><td>screen-pts</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-grv-hl7t-tasks"/>
+  <version value="0.0.3"/>
+  <name value="SDOHCC-GRV-HL7t-Tasks"/>
+  <title value="SDOHCC-GRV-HL7t-Tasks"/>
+  <status value="draft"/>
+  <date value="2020-03-19T15:18:18+00:00"/>
+  <compose>
+    <include>
+      <system value="http://grv.hl7t-tasks.tmp/grv-hl7t-tasks"/>
+      <concept>
+        <code value="grv-hl7-tasks-20191209143500ET"/>
+        <display value="screen-pts"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

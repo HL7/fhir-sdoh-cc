@@ -1,0 +1,58 @@
+{
+  "SDOHCC-Observation-FoodInsecurity-1": {
+    "index": 0,
+    "url": "http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1",
+    "name": "SDOHCC_Observation_FoodInsecurity_1",
+    "path": "StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html",
+    "kind": "resource",
+    "type": "Observation",
+    "base": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "basename": "Observation",
+    "basepath": "http://hl7.org/fhir/R4/observation.html",
+    "status": "draft",
+    "date": "Thu Mar 19 15:18:18 GMT 2020",
+    "description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Observations related to: Food Insecurity. It allows the creation of Observations of: Food insecurity unknown, Food insecurity absent (aka Food security present), Food insecurity present, Mild food insecurity present, Moderate food insecurity present, and Severe food insecurity present."
+  },
+  "SDOHCC-Goal-FoodInsecurity-1": {
+    "index": 1,
+    "url": "http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1",
+    "name": "SDOHCC_Goal_FoodInsecurity_1",
+    "path": "StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html",
+    "kind": "resource",
+    "type": "Goal",
+    "base": "http://hl7.org/fhir/StructureDefinition/Goal",
+    "basename": "Goal",
+    "basepath": "http://hl7.org/fhir/R4/goal.html",
+    "status": "draft",
+    "date": "Thu Mar 19 15:18:18 GMT 2020",
+    "description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Goals related to: Food Security.\n"
+  },
+  "SDOHCC-Condition-FoodInsecurity-1": {
+    "index": 2,
+    "url": "http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+    "name": "SDOHCC_Condition_FoodInsecurity_1",
+    "path": "StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html",
+    "kind": "resource",
+    "type": "Condition",
+    "base": "http://hl7.org/fhir/StructureDefinition/Condition",
+    "basename": "Condition",
+    "basepath": "http://hl7.org/fhir/R4/condition.html",
+    "status": "draft",
+    "date": "Thu Mar 19 15:18:18 GMT 2020",
+    "description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Conditions related to: Food insecurity, Mild food insecurity, Moderate food insecurity, or Severe food insecurity."
+  },
+  "SDOHCC-Procedure-FoodInsecurity-1": {
+    "index": 3,
+    "url": "http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1",
+    "name": "SDOHCC_Procedure_FoodInsecurity_1",
+    "path": "StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html",
+    "kind": "resource",
+    "type": "Procedure",
+    "base": "http://hl7.org/fhir/StructureDefinition/Procedure",
+    "basename": "Procedure",
+    "basepath": "http://hl7.org/fhir/R4/procedure.html",
+    "status": "draft",
+    "date": "Thu Mar 19 15:18:18 GMT 2020",
+    "description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Procedures related to: Food Insecurity."
+  }
+}

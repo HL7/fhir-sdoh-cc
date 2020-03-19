@@ -1,0 +1,80 @@
+{% raw %}<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Condition;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SDOHCC-Condition-FoodInsecurity-1-Example-1&quot;];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">fhir:Meta.versionId</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;2&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2020-03-12T21:24:40.760+00:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">fhir:Meta.source</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;#Ja3y4HfPNyswjIKA&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: SDOHCC-Condition-FoodInsecurity-1-Example-1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: Inactive &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-clinical code 'inactive' = 'Inactive', given as 'Inactive'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;verificationStatus&lt;/b&gt;: Confirmed &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-ver-status code 'confirmed' = 'Confirmed', given as 'Confirmed'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Health Concern &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/condition-category code 'health-concern' = 'health-concern', given as 'Health Concern'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Food insecurity &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '733423003' = 'Food insecurity', given as 'Food insecurity (finding)'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient/patientExample1\&quot;&gt;Patient/patientExample1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Encounter/encounterExample2\&quot;&gt;Encounter/encounterExample2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: May 1, 2012 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;abatement&lt;/b&gt;: Oct 27, 2012 12:00:00 AM&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;evidence&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;detail&lt;/b&gt;: &lt;a href=\&quot;Condition-SDOHCC-Condition-FoodInsecurity-1-Example-1.html\&quot;&gt;Generated Summary: id: SDOHCC-Observation-FoodInsecurity-1-Example-1; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category social-history}\&quot;&gt;Social History&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://snomed.info/sct 733423003}\&quot;&gt;Food insecurity&lt;/span&gt;; effective: May 1, 2012 12:00:00 AM --&amp;gt; Jul 18, 2012 12:00:00 AM; &lt;span title=\&quot;Codes: {http://snomed.info/sct 410515003}\&quot;&gt;Known present&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;evidence&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;detail&lt;/b&gt;: &lt;a href=\&quot;Condition-SDOHCC-Condition-FoodInsecurity-1-Example-1.html\&quot;&gt;Generated Summary: id: SDOHCC-Observation-FoodInsecurity-1-Example-2; &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category social-history}\&quot;&gt;Social History&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://snomed.info/sct 733423003}\&quot;&gt;Food insecurity&lt;/span&gt;; effective: Oct 27, 2012 12:00:00 AM; &lt;span title=\&quot;Codes: {http://snomed.info/sct 410516002}\&quot;&gt;Known absent&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.clinicalStatus">fhir:Condition.clinicalStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/condition-clinical&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;inactive&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Inactive&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.verificationStatus">fhir:Condition.verificationStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/condition-ver-status&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;confirmed&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Confirmed&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.category">fhir:Condition.category</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/condition-category&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;health-concern&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Health Concern&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.code">fhir:Condition.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       a sct:733423003;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;733423003&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Food insecurity (finding)&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Food insecurity&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">fhir:Condition.subject</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/patientExample1&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.encounter">fhir:Condition.encounter</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Encounter/encounterExample2&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.onset[x]">fhir:Condition.onsetDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2012-05&quot;^^xsd:gYearMonth];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.abatement[x]">fhir:Condition.abatementDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2012-10-27&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/condition.html#Condition.evidence">fhir:Condition.evidence</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/condition.html#Condition.evidence.detail">fhir:Condition.evidence.detail</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/SDOHCC-Observation-FoodInsecurity-1-Example-1&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/condition.html#Condition.evidence.detail">fhir:Condition.evidence.detail</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/SDOHCC-Observation-FoodInsecurity-1-Example-2&quot; ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+{% endraw %}

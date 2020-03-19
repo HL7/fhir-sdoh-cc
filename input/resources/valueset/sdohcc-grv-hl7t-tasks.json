@@ -1,0 +1,26 @@
+{
+	"resourceType": "ValueSet",
+	"id": "sdohcc-grv-hl7t-tasks",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-03-19T14:53:00.567+00:00",
+		"source": "#lDBfuFKDUgwuu3jm"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-grv-hl7t-tasks",
+	"name": "SDOHCC-GRV-HL7t-Tasks",
+	"title": "SDOHCC-GRV-HL7t-Tasks",
+	"status": "draft",
+	"compose": {
+		"include": [
+			{
+				"system": "http://grv.hl7t-tasks.tmp/grv-hl7t-tasks",
+				"concept": [
+					{
+						"code": "grv-hl7-tasks-20191209143500ET",
+						"display": "screen-pts"
+					}
+				]
+			}
+		]
+	}
+}

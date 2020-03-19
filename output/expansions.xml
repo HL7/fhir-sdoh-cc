@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ac87a4c3-6c67-40f1-b48a-3c4716a6696f"/>
+  <meta>
+    <lastUpdated value="2020-03-19T15:18:18.329+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"/>
+    <resource>
+      <ValueSet>
+        <id value="sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"/>
+        <meta>
+          <versionId value="6"/>
+          <lastUpdated value="2020-03-19T14:38:32.072+00:00"/>
+          <source value="#ajG4942fNk5Oznbt"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes version 0.0.3</p>
+            <p>All codes from system 
+              <a href="CodeSystem-sdohcc-temporary-codes.html">
+                <code>http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-733423003"> </a>
+                  <a href="CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-733423003">733423003</a>
+                </td>
+                <td>Food insecurity (finding)</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-sdohcc-sctt-21000243108"> </a>
+                  <a href="CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-sdohcc-sctt-21000243108">sdohcc-sctt-21000243108</a>
+                </td>
+                <td>Mild food insecurity (finding)</td>
+                <td>TBD:  Gravity Content Team</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-sdohcc-sctt-31000243105"> </a>
+                  <a href="CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-sdohcc-sctt-31000243105">sdohcc-sctt-31000243105</a>
+                </td>
+                <td>Moderate food insecurity (finding)</td>
+                <td>TBD: Gravity Content Team</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-sdoh-cc-CodeSystem-sdohcc-temporary-codes-sdohcc-sctt-41000243104"> </a>
+                  <a href="CodeSystem-sdohcc-temporary-codes.html#sdohcc-temporary-codes-sdohcc-sctt-41000243104">sdohcc-sctt-41000243104</a>
+                </td>
+                <td>Severe food insecurity (finding)</td>
+                <td>TBD: Gravity Content Team</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"/>
+        <version value="0.0.3"/>
+        <name value="Sdohcc_ValueSet_FoodInsecurity_1"/>
+        <title value="Sdohcc_ValueSet_FoodInsecurity_1"/>
+        <status value="draft"/>
+        <date value="2020-03-19T15:18:18+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:b47b220c-d99e-4c1e-b759-8614a084db9e"/>
+          <timestamp value="2020-03-19T15:18:32+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes|0.0.3"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <inactive value="true"/>
+            <code value="733423003"/>
+            <display value="Food insecurity (finding)"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <code value="sdohcc-sctt-21000243108"/>
+            <display value="Mild food insecurity (finding)"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <code value="sdohcc-sctt-31000243105"/>
+            <display value="Moderate food insecurity (finding)"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes"/>
+            <code value="sdohcc-sctt-41000243104"/>
+            <display value="Severe food insecurity (finding)"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

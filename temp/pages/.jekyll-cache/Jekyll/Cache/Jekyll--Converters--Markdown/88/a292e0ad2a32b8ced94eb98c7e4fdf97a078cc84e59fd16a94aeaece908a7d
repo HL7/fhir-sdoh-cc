@@ -1,0 +1,217 @@
+I"ä)
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#implementers-with-existing-systems-using-proprietary-data-exchange" id="markdown-toc-implementers-with-existing-systems-using-proprietary-data-exchange">Implementers with existing systems using proprietary data exchange</a></li>
+  <li><a href="#implementers-currently-developing-new-systems" id="markdown-toc-implementers-currently-developing-new-systems">Implementers currently developing new systems</a></li>
+  <li><a href="#implementers-considering-future-system-development" id="markdown-toc-implementers-considering-future-system-development">Implementers considering future system development</a></li>
+  <li><a href="#clinical-care-providers" id="markdown-toc-clinical-care-providers">Clinical Care Providers</a></li>
+  <li><a href="#community-based-organizations" id="markdown-toc-community-based-organizations">Community Based Organizations</a></li>
+  <li><a href="#payers-and-public-health-organizations" id="markdown-toc-payers-and-public-health-organizations">Payers and Public Health Organizations</a></li>
+  <li><a href="#researchers" id="markdown-toc-researchers">Researchers</a></li>
+  <li><a href="#technology-buyers" id="markdown-toc-technology-buyers">Technology Buyers</a></li>
+  <li><a href="#patients-care-givers-and-patient-advocates" id="markdown-toc-patients-care-givers-and-patient-advocates">Patients, Care Givers, and Patient Advocates</a></li>
+</ul>
+
+</div>
+<h3 id="implementers-with-existing-systems-using-proprietary-data-exchange">Implementers with existing systems using proprietary data exchange</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Understand the design of FHIR APIs to inform your product management</li>
+  <li>Discover an additional/alternate API you could begin offering to give your customer a path toward utilizing standards</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Engage your R&amp;D team to develop new capabilities with FHIR</li>
+  <li>Inform management about product development activities to prepare for FHIR APIs</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Find customers interested in moving toward standards-based data exchange</li>
+  <li>Determine when to start offering a FHIR API to your customers</li>
+</ul>
+
+<h3 id="implementers-currently-developing-new-systems">Implementers currently developing new systems</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your product management</li>
+  <li>Consider opportunities to utilize standards-based data exchange sooner rather than later</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Accelerate product development efforts</li>
+  <li>Adjust your product roadmap to adjust for more rapid support of FHIR APIs</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Bring standardized data solutions to market faster and avoid future product rework costs</li>
+</ul>
+
+<h3 id="implementers-considering-future-system-development">Implementers considering future system development</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your product management</li>
+  <li>Plan to utilize standards-based data exchange as you look at making future investments</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Introduce product management and technical resources to the HL7 FHIR standard</li>
+  <li>Learn how FHIR is being used to rapidly enable needed data exchange</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution development or purchase decisions</li>
+  <li>Avoid investment in products that are not aligned with where the industry and the nation are headed</li>
+</ul>
+
+<h3 id="clinical-care-providers">Clinical Care Providers</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your clinical workflow planning</li>
+  <li>Plan to utilize standards-based data exchange to understand how it can improve patient care</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Introduce clinical and technical resources in your practice about the HL7 FHIR standard</li>
+  <li>Learn how FHIR is being used to rapidly enable needed data exchange</li>
+  <li>Gain awareness of available and emerging technology solutions that offer services which would reduce administrative burden for your organization</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution purchasing decisions and clarify/simplify your interoperability requirements</li>
+  <li>Inform workflow design and information sharing possibilities</li>
+  <li>Avoid investment in products that are not aligned with where the industry and the nation are headed</li>
+</ul>
+
+<h3 id="community-based-organizations">Community Based Organizations</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your business planning</li>
+  <li>Plan to utilize standards-based data exchange as you look at making future investments</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Introduce management and technical resources to the HL7 FHIR standard</li>
+  <li>Learn how FHIR is being used to rapidly enable needed data exchange</li>
+  <li>Gain awareness of available and emerging technology solutions that offer services which would benefit your organization</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution development or purchase decisions</li>
+  <li>Inform workflow design and information sharing possibilities</li>
+  <li>Avoid investment in products that are not aligned with where the industry and the nation are headed</li>
+</ul>
+
+<h3 id="payers-and-public-health-organizations">Payers and Public Health Organizations</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your business planning</li>
+  <li>Plan to utilize standards-based data exchange as you look at making future investments</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Introduce management and technical resources to the HL7 FHIR standard</li>
+  <li>Learn how FHIR is being used to rapidly enable needed data exchange</li>
+  <li>Gain awareness of available and emerging technology solutions that offer services which would benefit your organization</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution development or purchase decisions</li>
+  <li>Inform workflow design and information sharing possibilities</li>
+  <li>Avoid investment in products that are not aligned with where the industry and the nation are headed</li>
+</ul>
+
+<h3 id="researchers">Researchers</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your business planning</li>
+  <li>Plan to utilize standards-based data exchange as you look at making future investments</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Introduce management and technical resources to the HL7 FHIR standard</li>
+  <li>Learn how FHIR is being used to rapidly enable needed data exchange</li>
+  <li>Gain awareness of available and emerging technology solutions that offer services which would benefit your organization</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution development or purchase decisions</li>
+  <li>Inform workflow design and information sharing possibilities</li>
+  <li>Avoid investment in products that are not aligned with where the industry and the nation are headed</li>
+</ul>
+
+<h3 id="technology-buyers">Technology Buyers</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your business planning</li>
+  <li>Plan to require support for standards-based data exchange as you consider technology solutions</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Introduce management and technical resources to the HL7 FHIR standard</li>
+  <li>Learn how FHIR is being used to rapidly enable needed data exchange and speed adoption of new capabilities</li>
+  <li>Gain awareness of available and emerging technology solutions that offer services which would benefit your organization</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution purchase decisions</li>
+  <li>Inform workflow design and information sharing possibilities</li>
+  <li>Avoid investment in products that are not aligned with where the industry and the nation are headed</li>
+</ul>
+
+<h3 id="patients-care-givers-and-patient-advocates">Patients, Care Givers, and Patient Advocates</h3>
+
+<p><em>Read the IG to:</em></p>
+<ul>
+  <li>Become more informed about the national direction for inclusion of SDOH information in clinical care</li>
+  <li>Understand the design of FHIR APIs to inform your expectations about what is possible</li>
+  <li>Plan to require support for standards-based data exchange as you advocate for yourself and others</li>
+</ul>
+
+<p><em>Participate in Connectathon testing to:</em></p>
+<ul>
+  <li>Gain experience with data exchange made possible by the HL7 FHIR standard</li>
+  <li>Help shape how FHIR is being used to rapidly enable needed data exchange and speed adoption of new capabilities</li>
+  <li>Contribute perspectives and requirements for the kinds of services and capabilities that would benefit patients and caregivers</li>
+</ul>
+
+<p><em>Use the IG to:</em></p>
+<ul>
+  <li>Inform solution purchasing decisions</li>
+  <li>Advocate for information sharing that integrates into everyday life and improves the experience of care for individuals and families</li>
+  <li>Influence the development of products that are not aligned with where the industry and the nation are headed, <strong>and</strong> where individuals want health data exchange to go</li>
+</ul>
+
+<p><a href="GravityProjectBackground.html">Next Page - Gravity Project Background</a></p>
+
+:ET
