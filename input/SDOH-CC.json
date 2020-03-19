@@ -2,9 +2,9 @@
 	"resourceType": "ImplementationGuide",
 	"id": "SDOH-CC",
 	"meta": {
-		"versionId": "393",
-		"lastUpdated": "2020-03-19T14:38:22.706+00:00",
-		"source": "#HZe4OOHgInbR69nT"
+		"versionId": "394",
+		"lastUpdated": "2020-03-19T19:02:31.345+00:00",
+		"source": "#ztNMlZVMguOgWUDD"
 	},
 	"contained": [],
 	"url": "http://hl7.maxmd.org/fhir/us/maxmd/ImplementationGuide/SDOH-CC",
@@ -69,16 +69,6 @@
 				},
 				"name": "sdohcc_ValueSet_FoodInsecurity_1",
 				"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extentionally to include the concepts of food insecurity and the more specific concepts of mild food insecurity, moderate food insecurity, and severe food insecurity.",
-				"exampleBoolean": false
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
-					"display": "sdohcc_ValueSet_FoodInsecurityIntervention_1"
-				},
-				"name": "sdohcc_ValueSet_FoodInsecurityIntervention_1",
-				"description": "Clinical Focus: Concepts in this Value Set are used to document activities performed to address identified social risks. Data Element Scope is Procedure.code. It is defined extensionally to include procedures identified as relevant interventions for addressing identified social risks.",
 				"exampleBoolean": false
 			},
 			{
