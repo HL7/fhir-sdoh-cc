@@ -2,9 +2,9 @@
 	"resourceType": "Condition",
 	"id": "SDOHCC-Condition-FoodInsecurity-1-Example-1",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-03-12T21:24:40.760+00:00",
-		"source": "#Ja3y4HfPNyswjIKA"
+		"versionId": "6",
+		"lastUpdated": "2020-04-24T20:16:25.476+00:00",
+		"source": "#IrcXOaeUkGRvDxck"
 	},
 	"text": {
 		"status": "generated"
@@ -49,13 +49,13 @@
 		"text": "Food insecurity"
 	},
 	"subject": {
-		"reference": "Patient/patientExample1"
+		"reference": "Patient/pat1"
 	},
 	"encounter": {
-		"reference": "Encounter/encounterExample2"
+		"reference": "Encounter/example"
 	},
-	"onsetDateTime": "2012-05",
-	"abatementDateTime": "2012-10-27",
+	"onsetDateTime": "2019-05",
+	"abatementDateTime": "2019-10-27",
 	"evidence": [
 		{
 			"detail": [

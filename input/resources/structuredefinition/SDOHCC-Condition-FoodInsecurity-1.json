@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Condition-FoodInsecurity-1",
 	"meta": {
-		"versionId": "23",
-		"lastUpdated": "2020-03-16T20:42:34.063+00:00",
-		"source": "#YGsIbyp58SdNEWYr"
+		"versionId": "31",
+		"lastUpdated": "2020-04-27T19:35:55.598+00:00",
+		"source": "#fojxUsYKbjOX5Pe3"
 	},
 	"extension": [],
-	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
 	"name": "SDOHCC_Condition_FoodInsecurity_1",
 	"status": "draft",
 	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Conditions related to: Food insecurity, Mild food insecurity, Moderate food insecurity, or Severe food insecurity.",
@@ -58,100 +58,50 @@
 				"mustSupport": true
 			},
 			{
-				"id": "Condition.clinicalStatus.coding",
-				"path": "Condition.clinicalStatus.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Condition.clinicalStatus.coding.system",
-				"path": "Condition.clinicalStatus.coding.system",
-				"min": 1,
-				"fixedUri": "http://hl7.org/fhir/ValueSet/condition-clinical|4.0.0"
-			},
-			{
-				"id": "Condition.clinicalStatus.coding.code",
-				"path": "Condition.clinicalStatus.coding.code",
-				"min": 1,
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical|4.0.0"
-				}
-			},
-			{
-				"id": "Condition.clinicalStatus.coding.display",
-				"path": "Condition.clinicalStatus.coding.display",
-				"min": 1
-			},
-			{
 				"id": "Condition.verificationStatus",
 				"path": "Condition.verificationStatus",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					]
+				},
 				"mustSupport": true
-			},
-			{
-				"id": "Condition.verificationStatus.coding",
-				"path": "Condition.verificationStatus.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Condition.verificationStatus.coding.system",
-				"path": "Condition.verificationStatus.coding.system",
-				"min": 1,
-				"fixedUri": "http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.0"
-			},
-			{
-				"id": "Condition.verificationStatus.coding.code",
-				"path": "Condition.verificationStatus.coding.code",
-				"min": 1,
-				"fixedCode": "confirmed",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.0"
-				}
-			},
-			{
-				"id": "Condition.verificationStatus.coding.display",
-				"path": "Condition.verificationStatus.coding.display",
-				"min": 1,
-				"fixedString": "Confirmed"
-			},
-			{
-				"id": "Condition.verificationStatus.coding.userSelected",
-				"path": "Condition.verificationStatus.coding.userSelected",
-				"max": "0"
 			},
 			{
 				"id": "Condition.category",
 				"path": "Condition.category",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "type",
+							"path": "coding"
+						}
+					],
+					"rules": "open"
+				},
 				"min": 1,
-				"mustSupport": true
-			},
-			{
-				"id": "Condition.category.coding",
-				"path": "Condition.category.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Condition.category.coding.system",
-				"path": "Condition.category.coding.system",
-				"min": 1,
-				"fixedUri": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
-			},
-			{
-				"id": "Condition.category.coding.code",
-				"path": "Condition.category.coding.code",
-				"min": 1,
+				"mustSupport": true,
 				"binding": {
 					"strength": "extensible",
+					"description": "Used to specify why the normally expected content of the data element is missing.",
 					"valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
 				}
 			},
 			{
-				"id": "Condition.category.coding.display",
-				"path": "Condition.category.coding.display",
-				"min": 1
+				"id": "Condition.category:foodInsecurityCategory",
+				"path": "Condition.category",
+				"sliceName": "foodInsecurityCategory",
+				"min": 1,
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "Used to specify why the normally expected content of the data element is missing.",
+					"valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
+				}
 			},
 			{
 				"id": "Condition.severity",
@@ -162,33 +112,41 @@
 				"id": "Condition.code",
 				"path": "Condition.code",
 				"min": 1,
-				"mustSupport": true
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extensionally to include the concepts of \"Food insecurity\" and the more specific concepts of \"Mild food insecurity\", \"Moderate food insecurity\", and \"Severe food insecurity\".",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurity-1"
+				}
 			},
 			{
 				"id": "Condition.code.coding",
 				"path": "Condition.code.coding",
-				"min": 1,
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "system"
+						},
+						{
+							"type": "value",
+							"path": "code"
+						}
+					],
+					"rules": "open"
+				},
 				"max": "1"
 			},
 			{
-				"id": "Condition.code.coding.system",
-				"path": "Condition.code.coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Condition.code.coding.code",
-				"path": "Condition.code.coding.code",
-				"min": 1,
+				"id": "Condition.code.coding:ICD-10Coding",
+				"path": "Condition.code.coding",
+				"sliceName": "ICD-10Coding",
+				"max": "1",
 				"binding": {
 					"strength": "required",
-					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"
+					"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity conditions for the purpose of billing using ICD-10. Data Element Scope is Condition.code. It is defined extensionally to include the concepts of “Lack of adequate food and safe drinking water”, “Food insecurity” and “Lack of adequate food”.",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurity-2"
 				}
-			},
-			{
-				"id": "Condition.code.coding.display",
-				"path": "Condition.code.coding.display",
-				"min": 1
 			},
 			{
 				"id": "Condition.bodySite",
@@ -281,7 +239,7 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
 						]
 					}
 				]

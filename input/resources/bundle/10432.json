@@ -1,25 +1,25 @@
 {
 	"resourceType": "Bundle",
-	"id": "2358",
+	"id": "10432",
 	"meta": {
 		"versionId": "1",
-		"lastUpdated": "2020-03-11T20:09:49.886+00:00",
-		"source": "#SXkxjWU1t13IcfVq"
+		"lastUpdated": "2020-04-28T20:02:23.331+00:00",
+		"source": "#xl7u7H1O8OYNcEZJ"
 	},
 	"type": "message",
 	"entry": [
 		{
-			"fullUrl": "urn:uuid:id-mh-20200306144007-5e62b52706882",
+			"fullUrl": "urn:uuid:id-mh-20200417145559-5e9a09cfd46b7",
 			"resource": {
 				"resourceType": "MessageHeader",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Screen Request Messaging including Questionnaire to be completed.</p> </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Screen Request Messaging including Questionnaire to be completed.</div>"
 				},
 				"eventCoding": {
-					"system": "http://sdohcc-hl7t-messageHeader.tmp/sdohcc-screening_task",
-					"code": "sdohcc-hl7t-screening_task-request",
-					"display": "screening task request"
+					"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+					"code": "sdohcc-hl7t-initiate-task",
+					"display": "Initiate Task Message"
 				},
 				"source": {
 					"name": "MaxMD Demo EHR",
@@ -29,27 +29,35 @@
 				},
 				"focus": [
 					{
-						"reference": "urn:uuid:id-task-20200306144006-5e62b5263239d",
-						"display": "Questionnaire sent out to be completed - 3/6"
+						"reference": "urn:uuid:id-task-20200417145559-5e9a09cf3b43c",
+						"display": "Questionnaire sent out to be completed"
 					},
 					{
-						"reference": "urn:uuid:id-communicationRequest-20200306144006-5e62b526323e6"
+						"reference": "urn:uuid:id-communicationRequest-20200417145559-5e9a09cf3b446"
 					}
 				]
 			}
 		},
 		{
-			"fullUrl": "urn:uuid:id-list-20200306144007-5e62b527068d8",
+			"fullUrl": "urn:uuid:id-list-20200417145559-5e9a09cfd46c9",
 			"resource": {
 				"resourceType": "List",
 				"status": "current",
-				"title": "Food Insecurity (Hunger Vital Sign) Questionnaire Patient List",
+				"mode": "snapshot",
+				"title": "Food Insecurity Questionnaire Patient List",
 				"entry": [
 					{
 						"item": {
 							"reference": "Patient?given=Alice&family=Newman&birthdate=1970-05-01&address-postalcode=97006",
 							"type": "Patient",
 							"display": "Newman, Alice"
+						}
+					},
+					{
+						"item": {
+							"reference": "Patient?given=Jeremy&family=Bates&birthdate=1980-08-01&address-postalcode=97006",
+							"type": "Patient",
+							"display": "Bates, Jeremy"
 						}
 					}
 				]
@@ -111,8 +119,8 @@
 						"value": "local-ehr-65d310b8-6235-4f47-8d45"
 					}
 				],
-				"name": "Food Insecurity (Hunger Vital Sign)",
-				"title": "Food Insecurity",
+				"name": "Food Insecurity",
+				"title": "Food Insecurity (Hunger Vital Sign)",
 				"status": "active",
 				"subjectType": [
 					"Patient"
@@ -330,11 +338,6 @@
 						]
 					}
 				]
-			},
-			"request": {
-				"method": "POST",
-				"url": "Questionnaire",
-				"ifNoneExist": "_count=1&identifier=http%3A%2F%2Fwww.maxmddirect.com%2Fhl7%2Ffhir%2Fgrv-locali-screenings%7Clocal-ehr-65d310b8-6235-4f47-8d45"
 			}
 		},
 		{
@@ -371,11 +374,6 @@
 					}
 				],
 				"address": "https://ehr-sandbox.directmdemail.com:8443/fhir/baseR4"
-			},
-			"request": {
-				"method": "POST",
-				"url": "Endpoint",
-				"ifNoneExist": "identifier=https%3A%2F%2Fwww.maxmddirect.com%2Ffhir%2Fidentifier%7CMaxMDDemoEhrEndpoint-local"
 			}
 		},
 		{
@@ -414,28 +412,28 @@
 				],
 				"endpoint": [
 					{
-						"reference": "Endpoint/Ehr.Endpoint.Id"
+						"reference": "urn:uuid:Ehr.Endpoint.Id"
 					}
 				]
-			},
-			"request": {
-				"method": "POST",
-				"url": "Organization",
-				"ifNoneExist": "identifier=https%3A%2F%2Fwww.maxmddirect.com%2Ffhir%2Fidentifier%7CMaxMDDemoEhrOrganization-local"
 			}
 		},
 		{
-			"fullUrl": "urn:uuid:id-task-20200306144006-5e62b5263239d",
+			"fullUrl": "urn:uuid:id-task-20200417145559-5e9a09cf3b43c",
 			"resource": {
 				"resourceType": "Task",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Screen Request Task including Questionnaire to be completed.</p> </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Screen Request Task including Questionnaire to be completed.</div>"
 				},
 				"identifier": [
 					{
 						"system": "https://www.maxmddirect.com/fhir/identifier/sdc/task",
-						"value": "task-1583527207"
+						"value": "task-1587153359"
+					}
+				],
+				"basedOn": [
+					{
+						"reference": "urn:uuid:id-communicationRequest-20200417145559-5e9a09cf3b446"
 					}
 				],
 				"status": "requested",
@@ -450,20 +448,20 @@
 					],
 					"text": "Screen Patients"
 				},
-				"description": "Questionnaire sent out to be completed - 3/6",
+				"description": "Questionnaire sent out to be completed",
 				"focus": {
 					"reference": "urn:uuid:17d3c570-28de-4aa3-a135-e35d0932a4ec",
-					"display": "Food Insecurity (Hunger Vital Sign)"
+					"display": "Food Insecurity"
 				},
 				"for": {
-					"reference": "urn:uuid:id-list-20200306144007-5e62b527068d8",
-					"display": "Food Insecurity (Hunger Vital Sign) Questionnaire Patient List"
+					"reference": "urn:uuid:id-list-20200417145559-5e9a09cfd46c9",
+					"display": "Food Insecurity Questionnaire Patient List"
 				},
 				"executionPeriod": {
-					"start": "2020-03-06",
-					"end": "2020-03-26"
+					"start": "2020-04-17",
+					"end": "2020-05-07"
 				},
-				"authoredOn": "2020-03-06T14:40:07-06:00",
+				"authoredOn": "2020-04-17T14:55:59-05:00",
 				"requester": {
 					"reference": "urn:uuid:Ehr.Organization.Id",
 					"display": "PMEHR Demo"
@@ -471,17 +469,17 @@
 			}
 		},
 		{
-			"fullUrl": "urn:uuid:id-communicationRequest-20200306144006-5e62b526323e6",
+			"fullUrl": "urn:uuid:id-communicationRequest-20200417145559-5e9a09cf3b446",
 			"resource": {
 				"resourceType": "CommunicationRequest",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Screen Request Task including Questionnaire to be completed.</p> </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Screen Request Task including Questionnaire to be completed.</div>"
 				},
 				"identifier": [
 					{
 						"system": "https://www.maxmddirect.com/fhir/identifier/sdc/communicationRequest",
-						"value": "task-1583527207"
+						"value": "task-1587153359"
 					}
 				],
 				"status": "active",
@@ -489,14 +487,14 @@
 					{
 						"coding": [
 							{
-								"system": "https://www.maxmddirect.com/fhir/CodeSystem/communication-category",
+								"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
 								"code": "ScreenRequest"
 							}
 						],
 						"text": "ScreenRequest"
 					}
 				],
-				"authoredOn": "2020-03-06T14:40:07-06:00",
+				"authoredOn": "2020-04-17T14:55:59-05:00",
 				"requester": {
 					"reference": "urn:uuid:Ehr.Organization.Id",
 					"display": "PMEHR Demo"

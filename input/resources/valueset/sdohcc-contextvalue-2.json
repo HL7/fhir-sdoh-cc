@@ -1,0 +1,35 @@
+{
+	"resourceType": "ValueSet",
+	"id": "sdohcc-contextvalue-2",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-04-27T14:51:27.204+00:00",
+		"source": "#V5TFN8YvqozKoB62"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-contextvalue-2",
+	"name": "SDOHCC_ValueSet_ContextValue_2",
+	"title": "SDOHCC ValueSet ContextValue 2",
+	"status": "draft",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document the reason that Observation.value for food insecurity as a clinical finding (simple assertion) has not been populated. Data Element Scope is Observation.dataAbsentReason. It is defined extensionally to include the concepts of \"Unknown\", \"Asked But Unknown\", and \"Asked But Declined\".",
+	"compose": {
+		"include": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+				"concept": [
+					{
+						"code": "unknown",
+						"display": "Unknown"
+					},
+					{
+						"code": "asked-unknown",
+						"display": "Asked But Unknown"
+					},
+					{
+						"code": "asked-declined",
+						"display": "Asked But Declined"
+					}
+				]
+			}
+		]
+	}
+}

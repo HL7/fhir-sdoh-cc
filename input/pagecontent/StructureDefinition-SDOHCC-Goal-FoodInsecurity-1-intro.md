@@ -1,4 +1,3 @@
-
 ## Additional Guidance
 
 The FHIR Observation, Condition and Goal resources reference one another. Therefore, to support interoperability and analytics, similar approaches have been used in the structured representation of food insecurity observations, conditions and goals. 
@@ -18,7 +17,7 @@ The sections that follow provide additional guidance on 1) rules to improve the 
 
 ### Goal.description
 
-This element references the SNOMED CT code below.
+This element references the temporary SNOMED CT code below.
 
 
 | Code                    | Display                 |
@@ -40,7 +39,7 @@ This element references the SNOMED CT code below.
 {:.table-striped}
 
 
-Food insecurity (finding) is also a member of sdohcc_ValueSet_FoodInsecurity_1 which is used for:
+Food insecurity (finding) is also a member of SDOHCC_ValueSet_FoodInsecurity_1 which is used for:
 *	Observation.code in SDOHCC_Observation_FoodInsecurity_1 
 *	Condition.code in SDOHCC_Condition_FoodInsecurity_1.
 
@@ -68,7 +67,7 @@ This element references the SNOMED CT code below.
 {:class="table table-bordered"}
 {:.table-striped}
 
-Known absent (qualifier value) is also a member of sdohcc_ValueSet_ContextValue_1 which is used for:
+Known absent (qualifier value) is also a member of SDOHCC_ValueSet_ContextValue_1 which is used for:
 
 * Observation.value in SDOHCC_Observation_FoodInsecurity_1 
 

@@ -1,48 +1,21 @@
-[Previous Page - Gravity Project Use Cases](GravityProjectUseCases.html)
+[Previous Page - Use Cases, System and Technical Actors](UseCasesSystemandTechnicalActors.html)
 
 
 This use case is relevant to how coded SDOH data are captured in a health care system and how data are shared with other systems.  SDOH data are documented either as part of screening or assessment/ diagnosis activities and may be the reason for ordering care activities. 
 
 <br><br>
 
-### Use Case 1 Messages and Transactions
-This Actor Transaction diagram shows the technical system roles and information exchange transaction for Use Case 1:
+<table><tr><td><img src="UC1 actors color.png" /></td></tr></table>
 
-| Transaction | Example |
+**Practice Management/EHR (PMEHR)** - gathers and shares SDOH information in a clinical care setting.
+
+Capability                   | FHIR API resources and operations | 
 |----------------------------------|----------------|
-|1.	Initiate Screening Task<br>|    BundleMessage-NewTask-Example-1   |
-| 2.	Return Screen<br> |      |
-|		2.1.	Consent provided by patient<br>|  BundleMessage_ReturnScreen_Example_1      |
-|	 	2.2.	Consent not provided by patient <br>| BundleMessage_ReturnScreen_Example_1      |
-| 3.	Update Screening Task<br>| BundleMessage_TaskUpdate_Example_1      |
-| 4.	Communication Request<br>|       |
-|			4.1.	CDA document request<br>|  BundleTransaction_CDEX_Request_Example_1     |
-|			4.2.	FHIR composition resource request<br>|   BundleTransaction_CDEX_Request_Example_2    |
-|			4.3.	FHIR Screening questionnaire request<br>|  BundleTransaction_CDEX_Request_Example_3     |
-|5.	Communication Response<br>|      |
-|			5.1.	CDA document response<br>|  BundleTransaction_CDEX_Response_Example_4      |
-|			5.2.	FHIR composition resource response<br>| BundleTransaction_CDEX_Response_Example_5      |
-|			5.3.	FHIR Screening questionnaire response<br>|  BundleTransaction_CDEX_Response_Example_6.xml     |
-| Questionnaire Resource Example | 	Questionnaire_Hunger_Vital_ Sign_Example_1 |
+| Initiate a screening task for a list of patients and a specific screening tool to be used [1]. Receive individual patient consent and screening information as it becomes available [2]. Associate received information from a patient's chart. Recieve a confirmation when a screening task has been completed [3].     | [base]/$process-message <br> [Bundle MessageHeader](https://www.hl7.org/fhir/messageheader.html)  <br> [Task](https://www.hl7.org/fhir/task.html) <br> [List](https://www.hl7.org/fhir/list.html) <br> [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)<br> [SDC Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) <br> [SDC Questionnaire Response](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html)  <br> [Observation](https://www.hl7.org/fhir/observation.html)        |
+| Enable review of received screening information associated with a patient's medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient's problem list. Include a structured SDOH goal in the patient's documentation to facilitate outcome tracking. Docment planned or completed activites to address SDOH needs using structured data. | [SDOHCC_Observation_FoodInsecurity_1](StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html) <br>[SDOHCC_Condition_FoodInsecurity_1](StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html   ) <br>[SDOHCC_Goal_FoodInsecurity_1](StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html) <br>[SDOHCC_Procedure_FoodInsecurity_1](StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html) <br>|
+|Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH informaiton as structured data or using a standard visit summary [5]. | [CDEX Communication Request](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html) <br> [CDEX Communication](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html) <br> [base]/Composition/[id]/$document <br> or [C-CDA document](http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html)|
 {:class="table table-bordered"}
 {:.table-striped}
-
-<table><tr><td><img src="Use Case 1 Gather and Share SDOH Data in a Clinical Care Setting.png" /></td></tr></table>
-
-<br><br>
-### Use Case 1 Actors
-**Practice Management/EHR (PMEHR)** - gathers and shares SDOH information in a clinical care setting.  
-
-| Capability                   | FHIR API resources and operations |
-|----------------------------------|----------------|
-| Initiate a screening task for a a list of patients and a specivic screening tool to be used [1].  Recieve individual patient consent and screening information as it becomes available [2]. Associate received information from a patient's chart. Recieve a confirmation when a screening task has been completed [3].        |  [base]/$process-message <br> [Bundle MessageHeader](https://www.hl7.org/fhir/messageheader.html), [Task](https://www.hl7.org/fhir/task.html) <br> [List](https://www.hl7.org/fhir/list.html), [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) <br>[SDC Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) <br>[SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html), [Observation](https://www.hl7.org/fhir/observation.html) |
-| Enable review of received screening information associated with a patient's medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient's problem list. Include a structured SDOH goal in the patient's documentation to facilitate outcome tracking. Document planned or completed activities to address SDOH needs using structured data     |    [SDOHCC_Observation_FoodInsecurity_1](StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html) <br> [SDOHCC_Condition_FoodInsecurity_1](StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html)<br> [SDOHCC_Goal_FoodInsecurity_1](StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html) <br> [SDOHCC_Procedure_FoodInsecurity_1](StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html)              |
- | Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH information as structured data or using a standard visit summary [5]. |  [CDEX Communication Request](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html)  <br> [CDEX Communication](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html)<br>[C-CDA on FHIR Composition](http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html) <br> [base]/Composition/[id]/$document <br> Or [C-CDA document](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) |
-{:class="table table-bordered"}
-{:.table-striped}
-
-<br><br>
-
 
 **Screening App Actor** - receives and executes the screening task by interacting with the patient and PMEHR.
 
@@ -80,6 +53,42 @@ This Actor Transaction diagram shows the technical system roles and information 
 {:.table-striped}
 <br>
 
+### Use Case 1 Messages and Transactions
+This Actor Transaction diagram shows the technical system roles and information exchange transaction for Use Case 1:
+
+| Transaction | Example |
+|----------------------------------|----------------|
+|1.	Initiate Screening Task<br>|    BundleMessage-NewTask-Example-1   |
+| 2.	Return Screen<br> |      |
+|		2.1.	Consent provided by patient<br>|  BundleMessage_ReturnScreen_Example_1      |
+|	 	2.2.	Consent not provided by patient <br>| BundleMessage_ReturnScreen_Example_1      |
+| 3.	Update Screening Task<br>| BundleMessage_TaskUpdate_Example_1      |
+| 4.	Communication Request<br>|       |
+|			4.1.	CDA document request<br>|  BundleTransaction_CDEX_Request_Example_1     |
+|			4.2.	FHIR composition resource request<br>|   BundleTransaction_CDEX_Request_Example_2    |
+|			4.3.	FHIR Screening questionnaire request<br>|  BundleTransaction_CDEX_Request_Example_3     |
+|5.	Communication Response<br>|      |
+|			5.1.	CDA document response<br>|  BundleTransaction_CDEX_Response_Example_4      |
+|			5.2.	FHIR composition resource response<br>| BundleTransaction_CDEX_Response_Example_5      |
+|			5.3.	FHIR Screening questionnaire response<br>|  BundleTransaction_CDEX_Response_Example_6.xml     |
+| Questionnaire Resource Example | 	Questionnaire_Hunger_Vital_ Sign_Example_1 |
+{:class="table table-bordered"}
+{:.table-striped}
+
+
+<br><br>
+### Use Case 1 Actors
+**Practice Management/EHR (PMEHR)** - gathers and shares SDOH information in a clinical care setting.  
+
+| Capability                   | FHIR API resources and operations |
+|----------------------------------|----------------|
+| Initiate a screening task for a a list of patients and a specivic screening tool to be used [1].  Recieve individual patient consent and screening information as it becomes available [2]. Associate received information from a patient's chart. Recieve a confirmation when a screening task has been completed [3].        |  [base]/$process-message <br> [Bundle MessageHeader](https://www.hl7.org/fhir/messageheader.html), [Task](https://www.hl7.org/fhir/task.html) <br> [List](https://www.hl7.org/fhir/list.html), [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) <br>[SDC Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) <br>[SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html), [Observation](https://www.hl7.org/fhir/observation.html) |
+| Enable review of received screening information associated with a patient's medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient's problem list. Include a structured SDOH goal in the patient's documentation to facilitate outcome tracking. Document planned or completed activities to address SDOH needs using structured data     |    [SDOHCC_Observation_FoodInsecurity_1](StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html) <br> [SDOHCC_Condition_FoodInsecurity_1](StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html)<br> [SDOHCC_Goal_FoodInsecurity_1](StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html) <br> [SDOHCC_Procedure_FoodInsecurity_1](StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html)              |
+ | Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH information as structured data or using a standard visit summary [5]. |  [CDEX Communication Request](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html)  <br> [CDEX Communication](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html)<br>[C-CDA on FHIR Composition](http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html) <br> [base]/Composition/[id]/$document <br> Or [C-CDA document](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) |
+{:class="table table-bordered"}
+{:.table-striped}
+
+<br><br>
 
 ### Use Case 1 Elements
 

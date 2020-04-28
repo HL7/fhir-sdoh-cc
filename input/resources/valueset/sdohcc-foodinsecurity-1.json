@@ -1,0 +1,45 @@
+{
+	"resourceType": "ValueSet",
+	"id": "sdohcc-foodinsecurity-1",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-04-27T17:47:56.194+00:00",
+		"source": "#RPy3VWygMbZqi14a"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurity-1",
+	"name": "SDOHCC_ValueSet_FoodInsecurity_1",
+	"status": "draft",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extensionally to include the concepts of \"Food insecurity\" and the more specific concepts of \"Mild food insecurity\", \"Moderate food insecurity\", and \"Severe food insecurity\".",
+	"compose": {
+		"include": [
+			{
+				"system": "http://snomed.info/sct",
+				"concept": [
+					{
+						"code": "733423003",
+						"display": "Food insecurity (finding)"
+					}
+				]
+			},
+			{
+				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+				"version": "0.0.3",
+				"concept": [
+					{
+						"code": "sdohcc-sctt-21000243108",
+						"display": "Mild food insecurity (finding)"
+					},
+					{
+						"code": "sdohcc-sctt-31000243105",
+						"display": "Moderate food insecurity (finding)"
+					},
+					{
+						"code": "sdohcc-sctt-41000243104",
+						"display": "Severe food insecurity (finding)"
+					}
+				]
+			}
+		]
+	},
+	"title": "SDOHCC_ValueSet_FoodInsecurity_1"
+}

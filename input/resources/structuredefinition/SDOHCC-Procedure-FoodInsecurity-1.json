@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Procedure-FoodInsecurity-1",
 	"meta": {
-		"versionId": "18",
-		"lastUpdated": "2020-03-17T19:46:38.813+00:00",
-		"source": "#WeHhdmRJFq8u4w0y"
+		"versionId": "28",
+		"lastUpdated": "2020-04-27T19:46:47.935+00:00",
+		"source": "#0iDrWNJnlWp9o8Dx"
 	},
 	"extension": [],
-	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1",
 	"name": "SDOHCC_Procedure_FoodInsecurity_1",
 	"status": "draft",
 	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Procedures related to: Food Insecurity.",
@@ -63,33 +63,12 @@
 				"id": "Procedure.code",
 				"path": "Procedure.code",
 				"min": 1,
-				"mustSupport": true
-			},
-			{
-				"id": "Procedure.code.coding",
-				"path": "Procedure.code.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Procedure.code.coding.system",
-				"path": "Procedure.code.coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Procedure.code.coding.code",
-				"path": "Procedure.code.coding.code",
-				"min": 1,
+				"mustSupport": true,
 				"binding": {
-					"strength": "preferred",
-					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964"
+					"strength": "required",
+					"description": "Clinical Focus: Concepts in this Value Set are used to document activities that might be performed to address food insecurity conditions/observations. Data Element Scope is Procedure.code. It is defined extensionally to include procedure concepts that address food insecurity conditions/observations.",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurityintervention-1"
 				}
-			},
-			{
-				"id": "Procedure.code.coding.display",
-				"path": "Procedure.code.coding.display",
-				"min": 1
 			},
 			{
 				"id": "Procedure.subject",
@@ -178,8 +157,8 @@
 						"code": "Reference",
 						"targetProfile": [
 							"http://hl7.org/fhir/StructureDefinition/Observation",
-							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1",
-							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
 							"http://hl7.org/fhir/StructureDefinition/Condition",
 							"http://hl7.org/fhir/StructureDefinition/Procedure",
 							"http://hl7.org/fhir/StructureDefinition/DocumentReference"
@@ -204,16 +183,6 @@
 						]
 					}
 				]
-			},
-			{
-				"id": "Procedure.complication",
-				"path": "Procedure.complication",
-				"max": "0"
-			},
-			{
-				"id": "Procedure.complicationDetail",
-				"path": "Procedure.complicationDetail",
-				"max": "0"
 			},
 			{
 				"id": "Procedure.note.author[x]",

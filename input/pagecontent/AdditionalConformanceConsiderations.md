@@ -1,4 +1,4 @@
-[Previous Page - Security and Consent Considerations](SecurityandConsentConsiderations.html)
+[Previous Page - Privacy, Security and Consent Considerations](PrivacySecurityandConsentConsiderations.html)
 
 This section includes important terms, definitions, interpretations, assumptions and conformance requirements relevant to this guide.
 
@@ -9,34 +9,8 @@ The conformance verbs - **SHALL, SHOULD, MAY** - used in this guide are defined 
 <br>
 ### Must Support
 For profiles defined in other IGs, the meaning of Must Support is established in the defining IG.
-For profiles defined in this IG, Must Support means the following:
-TBD
+For profiles defined in this IG, Must Support will conform with [US Core definition](https://build.fhir.org/ig/HL7/US-Core-R4/general-guidance.html#must-support).
 
-| Profile Name | Must Support Element |  Explanation |
-|--------------|----------------|-------------|
-|  SDOHCC_Procedure_FoodInsecurity_1            | status                |  preparation, in-progress, not-done, on-hold, stopped, completed, entered-in-error,  unknown<br>Binding: EventStatus (required)                            |
-|  SDOHCC_Procedure_FoodInsecurity_1            | code              | 	Identification of the procedure<br>Binding: ProcedureCodes(SNOMEDCT) (example) Binding: sdohcc_ValueSet_FoodInsecurityIntervention_1 (preferred)                             |
-|  SDOHCC_Procedure_FoodInsecurity_1            | subject               | Reference(US Core Patient Profile or Group)<br> Who the procedure was performed on                             |
-|  SDOHCC_Procedure_FoodInsecurity_1            | performed[x]               | When the procedure was performed                             |
-|  SDOHCC_Observation_FoodInsecurity_1            | status               |  Final <br>Binding: ObservationStatus (required) <br>Fixed Value: final                        |
-|  SDOHCC_Observation_FoodInsecurity_1            | category               |   Classification of type of observation<br> Binding: ObservationCategoryCodes (preferred)                          |
-|  SDOHCC_Observation_FoodInsecurity_1            | code               | 	Type of observation (code / type)<br>Binding: LOINCCodes (example)                          |
-|  SDOHCC_Observation_FoodInsecurity_1            | subject               |  	Reference(US Core Patient Profile)<br> Who and/or what the observation is about                            |
-|  SDOHCC_Observation_FoodInsecurity_1            | encounter               |  Reference(Encounter)	<br> Healthcare event during which this observation is made                            |
-|  SDOHCC_Goal_FoodInsecurity_1            | lifecycleStatus               |  	proposed, planned, accepted,  active, on-hold, completed, cancelled, entered-in-error, rejected<br> Binding: GoalLifecycleStatus (required)                            |
-|  SDOHCC_Goal_FoodInsecurity_1            | description              |  Code or text describing goal<br>Binding: SNOMEDCTClinicalFindings (example)                            |
-|  SDOHCC_Goal_FoodInsecurity_1            | subject              |   	Reference(US Core Patient Profile)<br> Who this goal is intended for                           |
-|  SDOHCC_Goal_FoodInsecurity_1            | target               |    Target outcome for the goal                          |
-|  SDOHCC_Goal_FoodInsecurity_1            | due[x]                |   	Reach goal on or before                           |
-|  SDOHCC_Condition_FoodInsecurity_1            | clinicalStatus               |   	active, recurrence, relapse, inactive, remission, resolved<br> Binding: ConditionClinicalStatusCodes (required)              |
-|  SDOHCC_Condition_FoodInsecurity_1            | verificationStatus              |  	unconfirmed, provisional, differential, confirmed, refuted, entered-in-error<br>Binding: ConditionVerificationStatus (required)                       |
-|  SDOHCC_Condition_FoodInsecurity_1            | category               | 	problem-list-item , encounter-diagnosis<br>Binding: ConditionCategoryCodes (extensible)                           |
-|  SDOHCC_Condition_FoodInsecurity_1            | code               |   	Identification of the condition, problem or diagnosis<br> Binding: Condition/Problem/DiagnosisCodes (example)             |
-|  SDOHCC_Condition_FoodInsecurity_1            | subject               | Reference(US Core Patient Profile)<br> Who has the condition?                             |
-|  SDOHCC_Condition_FoodInsecurity_1            | encounter              | 	Reference(Encounter<br> Encounter created as part of                              |
-|  SDOHCC_Condition_FoodInsecurity_1            | evidence               | BackboneElement<br>Supporting evidence                             |
-{:class="table table-bordered"}
-{:.table-striped}
 
 <br>
 #### Missing Data
@@ -56,6 +30,9 @@ Any actor acting as a FHIR Server in this IG SHALL:
 Any actor acting a FHIR Client in this IG SHALL: 
 *	Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profiles StructureDefinition.
 *	Conform to the US Core Client Capability Statement expectations for that profiles type.
+
+#### US Core Profile Exceptions
+US Core Profiles were designed for use cases where a range of RESTful search requirements were needed which are not applicable for use cases in scope for SDOH-CC. The table below summarizes differences between the search requirements of SDOH-CC and the search requirements of US Core.
 
 
 

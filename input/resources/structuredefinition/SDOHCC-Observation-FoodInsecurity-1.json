@@ -2,12 +2,12 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Observation-FoodInsecurity-1",
 	"meta": {
-		"versionId": "22",
-		"lastUpdated": "2020-03-15T10:11:17.259+00:00",
-		"source": "#0aUgO9wdEOr1ZsAx"
+		"versionId": "28",
+		"lastUpdated": "2020-04-27T19:41:45.167+00:00",
+		"source": "#unPBhU5BC6ioUKyb"
 	},
 	"extension": [],
-	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1",
 	"name": "SDOHCC_Observation_FoodInsecurity_1",
 	"status": "draft",
 	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Observations related to: Food Insecurity. It allows the creation of Observations of: Food insecurity unknown, Food insecurity absent (aka Food security present), Food insecurity present, Mild food insecurity present, Moderate food insecurity present, and Severe food insecurity present.",
@@ -59,37 +59,30 @@
 						"key": "food-insecurity-1",
 						"severity": "error",
 						"human": "either Observation.valueCodableConcept or Observation.dataAbsentReason, but NOT both, MUST be provided",
-						"expression": "Observation.valueCodeableConcept.exists() xor Observation.dataAbsentReason.exists()",
-						"source": "Observation"
+						"expression": "valueCodeableConcept.exists() xor dataAbsentReason.exists()"
 					},
 					{
 						"key": "food-insecurity-2",
 						"severity": "error",
 						"human": "Observation.valueCodeableConcept: 'Known absent' MUST only be used with Observation.code: 'Food insecurity'",
-						"expression": "Observation.valueCodeableConcept.coding.where(system = 'http://snomed.info/sct' and code = '410516002').exists() implies Observation.code.coding.where(system = 'http://snomed.info/sct' and code = '733423003').exists()",
-						"source": "Observation"
+						"expression": "valueCodeableConcept.coding.where(system = 'http://snomed.info/sct' and code = '410516002').exists() implies code.coding.where(system = 'http://snomed.info/sct' and code = '733423003').exists()"
 					},
 					{
 						"key": "food-insecurity-3",
 						"severity": "error",
 						"human": "Observation.dataAbsentReason MUST only be used with Observation.code: 'Food insecurity'",
-						"expression": "Observation.dataAbsentReason.exists() implies Observation.code.coding.where(system = 'http://snomed.info/sct' and code = '733423003').exists()",
-						"source": "Observation"
+						"expression": "dataAbsentReason.exists() implies code.coding.where(system = 'http://snomed.info/sct' and code = '733423003').exists()"
 					}
 				]
 			},
 			{
-				"id": "Observation.basedOn",
-				"path": "Observation.basedOn",
-				"max": "0"
-			},
-			{
-				"id": "Observation.partOf",
-				"path": "Observation.partOf",
-				"max": "0"
-			},
-			{
 				"id": "Observation.status",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint",
+						"valueString": "default: final"
+					}
+				],
 				"path": "Observation.status",
 				"short": "Final",
 				"fixedCode": "final",
@@ -98,69 +91,43 @@
 			{
 				"id": "Observation.category",
 				"path": "Observation.category",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "pattern",
+							"path": "$this"
+						}
+					],
+					"rules": "open"
+				},
 				"min": 1,
-				"max": "1",
 				"mustSupport": true
 			},
 			{
-				"id": "Observation.category.coding",
-				"path": "Observation.category.coding",
+				"id": "Observation.category:foodInsecurityCategory",
+				"path": "Observation.category",
+				"sliceName": "foodInsecurityCategory",
 				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Observation.category.coding.system",
-				"path": "Observation.category.coding.system",
-				"min": 1,
-				"fixedUri": "http://hl7.org/fhir/ValueSet/observation-category"
-			},
-			{
-				"id": "Observation.category.coding.code",
-				"path": "Observation.category.coding.code",
-				"min": 1,
-				"fixedCode": "social-history"
-			},
-			{
-				"id": "Observation.category.coding.display",
-				"path": "Observation.category.coding.display",
-				"min": 1,
-				"fixedString": "Social History"
-			},
-			{
-				"id": "Observation.category.coding.userSelected",
-				"path": "Observation.category.coding.userSelected",
-				"max": "0"
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+							"code": "social-history"
+						}
+					]
+				},
+				"mustSupport": true
 			},
 			{
 				"id": "Observation.code",
 				"path": "Observation.code",
-				"mustSupport": true
-			},
-			{
-				"id": "Observation.code.coding",
-				"path": "Observation.code.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Observation.code.coding.system",
-				"path": "Observation.code.coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Observation.code.coding.code",
-				"path": "Observation.code.coding.code",
-				"min": 1,
+				"mustSupport": true,
 				"binding": {
 					"strength": "required",
-					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8"
+					"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extensionally to include the concepts of \"Food insecurity\" and the more specific concepts of \"Mild food insecurity\", \"Moderate food insecurity\", and \"Severe food insecurity\".",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurity-1"
 				}
-			},
-			{
-				"id": "Observation.code.coding.display",
-				"path": "Observation.code.coding.display",
-				"min": 1
 			},
 			{
 				"id": "Observation.subject",
@@ -174,7 +141,7 @@
 						]
 					}
 				],
-				"mustSupport": true
+				"mustSupport": false
 			},
 			{
 				"id": "Observation.focus",
@@ -221,59 +188,21 @@
 					{
 						"code": "CodeableConcept"
 					}
-				]
-			},
-			{
-				"id": "Observation.value[x].coding",
-				"path": "Observation.value[x].coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Observation.value[x].coding.system",
-				"path": "Observation.value[x].coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Observation.value[x].coding.code",
-				"path": "Observation.value[x].coding.code",
-				"min": 1,
+				],
 				"binding": {
 					"strength": "required",
-					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa"
+					"description": "Clinical Focus: Concepts in this Value Set are used to document the presence or absence of food insecurity as a clinical finding (simple assertion). Data Element Scope is Observation.value. It is defined extensionally to include the concepts of \"Known present\" or \"Known absent\".",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-contextvalue-1"
 				}
 			},
 			{
-				"id": "Observation.value[x].coding.display",
-				"path": "Observation.value[x].coding.display",
-				"min": 1
-			},
-			{
-				"id": "Observation.dataAbsentReason.coding",
-				"path": "Observation.dataAbsentReason.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Observation.dataAbsentReason.coding.system",
-				"path": "Observation.dataAbsentReason.coding.system",
-				"min": 1,
-				"fixedUri": "http://hl7.org/fhir/ValueSet/data-absent-reason"
-			},
-			{
-				"id": "Observation.dataAbsentReason.coding.code",
-				"path": "Observation.dataAbsentReason.coding.code",
-				"min": 1,
+				"id": "Observation.dataAbsentReason",
+				"path": "Observation.dataAbsentReason",
 				"binding": {
 					"strength": "required",
-					"valueSet": "https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/ValueSet/sdohcc-ValueSet-ContextValue-2"
+					"description": "Clinical Focus: Concepts in this Value Set are used to document the reason that Observation.value for food insecurity as a clinical finding (simple assertion) has not been populated. Data Element Scope is Observation.dataAbsentReason. It is defined extensionally to include the concepts of \"Unknown\", \"Asked But Unknown\", and \"Asked But Declined\".",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-contextvalue-2"
 				}
-			},
-			{
-				"id": "Observation.dataAbsentReason.coding.display",
-				"path": "Observation.dataAbsentReason.coding.display",
-				"min": 1
 			},
 			{
 				"id": "Observation.interpretation",
@@ -332,7 +261,7 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaireresponse",
+							"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
 							"http://hl7.org/fhir/StructureDefinition/Observation",
 							"http://hl7.org/fhir/StructureDefinition/DocumentReference"
 						]

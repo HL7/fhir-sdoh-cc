@@ -16,9 +16,8 @@ Artifact names alone cannot fully represent the intent and use case(s) of each a
 * Artifact names will have segments as described in the Naming Conventions sections that follow. <br>
 * Capitalization <br>
 
-	*  With the exception of Segment 1, the first letter in each segment of an artifacts name MUST be capitalized. <br>
-	* Tools (e.g., Trifolia, Forge, etc.) differ in their constraints on capitalization. For this reason, case for this first segment of the name may vary.
-	* Concatenated capitalized words (Pascal Casing) MUST be used if a segment of an artifacts name contains more than one word. <br>
+	* The first letter in each segment of an artifact's name MUST be capitalized. <br>
+	* Concatenated capitalized words (Pascal Casing) MUST be used if a segment of an artifact name contains more than one word. <br>
 														
 				Example: SDOHCC_Observation_FoodInsecurity_1
 
@@ -144,9 +143,8 @@ The segment names for value sets are similar in purpose and order to those for p
 
 Gravity value set names MUST contain the segments below, separated by underscores, in the order specified:
 
-*	**Segment 1**: sdohcc<br>
-       	This segment is the identifier assigned to the Gravity Project by HL7. (Case for this segment is all lower case since value sets are currently generated in a tool (termSpace) which allows lower case for the first letter of the name.)<br>
-
+*	**Segment 1**: SDOHCC This segment is the identifier assigned to the Gravity Project by HL7. 
+				
 *	**Segment 2**: ValueSet
 
 *	**Segment 3**: A high-level label for the category of content (e.g., intervention, context value, body structure, device, etc.) that the value set contains. <br>
@@ -180,7 +178,7 @@ Gravity value set names MUST contain the segments below, separated by underscore
 		* Hand, Foot, Finger, Toe
 		* Brachial Artery, Radial Artery, Digital Artery
 	
-Note: This last trio of values are an example of why labels with more granularity will not necessarily simplify the assignment of labels since any of the following labels	could have worked: "ArterialBodyStructure", "VascularBodyStructure", "ExtremityBodyStructure".
+Note: This last trio of values are an example of why labels with more granularity will not necessarily simplify the assignment of labels since any of the following labels could have worked: "ArterialBodyStructure", "VascularBodyStructure", "ExtremityBodyStructure".
 	
 * **Segment 4**: A number to distinguish different value sets for which Segments 1, 2 and 3 are identical. (e.g., value sets that contain content with the same high-level label).  
 
@@ -188,23 +186,23 @@ Note: This last trio of values are an example of why labels with more granularit
 
 	* Value set names that are identical, except for the number assigned for Segment 4, are not versions of a single value set. Rather, they are distinct value sets that contain content categorized with the same high-level label.
 				
-			For example, "sdohcc_ValueSet_Intervention_1" and "sdohcc_ValueSet_Intervention_2" are not versions of the same value set, but rather value sets with different Intervention content (e.g., for a different use case).
+			For example, "SDOHCC_ValueSet_Intervention_1" and "SDOHCC_ValueSet_Intervention_2" are not versions of the same value set, but rather value sets with different Intervention content (e.g., for a different use case).
 		
   * Value sets with same number assigned for Segment 4 do not necessarily correlate to one another.
 				
 		
-			For example, "sdohcc_ValueSet_Intervention_1" does not necessarily correlate with  sdohcc_ValueSet_ContextValue_1.
+			For example, "SDOHCC_ValueSet_Intervention_1" does not necessarily correlate with  SDOHCC_ValueSet_ContextValue_1.
 			
 <br>
 
 #### 	Examples of Value Set Names
 
-	sdohcc_ValueSet_ContextValue_1 
-	sdohcc_ValueSet_ContextValue_2 	
-	sdohcc_ValueSet_ContextValue_3 
-	sdohcc_ValueSet_FoodInsecurity_1 	
-	sdohcc_ValueSet_InterpretationValue_1 
-	sdohcc_ValueSet_InterpretationValue_2
+	SDOHCC_ValueSet_ContextValue_1 
+	SDOHCC_ValueSet_ContextValue_2 	
+	SDOHCC_ValueSet_ContextValue_3 
+	SDOHCC_ValueSet_FoodInsecurity_1 	
+	SDOHCC_ValueSet_InterpretationValue_1 
+	SDOHCC_ValueSet_InterpretationValue_2
 
 <br>
 A Value Set is a collection of coded concepts. The coded concepts can come from the same or different code systems.  This enables an IG to define Value Sets that include placeholder codes where needed. The definition of the value set and its expansion is not considered final until the IG in which the value set is defined becomes published.  Before publication, all Value Set definitions MUST be defined in an external Value Set management resource such as the HL7 UTG or NLM VSAC.

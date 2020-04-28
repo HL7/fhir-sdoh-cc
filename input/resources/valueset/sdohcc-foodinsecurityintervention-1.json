@@ -1,0 +1,39 @@
+{
+	"resourceType": "ValueSet",
+	"id": "sdohcc-foodinsecurityintervention-1",
+	"meta": {
+		"versionId": "8",
+		"lastUpdated": "2020-04-27T14:33:15.554+00:00",
+		"source": "#izD4deYhk9RKVoP3"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurityintervention-1",
+	"name": "SDOHCC_ValueSet_FoodInsecurityIntervention_1",
+	"title": "SDOHCC ValueSet FoodInsecurityIntervention 1",
+	"status": "draft",
+	"compose": {
+		"include": [
+			{
+				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+				"version": "0.0.3",
+				"concept": [
+					{
+						"code": "sdohcc-sctt-151000243108",
+						"display": "Assistance with application for food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-141000243105",
+						"display": "Education about food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-131000243104",
+						"display": "Evaluation of eligibility for food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-161000243106",
+						"display": "Provision of food from food program (procedure)"
+					}
+				]
+			}
+		]
+	}
+}

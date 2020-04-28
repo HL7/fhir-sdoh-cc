@@ -1,4 +1,4 @@
-[Previous Page - Gravity Project Background](GravityProjectBackground.html)
+[Previous Page - SDOH-CC Background](SDOH-CCBackground.html)
 
 Personas are commonly used in user-centered design to describe a fictional character who would represent a user type that might use a site, brand, or product in a similar way.  Personas describe the fictional person in terms of their behaviors, skills, preferences, and needs.  From a data interoperability perspective, personas are used to visualize the data needs of a user type. 
 
