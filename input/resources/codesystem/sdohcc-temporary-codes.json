@@ -2,16 +2,28 @@
 	"resourceType": "CodeSystem",
 	"id": "sdohcc-temporary-codes",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-03-18T16:14:08.712+00:00",
-		"source": "#UogLsusV3WO91uKB"
+		"versionId": "43",
+		"lastUpdated": "2020-05-01T15:50:45.343+00:00",
+		"source": "#E1xdpnGVNs3Ujokz"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
-	"name": "SDOHCC_Temporary_Codes",
-	"title": "SDOHCC Temporary Codes",
-	"status": "draft",
+	"version": "0.0.3",
+	"name": "SDOHCC_CodeSystem_TemporaryCodes",
+	"title": "SDOHCC CodeSystem Temporary Codes",
+	"status": "active",
 	"experimental": true,
-	"description": "The SDOHCC-Temporary-Codes code system is a local code system defined within the context of the SDOH-CC IG. ",
+	"description": "A local code system defined within the context of the SDOH-CC IG. ",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"code": "US",
+					"display": "United States of America"
+				}
+			],
+			"text": "United States of America"
+		}
+	],
 	"purpose": "The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen prior to the IG being published by HL7.",
 	"copyright": "(c) 2020 HL7.org",
 	"content": "complete",
@@ -19,47 +31,92 @@
 		{
 			"code": "sdohcc-sctt-21000243108",
 			"display": "Mild food insecurity (finding)",
-			"definition": "TBD:  Gravity Content Team"
+			"definition": "The stage in the food insecurity spectrum best characterized by uncertainty and worry about adequate food resources and effects on cultural acceptability."
 		},
 		{
 			"code": "sdohcc-sctt-31000243105",
 			"display": "Moderate food insecurity (finding)",
-			"definition": "TBD: Gravity Content Team"
+			"definition": "The stage in the food insecurity spectrum best characterized by effects on food quality and variety and safety"
 		},
 		{
 			"code": "sdohcc-sctt-41000243104",
 			"display": "Severe food insecurity (finding)",
-			"definition": "TBD: Gravity Content Team"
-		},
-		{
-			"code": "sdohcc-sctt-111000243109",
-			"display": "Assistance with application for Supplemental Nutrition Assistance Program (procedure)",
-			"definition": "TBD: Gravity Content Team"
-		},
-		{
-			"code": "sdohcc-sctt-101000243107",
-			"display": "Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)",
-			"definition": "TBD: Gravity Content Team"
+			"definition": "The stage in the food insecurity spectrum best characterized by effects on food quantity"
 		},
 		{
 			"code": "sdohcc-sctt-91000243106",
 			"display": "Food security (finding)",
-			"definition": "TBD: Gravity Content Team"
+			"definition": "Certain and stable access to food that is adequate in quantity and in nutritional quality; culturally acceptable; safe and acquired in socially acceptable ways."
 		},
 		{
-			"code": "sdohcc-hl7t-screening_task-request",
-			"display": "screening task request",
+			"code": "sdohcc-hl7t-20200417717",
+			"display": "Screening task request",
 			"definition": "Indicates a message that is a screening task request as defined by the Gravity SDOH-CC IG"
 		},
 		{
-			"code": "sdohcc-hl7t-screening-response",
-			"display": "screening response",
+			"code": "sdohcc-hl7t-202004190719",
+			"display": "Screening response",
 			"definition": "Indicates a message that is a screening response as defined by the Gravity SDOH-CC IG"
 		},
 		{
-			"code": "sdohcc-hl7t-screening-response-taskStatusUpdate",
-			"display": "screening task response TaskStatusUpdate",
-			"definition": "Indicates a message that is response providing a TaskStatusUpdate as defined by the Gravity SDOH-CC IG"
+			"code": "sdohcc-hl7t-202004190720",
+			"display": "Screening task update",
+			"definition": "Indicates a message that is a screening task update as defined by the Gravity SDOH-CC IG"
+		},
+		{
+			"code": "sdohcc-hl7t-202004190718",
+			"display": "Patient screening task",
+			"definition": "Indicates a task to perform patient screening"
+		},
+		{
+			"code": "sdohcc-hl7t-202004190723",
+			"display": "Communication Request",
+			"definition": "Indicates a communication request to convey information"
+		},
+		{
+			"code": "​sdohcc-i10cmt-202004020519",
+			"display": "Food insecurity",
+			"definition": "Uncertain, limited, or unstable access to food that is adequate in quantity and in nutritional quality; culturally acceptable; safe and acquired in socially acceptable ways."
+		},
+		{
+			"code": "​sdohcc-i10cmt-202004020520",
+			"display": "Lack of adequate food",
+			"definition": "TBD: Gravity Content Team"
+		},
+		{
+			"code": "sdohcc-sctt-151000243108",
+			"display": "Assistance with application for food program (procedure)",
+			"definition": "Non-clinical aid with the tasks of care such as applications and setting up appointments for food program"
+		},
+		{
+			"code": "sdohcc-sctt-141000243105",
+			"display": "Education about food program (procedure)",
+			"definition": "Procedure that is synonymous with those activities such as teaching, demonstration, instruction, explanation, and advice that aims to increase knowledge and skills, change behaviors, or assist coping about food program"
+		},
+		{
+			"code": "sdohcc-sctt-131000243104",
+			"display": "Evaluation of eligibility for food program (procedure)",
+			"definition": "The process of both provider clinical observation and interpretation, and the application of assessment tools for food program"
+		},
+		{
+			"code": "sdohcc-sctt-161000243106",
+			"display": "Provision of food from food program (procedure)",
+			"definition": "Covers any concrete support that is able to be given to the patient directly at the point of service for food program"
+		},
+		{
+			"code": "sdohcc-hl7t-20204281629",
+			"display": "Solicited Communication",
+			"definition": "A response to a communication request"
+		},
+		{
+			"code": "sdohcc-hl7t-202004190731",
+			"display": "Request data",
+			"definition": "Indicates data is requested to be communicated used in conjunction with a communication request"
+		},
+		{
+			"code": "sdohcc-hl7t-202004190730",
+			"display": "Request document",
+			"definition": "Indicates a document is requested to be communicated used in conjunction with a communication request"
 		}
 	]
 }

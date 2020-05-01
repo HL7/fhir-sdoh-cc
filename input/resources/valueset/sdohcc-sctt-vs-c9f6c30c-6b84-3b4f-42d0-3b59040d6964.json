@@ -1,0 +1,40 @@
+{
+	"resourceType": "ValueSet",
+	"id": "sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-04-30T21:30:58.112+00:00",
+		"source": "#xWnY3dmjzoUWsTBd"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
+	"name": "SDOHCC_ValueSet_FoodInsecurityIntervention_1",
+	"status": "draft",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document activities that might be performed to address food insecurity conditions/observations. Data Element Scope is Procedure.code. It is defined extensionally to include procedure concepts that address food insecurity conditions/observations.",
+	"compose": {
+		"include": [
+			{
+				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+				"version": "0.0.3",
+				"concept": [
+					{
+						"code": "sdohcc-sctt-151000243108",
+						"display": "Assistance with application for food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-141000243105",
+						"display": "Education about food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-131000243104",
+						"display": "Evaluation of eligibility for food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-161000243106",
+						"display": "Provision of food from food program (procedure)"
+					}
+				]
+			}
+		]
+	},
+	"title": "SDOHCC_ValueSet_FoodInsecurityIntervention_1"
+}

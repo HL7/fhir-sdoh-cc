@@ -2,18 +2,18 @@
 	"resourceType": "ValueSet",
 	"id": "sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-03-19T14:53:45.415+00:00",
-		"source": "#Bm6AeW5WUtbcDGeO"
+		"versionId": "8",
+		"lastUpdated": "2020-04-30T15:32:24.319+00:00",
+		"source": "#rs9YTEHeGGdLpWRl"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
-	"name": "sdohcc_ValueSet_ContextValue_1",
+	"name": "SDOHCC_ValueSet_ContextValue_1",
 	"status": "draft",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document the presence or absence of food insecurity as a clinical finding (simple assertion). Data Element Scope is Observation.value. It is defined extensionally to include the concepts of \"Known present\" or \"Known absent\".",
 	"compose": {
 		"include": [
 			{
 				"system": "http://snomed.info/sct",
-				"version": "11000243100",
 				"concept": [
 					{
 						"code": "410516002",
@@ -27,5 +27,5 @@
 			}
 		]
 	},
-	"title": "sdohcc_ValueSet_ContextValue_1"
+	"title": "SDOHCC_ValueSet_ContextValue_1"
 }

@@ -2,18 +2,50 @@
 	"resourceType": "ImplementationGuide",
 	"id": "SDOH-CC",
 	"meta": {
-		"versionId": "394",
-		"lastUpdated": "2020-03-19T19:02:31.345+00:00",
-		"source": "#ztNMlZVMguOgWUDD"
+		"versionId": "861",
+		"lastUpdated": "2020-05-01T17:39:57.347+00:00",
+		"source": "#6MmBnqvbVw8Go9Y6"
 	},
 	"contained": [],
-	"url": "http://hl7.maxmd.org/fhir/us/maxmd/ImplementationGuide/SDOH-CC",
-	"version": "0.0.3",
+	"url": "http://hl7.org/fhir/us/ImplementationGuide/SDOH-CC",
+	"version": "0.0.4",
 	"name": "SDOH_CC",
 	"title": "SDOH Clinical Care",
 	"status": "draft",
-	"description": "| IG Characteristic  |     Value |\n|------------------------------------------------------|--------------------------------------------|\n|**FHIR Version:** |    FHIR R4 |\n|**IG Realm:** |    US |\n|**IG Type:** |    STU |\n|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |\n|**IG Dependencies:** |    This IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |\n{:.table-striped}\n\n\n\n\n| Dependent IG Name         |  IG Code         | Version                      |\n|----------------------------------|-------------------------|---------------|\n| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |\n| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |\n| C-CDA on FHIR R4     |     [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/STU1)           | Version 1.0.0              |\n| DaVinci Clinical Data exchange            | [CDex](http://hl7.org/fhir/us/davinci-cdex/2019Jun) | Version 1.0.0              |\n| Bidirectional Services eReferrals                      |  [BSer](http://hl7.org/fhir/us/bser/) | Version 1.0.0 |\n{:.table-striped}\n\nAdditional information regarding guidance developed in these IGs is available in the chapters of this IG titled Overview of Data Sharing Methods and Overview of Capability Statements.  \n\n\n\n\n###  Purpose\n\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:\n1.\tDocument SDOH data in conjunction with the patient encounter,\n2.\tDocument and track SDOH related interventions to completion,\n3.\tGather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)\n\n\n### How to Use This Guide\n\nA FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.\n\nHowever, one caveat must be clear: this FHIR IG and the other FHIR IG's it depends upon are at low levels of maturity.  Changes to the specification can be major and may happen rapidly as Gravity Project incorporates the full scope of SDOH content domains. Plan accordingly and budget for exploration and potential rework.  For example, the solutions tested at one Connectathon may need to be substantially revised before testing at the next Connectathon. Early engagement in FHIR IG development and sustained collaboration will create the opportunity to have greater impact on the design of these emerging implementer standards.\n\nAdditional details are provided in the chapter [Practical Guidance for All Audiences](PracticalGuidanceforAllAudiences.html) for \n* [Implementers with existing systems using proprietary data exchange](PracticalGuidanceforAllAudiences.html#implementers-with-existing-systems-using-proprietary-data-exchange)\n* [Implementers currently developing new systems](PracticalGuidanceforAllAudiences.html#implementers-currently-developing-new-systems)\n* [Implementers considering future system development](PracticalGuidanceforAllAudiences.html#implementers-considering-future-system-development)\n* [Clinical care providers](PracticalGuidanceforAllAudiences.html#clinical-care-providers)\n* [Community based organizations](PracticalGuidanceforAllAudiences.html#community-based-organizations)\n* [Payer and public health organizations](PracticalGuidanceforAllAudiences.html#payers-and-public-health-organizations)\n* [Researchers](PracticalGuidanceforAllAudiences.html#researchers)\n* [Technology buyers](PracticalGuidanceforAllAudiences.html#technology-buyers)\n* [Patients, care givers, and patient advocates](PracticalGuidanceforAllAudiences.html#patients-care-givers-and-patient-advocates)\n\n\n### Notes to Reviewers and Balloters\n\n* Review of version 0.0.3 of the IG is intended to gather high-level comments about the overall approach to the Implementation Guide and its positioning in terms of supporting the use cases defined for the Gravity Project. It also is aimed at identifying omissions that impact the quality of the IG. It still contains major IG Build errors and reviewers should be aware of imperfections that still need to be addressed in version 0.0.4. It would be wise to consider the errors associated with a resource as you review the guidance supplied in this version of the IG. The IG Build errors are listed in the QA Report referenced in the footer of the IG. Of the current 199 build errors, there 181 that are considered approved. There are 4 build warnings for examples that lack descriptions. The list of the approved errors that can be disregarded for this version can be found on [Confluence Gravity FHIR IG](https://confluence.hl7.org/pages/viewpage.action?pageId=66922000#GravityFHIRIG-ApprovedSDOHCCFHIRIGErrorsandWarnings).\n\n* Temporary Codes used in this IG will be replaced with permanent codes when they become available and before the IG is published as a Standard for Trial Use (STU).\n\n* For some profiles, value set bindings are set at the wrong level in the data structure. \n \n* For some of the examples, there are known issues/errors with the way IG Publisher is rendering the narrative view of the content. Nonetheless, the narrative view is included (as is) because it is useful to facilitate a general understanding of the profile and may be helpful for generating feedback about how to improve the way narrative is rendered. \n\n* Message, Transaction, and Workflow Content documentation is incomplete and some of the needed examples have not yet been loaded.\n\n* Capability Statements have been sketched into the document but have not yet been developed and included in the IG.\n\nFeedback on V0.0.3 of the IG should be sent to gravityproject@emiadvisors.net between March 20, 2020 and  April 5, 2020. All of the issues noted above will be addressed in version 0.0.4.  \n\n\n### Latest Changes\n\n| Number         | Description                                                                                                                                                              |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 16            | Created Must Support table |\n| 15            | Updated Overview of Data Sharing Methods |\n| 14            | Updated Security and Consent Considerations |\n| 13            | Updated Notes to Reviewers and Balloters  |\n| 12            | Added page Practical Guidance for All Audiences |\n| 11            | Revisions to profiles and examples |\n| 10            | Updates to dependencies to this IG |\n| 9            | Updates to Use Case 1 and 2 tables |\n| 8            | Change Placeholder Codes to \"Temporary codes\" and re-work code system naming |\n| 7             | Update to How to Read this Guide to align with new publication algorithm                               |\n| 6             | Update to Naming Conventions for Implementation Guide Artifacts                                  |\n| 5             | Update to Placeholder Code System page                                   |\n| 4             | Added notes for Profiles                                       |\n| 3             | Updates to Use Case 1                                       |\n| 2             | Update naming conventions to sdohcc                                        |\n| 1             | Redesign chapters                                         |\n{:class=\"table table-bordered\"}\n{:.table-striped}\n\n\n### Acknowledgements\n*This section is still under development*\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\nThe Placeholder Code Creation process was originally developed for Elimu profiles and SMART app development. It was modified in the context of creating this IG to make it more broadly applicable.\n\n\n### Authors\n*This section is still under development*\n\nReserve this area to include authors of this guide.\n\n|**Name:**         | **Org**                                        |\n|--------------------------|--------------------------------------------|\n|**TBD**             | **TBD**                                         |\n{:class=\"table table-bordered\"}\n{:.table-striped}",
-	"packageId": "SDOH-CC",
+	"publisher": "HL7 International - Patient Care WG",
+	"contact": [
+		{
+			"name": "HL7 International - Patient Care WG",
+			"telecom": [
+				{
+					"system": "other",
+					"value": "https://www.hl7.org/Special/committees/patientcare"
+				}
+			]
+		},
+		{
+			"name": "HL7 International - Patient Care",
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://www.hl7.org/Special/committees/patientare"
+				}
+			]
+		}
+	],
+	"description": "| IG Characteristic  |     Value |\n|------------------------------------------------------|--------------------------------------------|\n|**FHIR Version:** |    FHIR R4 |\n|**IG Realm:** |    US |\n|**IG Type:** |    STU |\n|**Exchange Methods:** |    RESTful Query, Messages, Transactions, Documents, Tasks |\n|**IG Dependencies:** |    The SDOH-CC IG utilizes and adopts guidance developed in several other FHIR&reg; Implementation Guides. |\n{:.table-striped}\n\n\n\n\n| Related IG Name         |  IG Code         | Version                      |\n|----------------------------------|-------------------------|---------------|\n| HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |\n| Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |\n| C-CDA on FHIR R4     |     [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/STU1)           | Version 1.0.0              |\n| DaVinci Clinical Data exchange            | [CDex](http://hl7.org/fhir/us/davinci-cdex/2019Jun) | Version 0.1.0              |\n| Bidirectional Services eReferrals                      |  [BSer](http://hl7.org/fhir/us/bser) | Version 1.0.0 |\n{:.table-striped}\n\n\n\n\n###  Purpose\n\nThis HL7&reg; IG defines FHIR R4 profiles, extensions and value sets needed to exchange SDOH content defined by the Gravity Project. It defines how to represent coded content used to support the following care activities: screening, clinical assessment/diagnosis, goal setting, and the planning and performing of interventions. It addresses the need to gather SDOH information in the context of clinical encounters and describes how to share SDOH information and other relevant information with outside organizations for the purpose of coordinating services and support to address SDOH related needs. It also demonstrates how to share clinical data to support secondary purposes such as population health, quality, and research. It supports the following use cases:\n1.\tDocument SDOH data in conjunction with the patient encounter,\n2.\tDocument and track SDOH related interventions to completion,\n3.\tGather and aggregate SDOH data for uses beyond the point of care (e.g. public health, population health, quality measurement, risk adjustment, quality improvement, and research.)\n\n\n### How to Use This Guide\n\nA FHIR IG address the needs of multiple audiences. It provides technical artifacts that assist programmers when implementing standards-based FHIR application program interfaces (APIs) for specific purposes. It provides instructive material that explains how FHIR is used to accomplish specific uses cases. It also provides general information that helps business analysts and technology decision-makers understand the use cases and benefits associated with acheiving specific data exchange capabilities. A FHIR IG is as much a business planning tool as it is an educational resource and a technical specification.\n\nHowever, one caveat must be clear: this FHIR IG and the other FHIR IG's it depends upon are at low levels of maturity.  Changes to the specification can be major and may happen rapidly as Gravity Project incorporates the full scope of SDOH content domains. Plan accordingly and budget for exploration and potential rework.  For example, the solutions tested at one Connectathon may need to be substantially revised before testing at the next Connectathon. Early engagement in FHIR IG development and sustained collaboration will create the opportunity to have greater impact on the design of these emerging implementer standards.\n\n\n#### For implementers interested in getting started with FHIR\nRead the IG to:\n* Understand the design of FHIR APIs to inform your product management, clinical workflow planning, business planning, and to inform expectations about what will be possible in the future.\n* Discover an additional/alternate API you could begin offering to give your customer a path toward utilizing standards\n* Become more informed about the national direction for inclusion of SDOH information in clinical care\n* Consider opportunities to utilize standards-based data exchange sooner rather than later\n* Plan to utilize standards-based data exchange as you consider technology solutions, look at making future investments that can improve patient care \n* Imagine the role of standards-based data exchange as you advocate for yourself and others\n\nParticipate in Connectathon testing to:\n* Engage your R&D team to develop new capabilities with FHIR\n* Inform management about product development activities to prepare for FHIR APIs\n* Accelerate product development efforts\n* Adjust your product roadmap to adjust for more rapid support of FHIR APIs to the HL7 FHIR standard\n* Learn how FHIR is being used to rapidly enable needed data exchange and speed adoption of new capabilities\n* Introduce product management and technical resources in your development team to the HL7 FHIR standard\n* Introduce clinical and technical resources in your practice about the HL7 FHIR standard\n* Gain awareness of available and emerging technology solutions that offer services which would reduce administrative burden for your organization and offer other benefits for your organization\n* Gain experience with data exchange made possible by the HL7 FHIR standard\n* Help shape how FHIR is being used to rapidly enable needed data exchange and speed adoption of new capabilities\n* Contribute patient and caregiver perspectives and requirements for the kinds of services and capabilities that would benefit individuals and families\n\nUse the IG to:\n* Find customers interested in moving toward standards-based data exchange\n* Inform solution purchasing decisions and clarify/simplify your interoperability requirements\n* Inform workflow design and information sharing possibilities\n* Inform solution development or purchase decisions\n* Determine when to start offering a FHIR API to your customers\n* Bring standardized data solutions to market faster and avoid future product rework costs\n* Avoid investment in products that are not aligned with where the industry and the nation are headed\n* Plan to utilize standards-based data exchange as you look at making future investments\n* Influence the development of products that are not aligned with where the industry and the nation are headed, **and** where individuals want health data exchange to go\n* Advocate personally for information sharing that integrates into everyday life and improves the experience of care for individuals and families\n<br>\n\n#### For implementers interested in using existing standards to make incremental progress in the planned direction\n* Apply the information exchange patterns and workflows developed in the IG to shape the flow of information available through the use of existing standards\n* Use standardized content for FHIR messages and data payloads to populate the message content carried by existing transport standards\n<br>\n\n#### For implementers who are not yet sharing data using standards-based data exchange\n* Develop APIs that support planned directions to make it easier to access and share information that will need to be exchanged\n* Begin aligning internal data concepts with standard data elements, adopting the standard definitions and constraining values to adopted answer sets\n* Be diligent about understanding definitions associated with codes and make accurate mappings between local concepts and standard codes\n\n<br>\n\n### Notes to Reviewers and Balloters\n\nFeedback on V0.0.4 of the IG should be sent to gravityproject@emiadvisors.net between April 30, 2020 and  May 31, 2020. \n\n* Review of version 0.0.4 of the IG is intended to gather high-level comments about the overall approach to the Implementation Guide and its positioning in terms of supporting the use cases defined for the Gravity Project. It also is aimed at identifying omissions that impact the quality of the IG. It still contains IG Build errors and reviewers should be aware of imperfections that still need to be addressed in version 0.0.5. The list of the approved errors that can be disregarded for this version can be found on [Confluence Gravity FHIR IG](https://confluence.hl7.org/pages/viewpage.action?pageId=66922000#GravityFHIRIG-ApprovedSDOHCCFHIRIGErrorsandWarnings).\n\n* Temporary Codes used in this IG will be replaced with permanent codes when they become available and before the IG is published as a Standard for Trial Use (STU).\n\n* In v0.0.5 valueSet bindings for condition.code and procedure.code will be modified to conform with US Core profiles. \n\n* In v0.0.5, when an SDOHCC profile references a resource that has been profiled in US Core, the refrenced resource will conform to the US Core profile.\n\n* For some of the examples, there are known issues/errors with the way IG Publisher is rendering the narrative view of the content. Nonetheless, the narrative view is included (as is) because it is useful to facilitate a general understanding of the profile and may be helpful for generating feedback about how to improve the way narrative is rendered. \n\n* Message, Transaction, and Workflow Content documentation is incomplete and some of the needed examples have not yet been loaded.\n\n* Capability Statements have been sketched into the document but have not yet been developed and included in the IG.\n\n* Minimal data provenance guidance has been included. This will be improved in v0.0.5.\n\n* Minimal privacy, security and consent guidance has been included. This will be improved in v0.0.5.\n\n* Within the profiles there is a known problem with some bound valueSets appearing as \"unbound\"\n\n* Some examples do not come from US Core because they did not validate in Trifolia. Therefore, we used examples from HL7. In v0.0.5 examples will be based on US Core.\n\n* Some example ids do not conform to the current naming convention and will be updated in v0.0.5.\n\n  \n\n\n### History of Document Changes\n\n| Number         | Description                                                                                                                                                   |\n|---------------|----------------------------------------------------------------------------------------------------|\n| 25         | Updates to naming conventions       |\n| 24         | How to create screening instruments, use of temporary codes       |\n| 23         | Expanded the ValueSet for coded Procedure      |\n| 22          | Improved naming conventions      |\n| 21           | Updated profiles and additional artifacts      |\n| 20          |  New profiles and artifacts for v.0.0.4     |\n| 19           | Resolved errors related to broken links      |\n| 18           | Updates to authors and acknowledgements      |\n| 17           | Additional guidance for form builder and temporary codes       |\n| 16            | Created Must Support table |\n| 15            | Updated Overview of Data Sharing Methods |\n| 14            | Updated Security and Consent Considerations |\n| 13            | Updated Notes to Reviewers and Balloters  |\n| 12            | Added page Practical Guidance for All Audiences |\n| 11            | Revisions to profiles and examples |\n| 10            | Updates to dependencies to this IG |\n| 9            | Updates to Use Case 1 and 2 tables |\n| 8            | Change Placeholder Codes to \"Temporary codes\" and re-work code system naming |\n| 7             | Update to How to Read this Guide to align with new publication algorithm                               |\n| 6             | Update to Naming Conventions for Implementation Guide Artifacts                                  |\n| 5             | Update to Placeholder Code System page                                   |\n| 4             | Added notes for Profiles                                       |\n| 3             | Updates to Use Case 1                                       |\n| 2             | Update naming conventions to sdohcc                                        |\n| 1             | Redesign chapters                                         |\n{:class=\"table table-bordered\"}\n{:.table-striped}\n\n\n### Acknowledgements\n*This section is still under development*\n\nWe would like to thank the Agency for Healthcare Research and Quality (AHRQ), SIREN UCSF, UV Larner and Yale Nursing for their support for developing this IG and all [Gravity Project sponsors](https://confluence.hl7.org/display/GRAV/Gravity+Project+Sponsors) for their contributions to make rapid progress on the standardization of social determinants of health data.\n\nReserve this area to included acknowledgements for the people and organizations involved in developing and maintaining this Implementation Guide.\n\nThere may also be some required copyright acknowledgements for certain Code Systems or other acknowledgements required by HL7 and FHIR.\n\nThe Placeholder Code Creation process was originally developed for Elimu profiles and SMART app development. It was modified in the context of creating this IG to make it more broadly applicable.\n\n\n|**Name**         | **Organization**                                        |\n|--------------------------|--------------------------------------------|\n| Lisa Nelson           | MaxMD                                         |\n| Matt Elrod        | MaxMD                                   |\n| Corey Smith        | AMA                                   |\n| Monique van Berkum       | AMA                                 |\n| Jim Shalaby        |   Elimu                                |\n| Matt Menning        |  AMA                                  |\n| Mohit Saigal        | AMA                                   |\n| Becky Gradl          | Academy of Nutrition and Dietetics                                 |\n| Sarah DeSilvey        |  Larner College of Medicine at the University of Vermont, SIREN                                  |\n| Donna Pertel         |  Academy of Nutrition and Dietetics                                  |\n| Evelyn Gallego        |  EMI Advisors, LLC                                  |\n| Linda Hyde        |   EMI Advisors, LLC                                 |\n| Lynette Elliott| EMI Advisors, LLC |\n| Rob Hausam |        |\n| Cheng Liu | MaxMD|\n| Natasha Kreisle | MaxMD|\n{:class=\"table table-bordered\"}\n{:.table-striped}",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US",
+					"display": "United States of America"
+				}
+			]
+		}
+	],
+	"packageId": "hl7.fhir.us.sdohcc",
 	"fhirVersion": [
 		"4.0.1"
 	],
@@ -54,57 +86,258 @@
 			{
 				"extension": [],
 				"reference": {
-					"reference": "ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
-					"display": "sdohcc_ValueSet_ContextValue_1"
+					"reference": "CodeSystem/sdohcc-temporary-codes",
+					"display": "sdohcc-temporary-codes "
 				},
-				"name": "sdohcc_ValueSet_ContextValue_1",
-				"description": "Clinical Focus: Concepts in this Value Set are used to document the presence or absence of food insecurity as a clinical finding (simple assertion). Data Element Scope is Observation.value. It is defined extensionally to include the concepts of known present or known absent.",
+				"name": "SDOHCC_CodeSystem_TemporaryCodes",
+				"description": "A local code system defined within the context of the SDOH-CC IG.",
 				"exampleBoolean": false
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "List/b1f72528-5501-4a6c-a5f3-9b86ec84264b",
+					"display": "Food Insecurity (Hunger Vital Sign) Questionnaire Patient List"
+				},
+				"name": "SDOHCC_List_HungerVitalSignPatient_1_Example_1",
+				"description": "Example of a List resource used to document a list of patients to be screened. This IG uses the base List resource. Further constraints are not profiled at this time.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Consent/40bfeb51-6d03-4109-8ad8-936247175aec",
+					"display": "SDOHCC_Consent_1_Example_1"
+				},
+				"name": "SDOHCC_Consent_ScreeningInfo_1_Example_1",
+				"description": "Example of a Consent resource use to document a patient's consent to share requested information. This IG uses the base Consent resource. Further constraints are not profiled at this time.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "QuestionnaireResponse/6a750c45-728d-4382-9836-94284e52451e"
+				},
+				"name": "SDOHCC_QuestionnaireResponse_HungerVitalSignScreening_1_Example_1",
+				"description": "Example of a QuestionnaireResponse resource used to represent a patient's answers to the associated Questionnaire (in this example, the associated Questionnaire is the Hunger Vital Sign Screening). It also includes and Observation resource that is derived based on the the individual's answers. The derived Observation represents the result of the screening.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "StructureDefinition/SDOHCC-Goal-FoodInsecurity-1",
+					"display": "SDOHCC_Goal_FoodInsecurity_1"
+				},
+				"name": "SDOHCC_Goal_FoodInsecurity_1",
+				"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Goals related to: Food Security.",
+				"exampleBoolean": false
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "ValueSet/sdohcc-task-1",
+					"display": "SDOHCC ValueSet Task 1"
+				},
+				"name": "SDOHCC_ValueSet_Task_1",
+				"description": "Clinical Focus: Concepts in this Value Set are used to indicate the type of task to be performed. Data Element Scope is Task.code It is defined extensionally to include the concept of \"patient screening task.\"",
+				"exampleBoolean": false
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "ValueSet/sdohcc-communicationcategory-1",
+					"display": "SDOHCC ValueSet Communication Category 1"
+				},
+				"name": "SDOHCC_ValueSet_CommunicationCategory_1",
+				"description": "Clinical Focus: Concepts in this Value Set are used to categorize types of information communicated between systems. Data Element Scope is Communication.category. It is defined extensionally to include the concept of \"patient screening information.",
+				"exampleBoolean": false
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "ValueSet/sdohcc-messageheader-1",
+					"display": "SDOHCC ValueSet Message Header"
+				},
+				"name": "SDOHCC_ValueSet_MessageHeader_1",
+				"description": "Clinical Focus: Concepts in this Value Set are used to document various types of messages used within a Patient Screening Task. (simple assertion). Data Element Scope is MessageHeader.event. It is defined extensionally to include the concepts of \"screening task request\", \"screening response\", \"screening task update\".",
+				"exampleBoolean": false
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "CodeSystem/sdohcc-temporary-identifiers",
+					"display": "SDOHCC IdentifierSystem Temporary Identifiers"
+				},
+				"name": "SDOHCC_IdentifierSystem_TemporaryIdentifiers",
+				"description": "A local identifier system defined within the context of the SDOH-CC IG.",
+				"exampleBoolean": false
+			},
+			{
+				"reference": {
+					"reference": "CapabilityStatement/pmehr",
+					"display": "SDOH-CC PMEHR Actor Capability Statement"
+				},
+				"name": "SDOH-CC_PMEHR_Actor_Capability_Statement",
+				"exampleBoolean": false,
+				"description": "The system that initiates the task to request a list of patients to be screened using a certain screening questionnaire. The PMEHR actor is assumed to either be grouped with an SDC Form Designer actor or to have access to Questionnaire Resources produced by other systems that are compliant with the SDC Form Designer and SDC Form Manager actors. The PMEHR uses the capability of a Form Designer technical actor to create a Questionnaire Resource that expresses a screening instrument. See the LHC Form Builder for an example: [https://lhcforms.nlm.nih.gov/](https://lhcforms.nlm.nih.gov/). For screening instruments included in the Gravity Project Master List, use temporary codes included in the Master List where permanent codes are not yet available.Link to Section of the IG about the Master List and Temporary Codes."
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Condition/SDOHCC-Condition-FoodInsecurity-1-Example-1"
+				},
+				"name": "SDOHCC_Condition_FoodInsecurity_1_Example_1",
+				"description": "Example of an Condition resource used to document a condition on a patient's problem list. The Condition include an onset date which records the point in time considered to be the time when the person began experiencing the condition. The Condition may include an abatement date to indicate the time when the person stopped experiencing the condition because the condition was no longer present. Onset and abatement dates can be precise to a moment in time, or generalized to a day, month, or year. The precision of the time should match the specificity of the available evidence. The Condition.asserter names the person responsible for asserting the patient's condition and the organization the asserter represented. The Condition.recorder names the person responsible for documenting the condition in the patient's record and that person's represented organization. PractitionerRole is always used to represent the practitioner and his or her associated organization. The Condition resource is conformant to the SDOHCC_Condition_FoodInsecurity_1 profile which is adapted from the US Core Condition profile. 7/18/2019: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2019 and adds to the physician's task list to assess and address the food insecurity issue. \n7/30/2019: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2019 (within 4 months).\n10/27/2019: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2019 and the condition is updated to be abated as of 10/27/2019.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1"
 			},
 			{
 				"extension": [],
 				"reference": {
 					"reference": "ValueSet/sdohcc-sctt-vs-8e8bc50a-bb9d-1753-2461-2419df70cef8",
-					"display": "sdohcc_ValueSet_FoodInsecurity_1"
+					"display": "SDOHCC_ValueSet_FoodInsecurity_1"
 				},
-				"name": "sdohcc_ValueSet_FoodInsecurity_1",
-				"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extentionally to include the concepts of food insecurity and the more specific concepts of mild food insecurity, moderate food insecurity, and severe food insecurity.",
+				"name": "SDOHCC_ValueSet_FoodInsecurity_1",
+				"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extensionally to include the concepts of \"Food insecurity\" and the more specific concepts of \"Mild food insecurity\", \"Moderate food insecurity\", and \"Severe food insecurity\".",
 				"exampleBoolean": false
 			},
 			{
 				"extension": [],
 				"reference": {
-					"reference": "Bundle/2358"
+					"reference": "Task/taskExample1",
+					"display": "Task Example1"
 				},
-				"name": "SDOHCC_BundleMessage_NewTask_with_Communication_1_Example_1",
-				"description": "Example of a Bundle of type Message used to initiate a new task established to request screening for a list of patients using a supplied screening instrument. The task requests the screening responses to be returned to the task originator if consented by the patient.",
+				"name": "SDOHCC_Task_Example_1",
+				"description": "TBD",
 				"exampleBoolean": true
 			},
 			{
 				"extension": [],
 				"reference": {
-					"reference": "Bundle/2360"
+					"reference": "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-2"
 				},
-				"name": "SDOHCC_BundleMessage_ReturnScreen_with_Communication_1_Example_1",
-				"description": "Example of a Bundle of type Message used to communicate a screening response and the patient consent to share the information with the information requester.",
+				"name": "SDOHCC_Observation_FoodInsecurity_1_Example_2",
+				"description": "Example of an Observation resource used to document a clinical finding (simple assertion) that food insecurity was observed to be present for an indicated time period. The Observation indicates the point in time it was made and the performer of the observation names the person responsible for making the assertion and the organization the performer represented. PractitionerRole is always used to represent the practitioner and his or her associated organization. The Observation resource is conformant to the SDOHCC_Observation_FoodInsecurity_1 profile which is adapted from the US Core Observation profile.\n7/18/2019: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2019 and adds to the physician's task list to assess and address the food insecurity issue. \n7/30/2019: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2019 (within 4 months).\n10/27/2019: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2019 and the condition is updated to be abated as of 10/27/2019.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Procedure/SDOHCC-Procedure-FoodInsecurity-1-Example-1"
+				},
+				"name": "SDOHCC_Procedure_FoodInsecurity_1_Example_1",
+				"description": "Example of a Procedure resource used to document that an activity was performed to [fill in action] to address a person's observed food insecurity. The Procedure resource also is conformant to the US Core Procedure profile.7/18/2019: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2019 and adds to the physician's task list to assess and address the food insecurity issue. \n7/30/2019: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2019 (within 4 months).\n10/27/2019: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2019 and the condition is updated to be abated as of 10/27/2019. ",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1"
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Encounter/SDOHCC-Encounter-Enc1-Example-1"
+				},
+				"name": "SDOHCC_Encounter_Enc1_Example_1",
+				"description": "This example is included to support the observation, condition, procedure and goal examples provided in this IG. This example itself is not focal to the SDOH examples.",
 				"exampleBoolean": true
 			},
 			{
 				"extension": [],
 				"reference": {
-					"reference": "Bundle/2365"
+					"reference": "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-1"
 				},
-				"name": "SDOHCC_BundleMessage_ReturnScreen_Rejected_1_Example_1",
-				"description": "SDOHCC_BundleMessage_ReturnScreen_Rejected_Example_1Example of a Bundle of type Message used to indicate a patient did not consent to share requested screening information with the information requester.",
+				"name": "SDOHCC_Observation_FoodInsecurity_1_Example_1",
+				"description": "Example of an Observation resource used to document a clinical finding (simple assertion) that food insecurity was observed to be absent for an indicated time period. The Observation indicates the point in time it was made and the performer of the observation names the person responsible for making the assertion and the organization the performer represented. PractitionerRole is always used to represent the practitioner and his or her associated organization. The Observation resource is conformant to the SDOHCC_Observation_FoodInsecurity_1 profile which is adapted from the US Core Observation profile. \n7/18/2019: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2019 and adds to the physician's task list to assess and address the food insecurity issue. \n7/30/2019: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2019 (within 4 months).\n10/27/2019: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2019 and the condition is updated to be abated as of 10/27/2019.",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
+			},
+			{
+				"reference": {
+					"reference": "ValueSet/sdohcc-i10cmt-vs-202004291638",
+					"display": "SDOHCC_ValueSet_FoodInsecurity_2"
+				},
+				"name": "SDOHCC_ValueSet_FoodInsecurity_2",
+				"exampleBoolean": false,
+				"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity conditions for the purpose of billing using ICD-10. Data Element Scope is Condition.code. It is defined extensionally to include the concepts of \"Lack of adequate food and safe drinking water\", \"Food insecurity\" and \"Lack of adequate food\"."
+			},
+			{
+				"reference": {
+					"reference": "StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+					"display": "SDOHCC_Condition_FoodInsecurity_1"
+				},
+				"name": "SDOHCC_Condition_FoodInsecurity_1",
+				"exampleBoolean": false,
+				"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Conditions related to: Food insecurity, Mild food insecurity, Moderate food insecurity, or Severe food insecurity."
+			},
+			{
+				"reference": {
+					"reference": "ValueSet/sdohcc-hl7t-vs-202004291635",
+					"display": "SDOHCC_ValueSet_ContextValue_2"
+				},
+				"name": "SDOHCC_ValueSet_ContextValue_2",
+				"exampleBoolean": false,
+				"description": "Clinical Focus: Concepts in this Value Set are used to document the reason that Observation.value for food insecurity as a clinical finding (simple assertion) has not been populated. Data Element Scope is Observation.dataAbsentReason. It is defined extensionally to include the concepts of \"Unknown\", \"Asked But Unknown\", and \"Asked But Declined\"."
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Practitioner/SDOHCC-Practitioner-f005-Example-1"
+				},
+				"name": "SDOHCC_Practitioner_f005_Example_1",
+				"description": "This example is included to support the observation, condition, procedure and goal examples provided in this IG. This example itself is not focal to the SDOH examples.",
 				"exampleBoolean": true
 			},
 			{
 				"extension": [],
 				"reference": {
-					"reference": "Bundle/2367"
+					"reference": "Practitioner/SDOHCC-Practitioner-f007-Example-1"
 				},
-				"name": "SDOHCC_BundleMessage_TaskUpdate_1_Example_1",
-				"description": "Example of a Bundle of type Message used to notify the originator of a task about a change in the status of the task. In this example, the task has reached the completed state.",
+				"name": "SDOHCC_Practitioner_f007_Example_1",
+				"description": "This example is included to support the observation, condition, procedure and goal examples provided in this IG. This example itself is not focal to the SDOH examples.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Patient/SDOHCC-Patient-pat1-Example-1"
+				},
+				"name": "SDOHCC_Patient_pat1_Example_1",
+				"description": "This example is included to support the observation, condition, procedure and goal examples provided in this IG. This example itself is not focal to the SDOH examples.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Encounter/SDOHCC-Encounter-f201-Example-1",
+					"display": "SDOHCC-Encounter-f201-Example-1"
+				},
+				"name": "SDOHCC_Encounter_f201_Example_1",
+				"description": "This example is included to support the observation, condition, procedure and goal examples provided in this IG. This example itself is not focal to the SDOH examples.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Encounter/SDOHCC-Encounter-f203-Example-1",
+					"display": "SDOHCC-Encounter-f203-Example-1"
+				},
+				"name": "SDOHCC_Encounter_f203_Example_1",
+				"description": "This example is included to support the observation, condition, procedure and goal examples provided in this IG. This example itself is not focal to the SDOH examples.",
+				"exampleBoolean": true
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
+					"display": "SDOHCC_ValueSet_ContextValue_1"
+				},
+				"name": "SDOHCC_ValueSet_ContextValue_1",
+				"description": "Clinical Focus: Concepts in this Value Set are used to document the presence or absence of food insecurity as a clinical finding (simple assertion). Data Element Scope is Observation.value. It is defined extensionally to include the concepts of \"Known present\" or \"Known absent\".",
+				"exampleBoolean": false
+			},
+			{
+				"extension": [],
+				"reference": {
+					"reference": "Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec",
+					"display": "SDOHCC_Questionnaire_HungerVitalSign_Example_1"
+				},
+				"name": "SDOHCC_Questionnaire_HungerVitalSign_1_Example_1",
+				"description": "Example of a Questionnaire resource used to represent the Hunger Vital Sign Screening Tool. This IG uses the sdc-questionnaire profile [http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire). This questionnaire resource instance was generated by the LHC Form Designer actor [https://lhcforms.nlm.nih.gov/](https://lhcforms.nlm.nih.gov/).",
 				"exampleBoolean": true
 			},
 			{
@@ -120,155 +353,31 @@
 			{
 				"extension": [],
 				"reference": {
-					"reference": "StructureDefinition/SDOHCC-Goal-FoodInsecurity-1",
-					"display": "SDOHCC_Goal_FoodInsecurity_1"
+					"reference": "ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
+					"display": "SDOHCC_ValueSet_FoodInsecurityIntervention_1"
 				},
-				"name": "SDOHCC_Goal_FoodInsecurity_1",
-				"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Goals related to: Food Security.",
+				"name": "SDOHCC_ValueSet_FoodInsecurityIntervention_1",
+				"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity as a clinical finding (simple assertion) or condition. Data Element Scope is Observation.code or Condition.code. It is defined extensionally to include the concepts of \"Food insecurity\" and the more specific concepts of \"Mild food insecurity\", \"Moderate food insecurity\", and \"Severe food insecurity\".",
 				"exampleBoolean": false
 			},
 			{
 				"extension": [],
-				"reference": {
-					"reference": "Goal/SDOHCC-Goal-FoodInsecurity-1-Example-1",
-					"display": "SDOHCC_Goal_FoodInsecurity_1_Example_1"
-				},
-				"name": "SDOHCC_Goal_FoodInsecurity_1_Example_1",
-				"description": "Example of a Goal resource used to document a goal of food security as measured by an observation (clinical finding) that asserts food insecurity absent. The Goal resource also is conformant to the US Core Goal profile.  7/18/2012: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2012 and adds to the physician&#39;s task list to assess and address the food insecurity issue.  7/30/2012: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2012 (within 4 months). 10/27/2012: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2012 and the condition is updated to be abated as of 10/27/2012.",
-				"exampleBoolean": true
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "Procedure/SDOHCC-Procedure-FoodInsecurity-1-Example-1"
-				},
-				"name": "SDOHCC_Procedure_FoodInsecurity_1_Example_1",
-				"description": "Example of a Procedure resource used to document that an activity was performed to [fill in action] to address a person's observed food insecurity. The Procedure resource also is conformant to the US Core Procedure profile. 7/18/2012: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2012 and adds to the physician&#39;s task list to assess and address the food insecurity issue.  7/30/2012: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2012 (within 4 months). 10/27/2012: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2012 and the condition is updated to be abated as of 10/27/2012.",
-				"exampleBoolean": true
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-2"
-				},
-				"name": "SDOHCC_Observation_FoodInsecurity_1_Example_2",
-				"description": "Example of an Observation resource used to document a clinical finding (simple assertion) that food insecurity was observed to be present for an indicated time period. The Observation indicates the point in time it was made and the performer of the observation names the person responsible for making the assertion and the organization the performer represented. PractitionerRole is always used to represent the practitioner and his or her associated organization. The Observation resource is conformant to the SDOHCC_Observation_FoodInsecurity_1 profile which is adapted from the US Core Observation profile. 7/18/2012: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2012 and adds to the physician&#39;s task list to assess and address the food insecurity issue.  7/30/2012: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2012 (within 4 months). 10/27/2012: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2012 and the condition is updated to be abated as of 10/27/2012.",
-				"exampleBoolean": true
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "Observation/SDOHCC-Observation-FoodInsecurity-1-Example-1"
-				},
-				"name": "SDOHCC_Observation_FoodInsecurity_1_Example_1",
-				"description": "Example of an Observation resource used to document a clinical finding (simple assertion) that food insecurity was observed to be absent for an indicated time period. The Observation indicates the point in time it was made and the performer of the observation names the person responsible for making the assertion and the organization the performer represented. PractitionerRole is always used to represent the practitioner and his or her associated organization. The Observation resource is conformant to the SDOHCC_Observation_FoodInsecurity_1 profile which is adapted from the US Core Observation profile.  7/18/2012: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2012 and adds to the physician&#39;s task list to assess and address the food insecurity issue.  7/30/2012: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2012 (within 4 months). 10/27/2012: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2012 and the condition is updated to be abated as of 10/27/2012.",
-				"exampleBoolean": true
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
-					"display": "SDOHCC_Condition_FoodInsecurity_1"
-				},
-				"name": "SDOHCC_Condition_FoodInsecurity_1",
-				"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Conditions related to: Food insecurity, Mild food insecurity, Moderate food insecurity, or Severe food insecurity.",
-				"exampleBoolean": false
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "Condition/SDOHCC-Condition-FoodInsecurity-1-Example-1"
-				},
-				"name": "SDOHCC_Condition_FoodInsecurity_1_Example_1",
-				"description": "Example of an Condition resource used to document a condition on a patient's problem list. The Condition include an onset date which records the point in time considered to be the time when the person began experiencing the condition. The Condition may include an abatement date to indicate the time when the person stopped experiencing the condition because the condition was no longer present. Onset and abatement dates can be precise to a moment in time, or generalized to a day, month, or year. The precision of the time should match the specificity of the available evidence. The Condition.asserter names the person responsible for asserting the patient's condition and the organization the asserter represented. The Condition.recorder names the person responsible for documenting the condition in the patient's record and that person's represented organization. PractitionerRole is always used to represent the practitioner and his or her associated organization. The Condition resource is conformant to the SDOHCC_Condition_FoodInsecurity_1 profile which is adapted from the US Core Condition profile.  7/18/2012: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2012 and adds to the physician&#39;s task list to assess and address the food insecurity issue.  7/30/2012: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2012 (within 4 months). 10/27/2012: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2012 and the condition is updated to be abated as of 10/27/2012.",
-				"exampleBoolean": true
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "CodeSystem/sdohcc-temporary-codes",
-					"display": "SDOHCC Temporary Codes"
-				},
-				"name": "SDOHCC Temporary Codes",
-				"exampleBoolean": false
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "Questionnaire/17d3c570-28de-4aa3-a135-e35d0932a4ec",
-					"display": "SDOHCC_Questionnaire_Hunger_Vital_Sign_Example_1"
-				},
-				"name": "SDOHCC_Questionnaire_Hunger_Vital_Sign_Example_1",
-				"exampleBoolean": true
-			},
-			{
-				"reference": {
-					"reference": "Observation/43373ef0-8fe3-403d-a62c-feb79700e1d5"
-				},
-				"name": "SDOHCC_Observation_FoodInsecurity_1_Example_1",
-				"exampleBoolean": true
-			},
-			{
-				"reference": {
-					"reference": "List/b1f72528-5501-4a6c-a5f3-9b86ec84264b",
-					"display": "Food Insecurity (Hunger Vital Sign) Questionnaire Patient List"
-				},
-				"name": "SDOHCC_List_Food_Insecurity_Hunger_Vital_Sign_Questionnaire_Patient_List_1_Example_1",
-				"exampleBoolean": true
-			},
-			{
-				"reference": {
-					"reference": "Consent/40bfeb51-6d03-4109-8ad8-936247175aec"
-				},
-				"name": "SDOHCC_Consent_1_Example_1",
-				"exampleBoolean": true
-			},
-			{
 				"reference": {
 					"reference": "StructureDefinition/SDOHCC-Procedure-FoodInsecurity-1",
 					"display": "SDOHCC_Procedure_FoodInsecurity_1"
 				},
 				"name": "SDOHCC_Procedure_FoodInsecurity_1",
+				"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Procedures related to: Food Insecurity.",
 				"exampleBoolean": false
 			},
 			{
 				"extension": [],
 				"reference": {
-					"reference": "QuestionnaireResponse/6a750c45-728d-4382-9836-94284e52451e"
+					"reference": "Goal/SDOHCC-Goal-FoodInsecurity-1-Example-1"
 				},
-				"name": "SDOHCC_QuestionnaireResponse_Hunger_Vital_Sign_Screening_Example_1",
-				"description": "SDOHCC_QuestionnaireResponse_Hunger_Vital_Sign_Screening_Example_1",
-				"exampleBoolean": true
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "ValueSet/sdohcc-screening-task",
-					"display": "SDOHCC_Screening_Task"
-				},
-				"name": "sdohcc_ValueSet_Screening_Task_1",
-				"description": "Codes used to indicate various types of messages used with a Patient Screening Task. ",
-				"exampleBoolean": false
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "ValueSet/communication-category",
-					"display": "SDOHCC_Communication_Category"
-				},
-				"name": "sdohcc_ValueSet_Communication_Category_1",
-				"description": "Concepts used to categorize various types of screening instrument results that could be communicated from one system to another.",
-				"exampleBoolean": false
-			},
-			{
-				"extension": [],
-				"reference": {
-					"reference": "ValueSet/sdohcc-grv-hl7t-tasks",
-					"display": "SDOHCC-GRV-HL7t-Tasks"
-				},
-				"name": "sdohcc_ValueSet_Tasks_1",
-				"description": "Code to indicate a patient screening task.",
-				"exampleBoolean": false
+				"name": "SDOHCC_Goal_FoodInsecurity_1_Example_1",
+				"description": "Example of a Goal resource used to document a goal of food security as measured by an observation (clinical finding) that asserts food insecurity absent. The Goal resource also is conformant to the US Core Goal profile.7/18/2019: Patient is assisted by the nurse to complete a food insecurity questionnaire and is assessed at that time to have had food insecurity over the past 3 months. The nurse notices the patient is coming in for a checkup on 7/30/2019 and adds to the physician's task list to assess and address the food insecurity issue. \n7/30/2019: Patient sees PCP and, during that visit, is enrolled by the PCP in a program to address food insecurity. A care plan is created with a goal to resolve this problem by 11/30/2019 (within 4 months).\n10/27/2019: Patient has a phone interview assessment by the nurse (using same questionnaire) and is no longer food insecure today.  The goal is updated to achieved with a status date of 10/27/2019 and the condition is updated to be abated as of 10/27/2019. ",
+				"exampleCanonical": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1"
 			}
 		],
 		"page": {
@@ -277,22 +386,22 @@
 			"generation": "markdown",
 			"page": [
 				{
-					"nameUrl": "toc.md",
+					"nameUrl": "toc.html",
 					"title": "Table of Contents",
 					"generation": "generated",
 					"page": [
-						{
-							"title": "Practical Guidance for All Audiences",
-							"generation": "markdown",
-							"nameUrl": "PracticalGuidanceforAllAudiences.html"
-						},
 						{
 							"title": "Gravity Project Background",
 							"generation": "markdown",
 							"nameUrl": "GravityProjectBackground.html"
 						},
 						{
-							"title": "Gravity Project Personas and Patient Stories",
+							"title": "SDOH-CC Background",
+							"generation": "markdown",
+							"nameUrl": "SDOH-CCBackground.html"
+						},
+						{
+							"title": "Personas and Patient Stories",
 							"generation": "markdown",
 							"page": [
 								{
@@ -306,15 +415,15 @@
 									"nameUrl": "PatientStory1.html"
 								}
 							],
-							"nameUrl": "GravityProjectPersonasandPatientStories.html"
+							"nameUrl": "PersonasandPatientStories.html"
 						},
 						{
-							"title": "Gravity Project SDOH Coded Content",
+							"title": "SDOH Coded Content",
 							"generation": "markdown",
-							"nameUrl": "GravityProjectSDOHCodedContent.html"
+							"nameUrl": "SDOHCodedContent.html"
 						},
 						{
-							"title": "Gravity Project Use Cases",
+							"title": "Use Cases, System and Technical Actors",
 							"generation": "markdown",
 							"page": [
 								{
@@ -333,7 +442,7 @@
 									"nameUrl": "UseCase3.html"
 								}
 							],
-							"nameUrl": "GravityProjectUseCases.html"
+							"nameUrl": "UseCasesSystemandTechnicalActors.html"
 						},
 						{
 							"title": "Overview of Data Sharing Methods",
@@ -341,9 +450,14 @@
 							"nameUrl": "OverviewofDataSharingMethods.html"
 						},
 						{
-							"title": "Security and Consent Considerations",
+							"title": "Data Provenance",
 							"generation": "markdown",
-							"nameUrl": "SecurityandConsentConsiderations.html"
+							"nameUrl": "DataProvenance.html"
+						},
+						{
+							"title": "Privacy, Security and Consent Considerations",
+							"generation": "markdown",
+							"nameUrl": "PrivacySecurityandConsentConsiderations.html"
 						},
 						{
 							"title": "Additional Conformance Considerations",
@@ -366,9 +480,9 @@
 							"nameUrl": "AboutSDOH-CCMasterListTemporaryCodeSystemandTemporaryCodes.html"
 						},
 						{
-							"title": "About SDOH-CC Temporary Identifier System",
+							"title": "About SDOH-CC IdentifierSystem Temporary Identifiers",
 							"generation": "markdown",
-							"nameUrl": "AboutSDOH-CCTemporaryIdentifierSystem.html"
+							"nameUrl": "AboutSDOH-CCIdentifierSystemTemporaryIdentifiers.html"
 						}
 					]
 				}

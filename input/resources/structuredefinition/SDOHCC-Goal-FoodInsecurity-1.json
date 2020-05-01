@@ -2,15 +2,15 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Goal-FoodInsecurity-1",
 	"meta": {
-		"versionId": "26",
-		"lastUpdated": "2020-03-16T20:43:00.848+00:00",
-		"source": "#ZF4kI4ZrErXsOVi9"
+		"versionId": "31",
+		"lastUpdated": "2020-04-19T22:27:03.621+00:00",
+		"source": "#HWrVzmsmSckhmWKc"
 	},
 	"extension": [],
-	"url": "http://example.org/fhir/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Goal-FoodInsecurity-1",
 	"name": "SDOHCC_Goal_FoodInsecurity_1",
 	"status": "draft",
-	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Goals related to: Food Security.\n",
+	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Goals related to: Food Security.",
 	"fhirVersion": "4.0.1",
 	"mapping": [
 		{
@@ -50,64 +50,18 @@
 				}
 			},
 			{
-				"id": "Goal.achievementStatus.coding",
-				"path": "Goal.achievementStatus.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Goal.achievementStatus.coding.system",
-				"path": "Goal.achievementStatus.coding.system",
-				"min": 1,
-				"fixedUri": "http://hl7.org/fhir/ValueSet/goal-achievement"
-			},
-			{
-				"id": "Goal.achievementStatus.coding.code",
-				"path": "Goal.achievementStatus.coding.code",
-				"min": 1,
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/ValueSet/goal-achievement"
-				}
-			},
-			{
-				"id": "Goal.achievementStatus.coding.display",
-				"path": "Goal.achievementStatus.coding.display",
-				"min": 1
-			},
-			{
 				"id": "Goal.description",
 				"path": "Goal.description",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
+							"code": "sdohcc-sctt-91000243106",
+							"display": "Food security (finding)"
+						}
+					]
+				},
 				"mustSupport": true
-			},
-			{
-				"id": "Goal.description.coding",
-				"path": "Goal.description.coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Goal.description.coding.system",
-				"path": "Goal.description.coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Goal.description.coding.code",
-				"path": "Goal.description.coding.code",
-				"min": 1,
-				"fixedCode": "sdohcc-sctt-91000243106"
-			},
-			{
-				"id": "Goal.description.coding.display",
-				"path": "Goal.description.coding.display",
-				"min": 1,
-				"fixedString": "Food security (finding)"
-			},
-			{
-				"id": "Goal.description.coding.userSelected",
-				"path": "Goal.description.coding.userSelected",
-				"max": "0"
 			},
 			{
 				"id": "Goal.subject",
@@ -132,36 +86,16 @@
 			{
 				"id": "Goal.target.measure",
 				"path": "Goal.target.measure",
-				"min": 1
-			},
-			{
-				"id": "Goal.target.measure.coding",
-				"path": "Goal.target.measure.coding",
 				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Goal.target.measure.coding.system",
-				"path": "Goal.target.measure.coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Goal.target.measure.coding.code",
-				"path": "Goal.target.measure.coding.code",
-				"min": 1,
-				"fixedCode": "733423003"
-			},
-			{
-				"id": "Goal.target.measure.coding.display",
-				"path": "Goal.target.measure.coding.display",
-				"min": 1,
-				"fixedString": "Food insecurity (finding)"
-			},
-			{
-				"id": "Goal.target.measure.coding.userSelected",
-				"path": "Goal.target.measure.coding.userSelected",
-				"max": "0"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "733423003",
+							"display": "Food insecurity (finding)"
+						}
+					]
+				}
 			},
 			{
 				"id": "Goal.target.detail[x]",
@@ -171,36 +105,16 @@
 					{
 						"code": "CodeableConcept"
 					}
-				]
-			},
-			{
-				"id": "Goal.target.detail[x].coding",
-				"path": "Goal.target.detail[x].coding",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Goal.target.detail[x].coding.system",
-				"path": "Goal.target.detail[x].coding.system",
-				"min": 1,
-				"fixedUri": "http://snomed.info/sct"
-			},
-			{
-				"id": "Goal.target.detail[x].coding.code",
-				"path": "Goal.target.detail[x].coding.code",
-				"min": 1,
-				"fixedCode": "410516002"
-			},
-			{
-				"id": "Goal.target.detail[x].coding.display",
-				"path": "Goal.target.detail[x].coding.display",
-				"min": 1,
-				"fixedString": "Known absent (qualifier value)"
-			},
-			{
-				"id": "Goal.target.detail[x].coding.userSelected",
-				"path": "Goal.target.detail[x].coding.userSelected",
-				"max": "0"
+				],
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "410516002",
+							"display": "Known absent (qualifier value)"
+						}
+					]
+				}
 			},
 			{
 				"id": "Goal.target.due[x]",
@@ -232,7 +146,7 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
 							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
 							"http://hl7.org/fhir/StructureDefinition/Condition"
 						]
@@ -266,7 +180,7 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"https://trifolia-fhir-dev.lantanagroup.com/lantana_prod_hapi_r4/SDOH-CC/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
 						]
 					}
 				]

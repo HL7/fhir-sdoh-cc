@@ -1,48 +1,21 @@
-[Previous Page - Gravity Project Use Cases](GravityProjectUseCases.html)
+[Previous Page - Use Cases, System and Technical Actors](UseCasesSystemandTechnicalActors.html)
 
 
 This use case is relevant to how coded SDOH data are captured in a health care system and how data are shared with other systems.  SDOH data are documented either as part of screening or assessment/ diagnosis activities and may be the reason for ordering care activities. 
 
 <br><br>
 
-### Use Case 1 Messages and Transactions
-This Actor Transaction diagram shows the technical system roles and information exchange transaction for Use Case 1:
+<table><tr><td><img src="UC1 actors color.png" /></td></tr></table>
 
-| Transaction | Example |
+**Practice Management/EHR (PMEHR)** - gathers and shares SDOH information in a clinical care setting.
+
+Capability                   | FHIR API resources and operations | 
 |----------------------------------|----------------|
-|1.	Initiate Screening Task<br>|    BundleMessage-NewTask-Example-1   |
-| 2.	Return Screen<br> |      |
-|		2.1.	Consent provided by patient<br>|  BundleMessage_ReturnScreen_Example_1      |
-|	 	2.2.	Consent not provided by patient <br>| BundleMessage_ReturnScreen_Example_1      |
-| 3.	Update Screening Task<br>| BundleMessage_TaskUpdate_Example_1      |
-| 4.	Communication Request<br>|       |
-|			4.1.	CDA document request<br>|  BundleTransaction_CDEX_Request_Example_1     |
-|			4.2.	FHIR composition resource request<br>|   BundleTransaction_CDEX_Request_Example_2    |
-|			4.3.	FHIR Screening questionnaire request<br>|  BundleTransaction_CDEX_Request_Example_3     |
-|5.	Communication Response<br>|      |
-|			5.1.	CDA document response<br>|  BundleTransaction_CDEX_Response_Example_4      |
-|			5.2.	FHIR composition resource response<br>| BundleTransaction_CDEX_Response_Example_5      |
-|			5.3.	FHIR Screening questionnaire response<br>|  BundleTransaction_CDEX_Response_Example_6.xml     |
-| Questionnaire Resource Example | 	Questionnaire_Hunger_Vital_ Sign_Example_1 |
+| Initiate a screening task for a list of patients and a specific screening tool to be used [1]. Receive individual patient consent and screening information as it becomes available [2]. Associate received information from a patient's chart. Recieve a confirmation when a screening task has been completed [3].     | [base]/$process-message <br> [Bundle MessageHeader](https://www.hl7.org/fhir/messageheader.html)  <br> [Task](https://www.hl7.org/fhir/task.html) <br> [List](https://www.hl7.org/fhir/list.html) <br> [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)<br> [SDC Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) <br> [SDC Questionnaire Response](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html)  <br> [Observation](https://www.hl7.org/fhir/observation.html)        |
+| Enable review of received screening information associated with a patient's medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient's problem list. Include a structured SDOH goal in the patient's documentation to facilitate outcome tracking. Docment planned or completed activites to address SDOH needs using structured data. | [SDOHCC_Observation_FoodInsecurity_1](StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html) <br>[SDOHCC_Condition_FoodInsecurity_1](StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html   ) <br>[SDOHCC_Goal_FoodInsecurity_1](StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html) <br>[SDOHCC_Procedure_FoodInsecurity_1](StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html) <br>|
+|Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH informaiton as structured data or using a standard visit summary [5]. | [CDEX Communication Request](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html) <br> [CDEX Communication](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html) <br> [base]/Composition/[id]/$document <br> or [C-CDA document](http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html)|
 {:class="table table-bordered"}
 {:.table-striped}
-
-<table><tr><td><img src="Use Case 1 Gather and Share SDOH Data in a Clinical Care Setting.png" /></td></tr></table>
-
-<br><br>
-### Use Case 1 Actors
-**Practice Management/EHR (PMEHR)** - gathers and shares SDOH information in a clinical care setting.  
-
-| Capability                   | FHIR API resources and operations |
-|----------------------------------|----------------|
-| Initiate a screening task for a a list of patients and a specivic screening tool to be used [1].  Recieve individual patient consent and screening information as it becomes available [2]. Associate received information from a patient's chart. Recieve a confirmation when a screening task has been completed [3].        |  [base]/$process-message <br> [Bundle MessageHeader](https://www.hl7.org/fhir/messageheader.html), [Task](https://www.hl7.org/fhir/task.html) <br> [List](https://www.hl7.org/fhir/list.html), [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) <br>[SDC Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) <br>[SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html), [Observation](https://www.hl7.org/fhir/observation.html) |
-| Enable review of received screening information associated with a patient's medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient's problem list. Include a structured SDOH goal in the patient's documentation to facilitate outcome tracking. Document planned or completed activities to address SDOH needs using structured data     |    [SDOHCC_Observation_FoodInsecurity_1](StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html) <br> [SDOHCC_Condition_FoodInsecurity_1](StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html)<br> [SDOHCC_Goal_FoodInsecurity_1](StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html) <br> [SDOHCC_Procedure_FoodInsecurity_1](StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html)              |
- | Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH information as structured data or using a standard visit summary [5]. |  [CDEX Communication Request](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html)  <br> [CDEX Communication](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html)<br>[C-CDA on FHIR Composition](http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html) <br> [base]/Composition/[id]/$document <br> Or [C-CDA document](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) |
-{:class="table table-bordered"}
-{:.table-striped}
-
-<br><br>
-
 
 **Screening App Actor** - receives and executes the screening task by interacting with the patient and PMEHR.
 
@@ -80,6 +53,42 @@ This Actor Transaction diagram shows the technical system roles and information 
 {:.table-striped}
 <br>
 
+### Use Case 1 Messages and Transactions
+This Actor Transaction diagram shows the technical system roles and information exchange transaction for Use Case 1:
+
+| Transaction | Example |
+|----------------------------------|----------------|
+|1.	Initiate Screening Task<br>|    BundleMessage-NewTask-Example-1   |
+| 2.	Return Screen<br> |      |
+|		2.1.	Consent provided by patient<br>|  BundleMessage_ReturnScreen_Example_1      |
+|	 	2.2.	Consent not provided by patient <br>| BundleMessage_ReturnScreen_Example_1      |
+| 3.	Update Screening Task<br>| BundleMessage_TaskUpdate_Example_1      |
+| 4.	Communication Request<br>|       |
+|			4.1.	CDA document request<br>|  BundleTransaction_CDEX_Request_Example_1     |
+|			4.2.	FHIR composition resource request<br>|   BundleTransaction_CDEX_Request_Example_2    |
+|			4.3.	FHIR Screening questionnaire request<br>|  BundleTransaction_CDEX_Request_Example_3     |
+|5.	Communication Response<br>|      |
+|			5.1.	CDA document response<br>|  BundleTransaction_CDEX_Response_Example_4      |
+|			5.2.	FHIR composition resource response<br>| BundleTransaction_CDEX_Response_Example_5      |
+|			5.3.	FHIR Screening questionnaire response<br>|  BundleTransaction_CDEX_Response_Example_6.xml     |
+| Questionnaire Resource Example | 	Questionnaire_Hunger_Vital_ Sign_Example_1 |
+{:class="table table-bordered"}
+{:.table-striped}
+
+
+<br><br>
+### Use Case 1 Actors
+**Practice Management/EHR (PMEHR)** - gathers and shares SDOH information in a clinical care setting.  
+
+| Capability                   | FHIR API resources and operations |
+|----------------------------------|----------------|
+| Initiate a screening task for a a list of patients and a specivic screening tool to be used [1].  Recieve individual patient consent and screening information as it becomes available [2]. Associate received information from a patient's chart. Recieve a confirmation when a screening task has been completed [3].        |  [base]/$process-message <br> [Bundle MessageHeader](https://www.hl7.org/fhir/messageheader.html), [Task](https://www.hl7.org/fhir/task.html) <br> [List](https://www.hl7.org/fhir/list.html), [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) <br>[SDC Questionnaire](http://hl7.org/fhir/us/sdc/sdc-questionnaire.html) <br>[SDC QuestionnaireResponse](http://hl7.org/fhir/us/sdc/sdc-questionnaireresponse.html), [Observation](https://www.hl7.org/fhir/observation.html) |
+| Enable review of received screening information associated with a patient's medical record. Enable the clinician to document an SDOH clinical finding. Permit clinicians to document an SDOH issue as a health concern or condition to be tracked on the patient's problem list. Include a structured SDOH goal in the patient's documentation to facilitate outcome tracking. Document planned or completed activities to address SDOH needs using structured data     |    [SDOHCC_Observation_FoodInsecurity_1](StructureDefinition-SDOHCC-Observation-FoodInsecurity-1.html) <br> [SDOHCC_Condition_FoodInsecurity_1](StructureDefinition-SDOHCC-Condition-FoodInsecurity-1.html)<br> [SDOHCC_Goal_FoodInsecurity_1](StructureDefinition-SDOHCC-Goal-FoodInsecurity-1.html) <br> [SDOHCC_Procedure_FoodInsecurity_1](StructureDefinition-SDOHCC-Procedure-FoodInsecurity-1.html)              |
+ | Receive a communication requesting SDOH information gathered during a patient encounter [4]. Initiate a communication with the requested for SDOH information as structured data or using a standard visit summary [5]. |  [CDEX Communication Request](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communicationrequest.html)  <br> [CDEX Communication](http://hl7.org/implement/standards/fhir/us/davinci-cdex/2019Jun/StructureDefinition-cdex-communication.html)<br>[C-CDA on FHIR Composition](http://www.hl7.org/fhir/us/ccda/StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html) <br> [base]/Composition/[id]/$document <br> Or [C-CDA document](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) |
+{:class="table table-bordered"}
+{:.table-striped}
+
+<br><br>
 
 ### Use Case 1 Elements
 
@@ -172,6 +181,93 @@ In Use Case 1 part 2, the PMEHR allows the user to gather other SDOH related inf
 ### Use Case 1, Part 3
 In Use Case 1, part 3, an outside systems queries for or requests information to be communicated from the clinical setting. Two options are supported. First, FHIR RESTful mechanisms can be used to query and retrieve the relevant data or documents.  Second, a Communication Request message can be used to request the data or encounter documents. The Communication message can be used to respond to a Communication Request (solicited communication). Alternatively, a Communication message can be used  to send the documents to a known recipient (unsolicited communication).
 
+### Data Representation Reference Information
 
+#### Structured Document Clinical Note Types
+
+Use this information to request clinical note(s) (DocumentReference or Composition, DiagnosticReport, CarePlan).
+
+The Pull (Solicited Request) information exchange mechanism enables Information Request Sender to request a general type of document and permits the Information Request Recipient to respond with any of the more specific document types defined to be in that note type category.
+
+The Pull (GET) information exchange mechanism requires the Information Client to use specific codes when querying the Information Source. 
+
+Reference the various types of clinical note types via the concepts in the associated value sets.
+
+| Clinical Note Type          | General Code (LOINC) | Specific Types Value Set Name    | Value Set Reference (available in VSAC)    |
+|-----------------------------|----------------------|----------------------------------|--------------------------------------------|
+| History and Physical Note   | 34117-2              | HPDocumentType                   | 2.16.840.1.113883.1.11.20.22               |
+| Progress Note               | 11506-3              | ProgressNoteDocumentTypeCode     | 2.16.840.1.113883.11.20.8.1                |
+| Referral Note               | 57133-1              | ReferralDocumentType             | 2.16.840.1.113883.1.11.20.2.3              |
+| Consultation Note           | 11488-4              | ConsultDocumentType              | 2.16.840.1.113883.11.20.9.31               |
+| Procedure Note              | 28570-0              | ProcedureNoteDocumentTypeCodes   | 2.16.840.1.113883.11.20.6.1                |
+| Care Plan                   | 18776-5              | Care Plan Document Type          | 2.16.840.1.113762.1.4.1099.10              |
+| Continuity of Care Document | 34133-9              | N/A                              | N/A                                        |
+{:class="table table-bordered"}
+{:.table-striped}
+
+#### Helpful Communication Request Recipient Organization Endpoint format codes (this in only relevant for the Request (Solicited Communication) Information Exchange mechanism.
+
+
+|       Profile                                    |    Format Code                           |    Media Type    |    When to use                                                           |   |   |
+|--------------------------------------------------|------------------------------------------|------------------|--------------------------------------------------------------------------|---|---|
+| HL7 C-CDA R2.1 using a structured body           | urn:hl7-org:sdwg:ccda-structuredBody:2.1 | text/xml         | To receive document bundles that contain C-CDA R2.1 structured documents |   |   |
+| HL7 C-CDA R2.1 using a non-structured body       | urn:hl7-org:sdwg:ccda-nonXMLBody:2.1     | text/xml         | binary resource                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a structured Composition |                                          | text/xml         |                                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a structured Composition |                                          | text/json        |                                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a non-structured body    |                                          | text/xml         |                                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a non-structured body    |                                          | text/json        |                                                                          |   |   |
+{:class="table table-bordered"}
+{:.table-striped}
+
+
+#### Sample Structured Data Codes
+
+Note: there are many search parameters and other details for the FHIR search API.  Refer to the FHIR specification for [details](http://hl7.org/fhir/search.html).
+
+|    Data Element Description                                                                                    | C-CDA Entry Template                       | C-CDA data coding                                                                           | FHIR Resource |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------|---------------------------------------------------------------------------------------------|---------------|
+| **What are the A1C results after 2018-01-01 for this patient?**                                                    |                                            |                                                                                             |               |
+| FHIR Query String:                                                                                             |                                            |                                                                                             |               |
+| Observation?patient=[the patient's id]&date=ge2018-01-01&code=4548-4                                           |                                            |                                                                                             |               |
+| Test Result: A1C                                                                                               |                                            | 4548-4 Hemoglobin A1c/Hemoglobin.total in Blood (LOINC)                                     |               |
+| **What are the patient's vital sign measurements in reverse chronological order?**                                 |                                            |                                                                                             |               |
+| FHIR Query String:                                                                                             |                                            |                                                                                             |               |
+| Observation?_sort=-date&patient=[this patient's id]&category=vital-signs                                       |                                            |                                                                                             |               |
+| Vital Sign: weight                                                                                             | Vital Sign Observation                     | 29463-7 Weight (LOINC)                                                                      |               |
+| Vital Sign: height                                                                                             | Vital Sign Observation                     | 8302-2 Height (LOINC)                                                                       |               |
+| Vital Sign: BMI                                                                                                | Vital Sign Observation                     | 39156-5 Body Mass Index (BMI)                                                               |               |
+| **What are the patient's active conditions?**                                                                      |                                            |                                                                                             |               |
+| FHIR Query String:                                                                                             |                                            |                                                                                             |               |
+| Condition?patient=[this patient's id]&clinicalstatus=active                                                    |                                            |                                                                                             |               |
+| Condition/Diagnosis: Type II Diabetes                                                                          | Problem Concern                            | E11 (ICD-10) Type 2 diabetes mellitus                                                       |               |
+| Condition/diagnosis: Amputated left foot                                                                       | Problem Concern                            | Z89.432 Acquired absence left foot (ICD-10)                                                 | Condition     |
+| Condition/diagnosis: Hypertension                                                                              | Problem Concern                            | I10 (ICD-10)                                                                                | Condition     |
+| **What is the patient's current smoking status?**                                                                  |                                            |                                                                                             |               |
+| Observation?patient=1032702&code=72166-2&_sort=-date&_count=1                                                  |                                            |                                                                                             |               |
+| Social History: Smoking Status                                                                                 | Social History Observation                 | 72166-2 Tobacco Smoking Status (LOINC)                                                      |               |
+| **What medications is the patient taking?**                                                                        |                                            |                                                                                             |               |
+| MedicationStatement?patient=[this patient's id]                                                                |                                            |                                                                                             |               |
+|                                                                                                                | Medication Activity                        |                                                                                             |               |
+| Medication:                                                                                                    | Medication Information                     | 316151 Lisinopril 10 MG (RxNorm)                                                            |               |
+|                                                                                                                | Indication                                 | 38341003 | Hypertensive disorder,systemic arterial (disorder) (SCT)                         |               |
+| **What devices does the patient have?**                                                                            |                                            |                                                                                             |               |
+| Device?patient=[this patient's id]                                                                             |                                            |                                                                                             |               |
+| Device: Wheel chair                                                                                            | Non-medicinal Supply/product instance      | 58938008 | Wheelchair device (physical object) | (SCT)                                      |               |
+| Device: Crutches                                                                                               | Non-medicinal Supply                       | 363753007 | Crutches (physical object) | (SCT)                                              |               |
+| Device: Prosthetic left foot                                                                                   | Non-medicinal Supply                       | 449694008 | Implantation of prosthetic device of lower leg (procedure) | (SCT)              |               |
+| **What procedures has the patient had?**                                                                      |                                            |                                                                                             |               |
+| Procedure?patient=[this patient's id]                                                                          |                                            |                                                                                             |               |
+| Procedures                                                                                                     | Diabetic Retinal Exam                      | 67028 Diabetic Retinal Exam (CPT)                                                           |               |
+| Procedures:                                                                                                    | Procedure activity Procedure               | 46786008 | Fitting of prosthesis or prosthetic device of leg below knee (procedure) | (SCT) |               |
+| Procedures:                                                                                                    |                                            | Implantation of prosthetic device of lower leg (CPT)                                        |               |
+| **Who is the patient's Primary Care Provider?**                                                                    |                                            |                                                                                             |               |
+| Patient/this patient's id (note: parse the generalPractitioner field)                                          |                                            |                                                                                             |               |
+| Primary Care Provider for Patient                                                                              | Performer or ResponsibleParty functionCode | 446050000 Primary Care Provider (SCT)                                                       |               |
+|                                                                                                                |                                            | or PCP Primary Care Provider (ParticipationFunction)                                        |               |
+| **What type of health insurance does the patient have?**                                                           |                                            |                                                                                             |               |
+| Coverage?patient=[this patient's id]&status=active (note: parse coverage resource to get the fields you need.) |                                            |                                                                                             |               |
+| Coverage: Health Insurance type                                                                                | Coverage Activity / Policy Activity        | Need help                                                                                   |               |
+{:class="table table-bordered"}
+{:.table-striped}
 
 [Next Page - Use Case 2](UseCase2.html)

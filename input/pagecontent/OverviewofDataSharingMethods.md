@@ -8,4 +8,4 @@ Use cases #1, #2, and #3 support exchange of information as collections of data 
 
 A combination of Task, actionable CommunicationRequests and ServiceRequest resources are used to drive workflows needed to accomplish the SDOH-CC use cases.
 
-[Next Page - Security and Consent Considerations](SecurityandConsentConsiderations.html)
+[Next Page - Data Provenance](DataProvenance.html)

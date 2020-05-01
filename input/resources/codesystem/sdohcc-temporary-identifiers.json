@@ -1,0 +1,38 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "sdohcc-temporary-identifiers",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-04-30T13:17:18.235+00:00",
+		"source": "#k0TUiS32n8jtuh3s"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-identifiers",
+	"version": "0.0.3",
+	"name": "SDOHCC_IdentifierSystem_TemporaryIdentifiers",
+	"title": "SDOHCC IdentifierSystem Temporary Identifiers",
+	"status": "active",
+	"experimental": true,
+	"content": "not-present",
+	"concept": [
+		{
+			"code": "task-1587153359",
+			"display": "task-1587153359"
+		},
+		{
+			"code": "local-ehr-65d310b8-6235-4f47-8d45",
+			"display": "local-ehr-65d310b8-6235-4f47-8d45"
+		},
+		{
+			"code": "MaxMDDemoEhrEndpoint-local",
+			"display": "MaxMDDemoEhrEndpoint-local"
+		},
+		{
+			"code": "MaxMDDemoPayerCoverage-Alice-local",
+			"display": "MaxMDDemoPayerCoverage-Alice-local"
+		},
+		{
+			"code": "request-20200218154321-220t7e66rjptstodlp0tjsor05",
+			"display": "request-20200218154321-220t7e66rjptstodlp0tjsor05"
+		}
+	]
+}

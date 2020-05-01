@@ -1,6 +1,13 @@
-[Previous Page - Overview of Data Sharing Methods](OverviewofDataSharingMethods.html)
+[Previous Page - Data Provenance](DataProvenance.html)
 
-## Security Considerations
+### Gravity Data Principles
+This IG utilizes [Gravity Data Principles](https://confluence.hl7.org/display/GRAV/Gravity+Data+Principles). 
+
+### Privacy Considerations
+*This section is still under development*
+
+
+### Security Considerations
 
 This IG utilizes security guidance established for FHIR R4 and covered in the US Core Security section. Links to relevant material are provided below and conformance constraints specific to this IG are described.
 Many of the SDOH transactions include patient-specific information. For this reason, all SDOH transactions must be appropriately secured with access limited to authorized individuals, data protected while in transit and appropriate audit measures taken.
@@ -13,6 +20,7 @@ Many of the SDOH transactions include patient-specific information. For this rea
 * [Audit Logging](http://hl7.org/fhir/R4/security.html#audit%20logging)
 * [Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)
 * [Security Labels](http://hl7.org/fhir/R4/security-labels.html)
+* [Binding]( https://www.hl7.org/fhir/security.html#binding)
  
  
 Security conformance requirements specific to the SDOH-CC IG are as follows:
@@ -29,7 +37,7 @@ Security conformance requirements specific to the SDOH-CC IG are as follows:
 * Systems MAY protect the confidentiality of data at rest via encryption and associated access controls. The policies and methods used are outside the scope of this specification.
 
 <br>
-## Consent Considerations
+### Consent Considerations
 This IG requires the use of a Consent resource to capture and exchange a subject's consent to share information with a requestor.  When consent to share is agreed, a Consent resource in included with the shared information.  When consent to share is not agreed, a Communication is provided as a response to the request message and the Consent resource is included in the response message to document the denial to share the requested information.
 
 [Next Page - Additional Conformance Considerations](AdditionalConformanceConsiderations.html)

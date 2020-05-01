@@ -1,5 +1,3 @@
-[Previous Page - Practical Guidance for All Audiences](PracticalGuidanceforAllAudiences.html)
-
 
 The influence of social determinants on health outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  Social determinants of health (SDOH) are defined by the World Health Organization as the conditions in which people are born, live, work, and age.  
 
@@ -45,71 +43,4 @@ The systematic documentation and aggregation of SDOH data in EHRs and related sy
 
 Based on the growing collection of social risk data in health care systems, an immediate opportunity exists to support data collection, data aggregation, data sharing, quality measurement, benchmarking, and risk adjustment.   Many assessment tools are currently in use, but the concepts addressed vary, and some tools merit further validation and testing across a variety of settings and clinical workflows.  Health IT can play a critical, untapped role in enabling the seamless electronic exchange and use of this data.  However, standardization and harmonization of SDOH concepts, regardless of the social risk assessment tool used, requires a consensus-based approach to maximize buy-in, consistency of implementation, and usefulness of data collected.
 
-<br>
-###  SDOH Domain Scope
-
-The Gravity Project focus on defining coded content to support three priority social domains, **food insecurity**, **housing instability and homelessness**, and **transportation access**.
-
-<table><tr><td><img src="three SDOH domains.png" /></td></tr></table>
-
-
-<br>
-####  Out of SDOH Domain Scope
-
-The Gravity Project will not focus on evaluating, testing, or harmonizing existing social risk screening tools and instruments, nor will it identify social risk data elements that do not directly support one of the three priority social domains previously listed in the Scope Statement. This project also will not validate or provide incentives for implementation of the identified SDOH data elements.
-
-<br>
-### Conceptual Framework
-
-Coded SDOH content is captured across four core health care activities: screening, assessment/diagnosis, goal setting, and interventions. The conceptual framework illustrated below shows how these activities form a cycle of care. Over time, as additional screening and assessment is performed, a patients progress toward care goals can be tracked and measured.
-
-<table><tr><td><img src="Gravity Project Conceptual Framework.png" /></td></tr></table>
-
-
-
-<br>
-### Data Modeling Framework
-The figure below was derived from the HL7 Patient Care WG Domain Analysis model for Care Plan information. It informs the design of the  FHIR Resources used in this IG.
-
-<table><tr><td><img src="Data Modeling Framework.png" /></td></tr></table>
-
-The relationships between the various types of information are supported by the designs developed for the resources. The diagram below shows the data model for the assessment observation, condition (diagnosis), and goal (patient centered goal). The semantics designed for the profiled resources support the envisioned cycles of assessment, diagnosis, and goal setting. The mind map illustration represents profiles developed in this IG for the FHIR Observation, Condition, and Goal Resources. It shows instances of profiled Resources that would be used over time as part of an iterative care process. 
-
-<table><tr><td><img src="SDOHCC FHIR IG Mindmap 1 smaller.png" /></td></tr></table>
-
-
-The data modeling includes additional considerations specified using FHIR Path expressions.
-
-| Profile                                                         | Additional Constraints                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Observation Profile 1 instance 1 | Food insecurity observation that is the result of clinical  assessment based on information collected in the screening  questionnaire and other information gathered during the  encounter. <br> 1) Allows an Observation that specifies Food insecurity absent (aka Food Security), Mild food insecurity, Moderate food insecurity, Severe Food insecurity, or Food insecurity, unknown. <br> 2) xpath rules could specify xpath that must either  Observation.valueCodableConcept or  Observation.dataAbsentReason, but not both, must be provided. |
-| Condition                        | Allows a Condition that specifies Mild food insecurity, Moderate  food insecurity, Severe Food insecurity.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Goal                             | Patient-centered goal documenting the desired outcome  of planned interventions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Observation Profile 1 instance 2 | Food insecurity observation that is the result of a post-goal,  post-intervention evaluation/assessment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-{:class="table table-bordered"}
-{:.table-striped}
-
-<br>
-#### Role of the FHIR CarePlan Resource
-Initially, Care Plan information exchange mechanisms were developed using the HL7 Clinical Document Architecture (CDA) standard. A Care Plan Document template was defined in the HL7 Consolidated C-CDA  Implementation Guide. It comprised four sections representing the primary informational components (Health Concerns, Goals, Interventions, and Health Status Evaluations and Outcomes). The discrete entries defined to hold these different types of information included linkages that allowed the relationships between the information to be recorded. Interventions planned and performed could be linked to the goals they were intended to make progress toward and those goals could be linked to the health concerns being addressed. Observations made to evaluate progress could be associated with specific interventions, or to document progress toward accomplishing the targeted goal(s). Processing the information in four separate sections and rendering it in a useful way to show the inherent relationships across the pieces of information was challenging and adoption of the C-CDA Care Plan Document template was challenging for implementers.  Exploration of organizing information captured in a clinical encounter to expose the care plan view of the story remains a nascent activity. More progress has been made on exchanging this information in the form of an Encounter Summary organized using the individual sections of C-CDA Documents in a way that does not focus on the linkages across the pieces of information.  This more traditional SOAP Note view has seen more exploration via C-CDA Document Templates such as Discharge Summary, Progress Note, and History and Physical Note.
-
-After the advent of FHIR, a CarePlan Resource was developed to accomplish the need to express the relationships between information about health concerns, goals, interventions, and supporting clinical observations resulting from screening, assessment, and evaluation activities. The CarePlan Resource was designed to make linkages between these care plan cornerstone components of information.
-
-The figure below shows a larger scope of data modeling to incorporate a care plan to express and track care delivery to address a specific condition. The more complex data model brings in the screening done to inform the assessment, and the interventions planned and performed to make progress toward the goal. 
-
-
-<table><tr><td><img src="Screen Shot 2020-02-03 at 7.58.02 AM.png" /></td></tr></table>
-
-Again, the mind map shows instances of profiled Resources that would be used over time as part of an iterative care process. when the patient progresses from: Initial Observation(s) -> Initial Condition(s) - based on Initial Observation(s) -> Initial Care Plan and Initial Goal(s) - based on Initial Condition(s) ->Initial Service Request(s) and Initial Procedure(s)/Intervention(s) - based on Initial Care plan and Initial Goal(s)->Subsequent Observation(s) -> Subsequent Condition(s) -> Revised Care Plan and Revised Goal(s) -> etc. 
-
-This data modeling aligns with the Conceptual Framework described earlier as the foundation for the use cases covered by this IG.
-
-While the CarePlan Resource makes it easier to organize informational components according to a care planning perspective, it also is possible in FHIR to create Encounter Summary Documents that present the very same information in a more familiar SOAP Note type of view.  The FHIR Composition Resource uses sections that function in the same way (and use the same LOINC Document Ontology codes) as C-CDA.  In fact, the C-CDA on FHIR Implementation Guide provides guidance on how to implement each of the C-CDA Clinical Note types using the FHIR Composition Resource and underlying FHIR Resources like Condition, Goal, Procedure, MedicationRequest, and Observation to record the machine processable data that accompanies the human readable narrative in the sections. 
-
-The illustration below shows wireframe representation of structured documents used to exchange clinical information summarizing a patients medical history over a span of time, summarizing a specific patient encounter, or summarized to support referral to an outside organization for additional patient care/services. 
-
-
-<table><tr><td><img src="SDOH Data Elements Wireframe.png" /></td></tr></table>
-
-
-[Next Page - Gravity Project Personas and Patient Stories](GravityProjectPersonasandPatientStories.html)
+[Next Page - SDOH-CC Background](SDOH-CCBackground.html)

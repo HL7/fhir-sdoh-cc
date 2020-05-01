@@ -21,10 +21,10 @@ To align this food insecurity condition with the food insecurity observation tha
 
 ### Condition.code
 
-This element references sdohcc_ValueSet_FoodInsecurity_1. This value set contains the SNOMED CT codes listed below.
+This element references sdohcc_ValueSet_FoodInsecurity_1. The profile requires a code from this value set which contains the existing and temporary SNOMED CT codes listed below.
 
 | Code                    | Display                            |
-|-------------------------|------------------------------------|
+|-------------------------|--------------------|
 | 733423003               | Food insecurity (finding)          |
 | sdohcc-sctt-21000243108 | Mild food insecurity (finding)     |
 | sdohcc-sctt-31000243105 | Moderate food insecurity (finding) |
@@ -69,6 +69,16 @@ aligns with the goal that address this condition (via Goal.addresses):
 	* Goal target measure = Food insecurity
 	* Goal target detail = Known absent
 
+Condition.code has been sliced to also allow the optional addition of ICD-10 codes used to document food insecurity conditions for the purpose of billing. The Condition.code slice references SDOHCC_ValueSet_FoodInsecurity_2 which contains the existing and temporary ICD-10 codes listed below.
+
+| Code | Display|
+|-------------------------|--------------------|
+|Z59.4 | Lack of adequate food and safe drinking water|
+| sdohcc-i10cmt-202004020519	| Food insecurity |
+|sdohcc-i10cmt-202004020520|	Lack of adequate food|
+{:class="table table-bordered"}
+{:.table-striped}
+
 ### Condition.severity
 
 This element is prohibited. 
@@ -82,8 +92,3 @@ Condition.onset is constrained to dateTime. While it is recognized that “Food 
 ### Condition.abatement
 
 Condition.abatement is constrained to “dateTime”. Where the abatement period is somewhat fuzzy, this element might use month/year. However, since the condition of food insecurity may possibly end at a specific point in time (e.g., upon receipt of a paycheck from a new job or gaining eligibility to a food program) a higher precision representation (e.g., year/month/date/hour/min) might also be used for dateTime.
-
-
-
-
-

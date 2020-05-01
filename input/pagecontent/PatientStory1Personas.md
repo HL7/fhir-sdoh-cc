@@ -1,4 +1,4 @@
-[Previous Page - Gravity Project Personas and Patient Stories](GravityProjectPersonasandPatientStories.html)
+[Previous Page - Personas and Patient Stories](PersonasandPatientStories.html)
 
 ###  Patient Persona
 

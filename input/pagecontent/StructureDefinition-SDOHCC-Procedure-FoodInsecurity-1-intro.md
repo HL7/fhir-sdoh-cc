@@ -1,18 +1,19 @@
 ## Profile design 
-This profile is adapted from US Core Procedure. However, the value set bindings are not necessarily compliant. 
+This profile is adapted from US Core Condition. However, the value set bindings are not necessarily compliant. 
 
 ## Additional Guidance
 
-This is a draft profile that is included in this IG to give implementers an idea of how Gravity intends to develop this profile. As the Gravity project continues to develop content, this Procedure profile will also align with CarePlan and BSeR ServiceRequest profiles which will also be further developed in future versions of the Gravity IG.
+This draft profile is included in this IG to give implementers an idea of how Gravity intends to develop this profile. As the Gravity project continues to develop content, this Procedure profile will also align with CarePlan and BSeR ServiceRequest profiles which will also be further developed in future versions of the Gravity IG.
 
-The FHIR Procedure, ServiceRequest and CarePlan resources reference one another. Therefore, to support interoperability and analytics, similar approaches will be considered in the structured representation of food insecurity procedures, service requests and care plans. 
+The FHIR Procedure, ServiceRequest and CarePlan resources reference one another. Therefore, to support interoperability and analytics, similar approaches will be considered in the structured representation of food insecurity Procedure, ServiceRequests and CarePlan profiles. 
 
 Although the Gravity Procedure, ServiceRequest and CarePlan profiles are still being developed, the diagram below shows potential relationships between Procedure, ServiceRequest and CarePlan (as well as the Conditions and/or Observations that they reference). 
 
- <table><tr><td><img src="Procedure Mindemap 2020.01.27.png" /></td></tr></table>
+The initial QuestionnaireResponse (1) results in Observations (2,3) which are evidence for a Condition (4) that is addressed by a CarePlan (5) and Goal (6) which lead to a ServiceRequest (7) and Procedure (8).
 
 
-CarePlan may reference ServiceRequest. Procedure may be based on ServiceRequest or CarePlan. The Procedure, CarePlan and ServiceRequest may reference Condition and/or Observation.
+<table><tr><td><img src="procedure profile mindmap 20200423.png" /></td></tr></table>
+
  
 The sections that follow provide additional guidance on 1) specific elements of this profile, and 2) efforts to align the profile with the following correlated Condition and Observation profiles:
 
@@ -21,12 +22,14 @@ The sections that follow provide additional guidance on 1) specific elements of 
 
 ### Procedure.code
 
-This element references sdohcc_ValueSet_FoodInsecurityIntervention_1. Currently, this value set contains the SNOMED CT extension codes listed below. However, the current value set is only for the purpose of demonstrating a Food Insecurity Procedure for this IG. The members of this value set will increase as the Gravity Project continues to develop content.
+This element references SDOHCC_ValueSet_FoodInsecurityIntervention_1. Currently, this value set contains the temporary SNOMED CT codes listed below. The current value set is only for the purpose of demonstrating a Food Insecurity Procedure profile for this IG. The members of this value set may change as the Gravity Project continues to develop content.
 
 | Code                     | Display                                                                               |
 |--------------------------|---------------------------------------------------------------------------------------|
-| sdohcc-sctt-111000243109 | Assistance with application for Supplemental Nutrition Assistance Program (procedure) |
-| sdohcc-sctt-101000243107 | Evaluation of eligibility for Supplemental Nutrition Assistance Program (procedure)   |
+| sdohcc-sctt-151000243108 | Assistance with application for food program (procedure) |
+| sdohcc-sctt-141000243105 | Education about food program (procedure)   |
+| sdohcc-sctt-131000243104 | Evaluation of eligibility for food program (procedure)   |
+| sdohcc-sctt-161000243106 | Provision of food from food program (procedure)   |
 {:class="table table-bordered"}
 {:.table-striped}
 
@@ -43,6 +46,8 @@ The consistent use of similar codes for a Procedure and a referenced ServiceRequ
 May align with a service request that this procedure references (via Procedure.basedOn) such as:
 * SDOHCC_ServiceRequest_FoodInsecurity_1 (yet to be developed) modeled with:
 	* ServiceRequest.code = Assistance with application for Supplemental Nutrition Assistance Program
+
+The codes in the SDOHCC_ValueSet_FoodInsecurityIntervention_1 are high level codes that do not specify specific food programs. Gravity is exploring a number of options to refine the current set of codes (for Procedure.code and ServiceRequest,code) so that specific food and nutrition programs (national or local) can be represented in a consistent manner. Options under consideration include but are not limited to: 1) value sets for Programs that can be used with a modified existing element of the ServiceRequest Resource, 2) Precoodination of more granular procedure codes that include the specific programs.
 
 ### Procedure.basedOn
 
@@ -72,7 +77,7 @@ DocumentReference profiles.
 
 ### Procedure.reasonCode
 
-This element can be used to provide a coded reason for why a procedure was performed. This element could have been used in this profile to reference sdohcc_ValueSet_FoodInsecurity_1 (see members below) which was also used for Condition.code and Observation.code in SDOHCC_Condition_FoodInsecurity_1 and SDOHCC_Observation_FoodInsecurity_1. 
+This element can be used to provide a coded reason for why a procedure was performed. This element could have been used in this profile to reference SDOHCC_ValueSet_FoodInsecurity_1 (see members below) which was also used for Condition.code and Observation.code in SDOHCC_Condition_FoodInsecurity_1 and SDOHCC_Observation_FoodInsecurity_1. 
 
 | Code                    | Display                            |
 |-------------------------|------------------------------------|

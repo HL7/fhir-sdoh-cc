@@ -1,0 +1,28 @@
+{
+	"resourceType": "CapabilityStatement",
+	"id": "pmehr",
+	"meta": {
+		"versionId": "6",
+		"lastUpdated": "2020-05-01T17:45:18.525+00:00",
+		"source": "#OKrt2OHUv2D7snWa"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/CapabilityStatement/pmehr",
+	"version": "0.0.3",
+	"name": "SDOHCC_CapabilityStatement_PMEHR",
+	"title": "SDOHCC PMEHR Actor Capability Statement",
+	"status": "active",
+	"experimental": false,
+	"date": "2020-04-29",
+	"description": "The system that initiates the task to request a list of patients to be screened using a certain screening questionnaire. The PMEHR actor is assumed to either be grouped with an SDC Form Designer actor or to have access to Questionnaire Resources produced by other systems that are compliant with the SDC Form Designer and SDC Form Manager actors. The PMEHR uses the capability of a Form Designer technical actor to create a Questionnaire Resource that expresses a screening instrument. See the LHC Form Builder for an example: [https://lhcforms.nlm.nih.gov/](https://lhcforms.nlm.nih.gov/). For screening instruments included in the Gravity Project Master List, use temporary codes included in the Master List where permanent codes are not yet available.Link to Section of the IG about the Master List and Temporary Codes.",
+	"kind": "requirements",
+	"fhirVersion": "4.0.1",
+	"format": [
+		"xml",
+		"json"
+	],
+	"rest": [
+		{
+			"mode": "client"
+		}
+	]
+}

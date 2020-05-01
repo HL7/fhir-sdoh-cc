@@ -2,9 +2,12 @@
 	"resourceType": "Goal",
 	"id": "SDOHCC-Goal-FoodInsecurity-1-Example-1",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-03-12T20:51:41.685+00:00",
-		"source": "#M7f43tEJiEVDc56W"
+		"versionId": "11",
+		"lastUpdated": "2020-04-30T11:28:28.229+00:00",
+		"source": "#ZCslxsOs3EtIhVuo"
+	},
+	"text": {
+		"status": "generated"
 	},
 	"lifecycleStatus": "completed",
 	"achievementStatus": {
@@ -19,7 +22,7 @@
 	"description": {
 		"coding": [
 			{
-				"system": "http://snomed.info/sct",
+				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
 				"code": "sdohcc-sctt-91000243106",
 				"display": "Food security (finding)"
 			}
@@ -27,7 +30,7 @@
 		"text": "Food security"
 	},
 	"subject": {
-		"reference": "Patient/patientExample1"
+		"reference": "Patient/SDOHCC-Patient-pat1-Example-1"
 	},
 	"target": [
 		{
@@ -50,10 +53,11 @@
 					}
 				],
 				"text": "Known absent"
-			}
+			},
+			"dueDate": "2019-11-30"
 		}
 	],
-	"statusDate": "2012-10-27",
+	"statusDate": "2019-10-27",
 	"addresses": [
 		{
 			"reference": "Condition/SDOHCC-Condition-FoodInsecurity-1-Example-1"

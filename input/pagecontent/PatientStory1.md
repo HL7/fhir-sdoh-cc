@@ -91,4 +91,4 @@ Ms. Shah reviews Rebeccas progress toward the goals set during the last encounte
 * Each of the entry modalities either tie back to a common, singular database, or if they are separate databases, the data elements are consistent across each and the integration is preferably automated and near real-time.
 * Acknowledgment and error-handling messages will be handled by standard IT protocols and will not be addressed within the scope of this Use Case Package.
 
-[Next Page - Gravity Project SDOH Coded Content](GravityProjectSDOHCodedContent.html)
+[Next Page - SDOH Coded Content](SDOHCodedContent.html)

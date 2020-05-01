@@ -14,8 +14,7 @@ The sections that follow provide additional guidance on 1) rules to improve the 
 * SDOHCC_Goal_FoodInsecurity_1
 
 ### Observation.code
-This element references sdohcc_ValueSet_FoodInsecurity_1. 
-This value set contains the SNOMED CT codes listed below.
+This element references sdohcc_ValueSet_FoodInsecurity_1. This value set contains the existing and temporary SNOMED CT codes listed below.
 
 
 | Code | Display |
@@ -50,7 +49,7 @@ aligns with the observation that this condition references (via Condition.eviden
 
 
 ### Observation.dataAbsentReason
-This element references sdohcc_ValueSet_ContextValue_2. The value set contains the three codes listed below which represent a subset of the FHIR DataAbsentReason value set. 
+This element references SDOHCC_ValueSet_ContextValue_2. The value set contains the three codes listed below which represent a subset of the FHIR DataAbsentReason value set. 
 
 | Code | Display |
 | -------- | -------- | 
@@ -62,7 +61,7 @@ This element references sdohcc_ValueSet_ContextValue_2. The value set contains t
 
 
 ### Observation.value
-This element references sdohcc_ValueSet_ContextValue_1. This value set contains the SNOMED CT codes listed below.
+This element references SDOHCC_ValueSet_ContextValue_1. This value set contains the SNOMED CT codes listed below.
 
 | Code | Display |
 | -------- | -------- | 
@@ -103,13 +102,13 @@ This element is constrained to dateTime or Period.
 The mandating of “end” time is still under discussion at the time of this IG. Therefore, fhirpath rules have not been added to enforce this. 
 
 
-### FHIRpath rules 
-This profile will use FHIRpath rules. The objective of the FHIRpath rules are to support creation of observations that clearly establish a patient’s food insecurity state. 
+### FHIRPath rules 
+This profile will use FHIRPath rules. The objective of the FHIRPath rules are to support creation of observations that clearly establish a patient’s food insecurity state. 
 
 *Example:*
 Moderate food insecurity = known present 
 
-FHIRpath rules will constrain the observations that can be created with this profile to:
+FHIRPath rules will constrain the observations that can be created with this profile to:
 
 * Food insecurity = unknown (and subtypes):
 	* Food insecurity = asked-unknown 
@@ -123,5 +122,4 @@ FHIRpath rules will constrain the observations that can be created with this pro
 #### Rules:
 1. Observation.value or Observation.dataAbsentReason, but NOT both, MUST be provided. <br>This rule prohibits creation of nonsense observations like “Food insecurity = known present AND unknown”.
 2.  “Observation.value = Known absent” can only be used with “Observation.code = Food insecurity”. <br> This rule prohibits creation of observations like “Mild food insecurity = Known absent” which merely exclude a possible food insecurity state rather than clearly establish a patient’s food insecurity state. <br> This rule allows creation of the observation “Food insecurity = known absent” which implies that all states of food insecurity (including mild, moderate and severe) are absent. This clearly establishes that the patient is not in a food insecure state (e.g., equates to “Food security = known present”).
-3.  Observation.dataAbsentReason can only be used with “Observation.code = Food insecurity” <br>This rule prohibits creation of observations like “Mild food insecurity = unknown” which merely establish that one possible food insecurity state is unknown. <br>This rule allows creation of observations like “Food insecurity = unknown” which imply that all states of food insecurity (including mild, moderate and severe) are unknown.   
-
+3.  Observation.dataAbsentReason can only be used with “Observation.code = Food insecurity” <br>This rule prohibits creation of observations like “Mild food insecurity = unknown” which merely establish that one possible food insecurity state is unknown. <br>This rule allows creation of observations like “Food insecurity = unknown” which imply that all states of food insecurity (including mild, moderate and severe) are unknown.
