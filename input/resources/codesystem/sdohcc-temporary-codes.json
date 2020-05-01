@@ -2,17 +2,28 @@
 	"resourceType": "CodeSystem",
 	"id": "sdohcc-temporary-codes",
 	"meta": {
-		"versionId": "35",
-		"lastUpdated": "2020-04-28T16:00:33.535+00:00",
-		"source": "#CpbyIiMLXm15UcOC"
+		"versionId": "43",
+		"lastUpdated": "2020-05-01T15:50:45.343+00:00",
+		"source": "#E1xdpnGVNs3Ujokz"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
 	"version": "0.0.3",
 	"name": "SDOHCC_CodeSystem_TemporaryCodes",
 	"title": "SDOHCC CodeSystem Temporary Codes",
-	"status": "draft",
+	"status": "active",
 	"experimental": true,
 	"description": "A local code system defined within the context of the SDOH-CC IG. ",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"code": "US",
+					"display": "United States of America"
+				}
+			],
+			"text": "United States of America"
+		}
+	],
 	"purpose": "The purpose of this code system is to enable temporary codes to be assigned to concepts that are needed to document SDOH-related data elements defined by the Gravity Project community and concepts that are needed to facilitate the use of FHIR to exchange data as required in the use cases covered by this IG.  After the IG has been sufficiently tested through HL7 Connectathons and the coded concepts have been confirmed as fit for the intended purpose, and consensus on the use of the codes has been confirmed through the HL7 Ballot process, the temporary codes will be replaced with coded concepts established within nationally recognized, open code systems.  The replacement of temporary codes with permanent codes is intended to happen prior to the IG being published by HL7.",
 	"copyright": "(c) 2020 HL7.org",
 	"content": "complete",
@@ -91,6 +102,21 @@
 			"code": "sdohcc-sctt-161000243106",
 			"display": "Provision of food from food program (procedure)",
 			"definition": "Covers any concrete support that is able to be given to the patient directly at the point of service for food program"
+		},
+		{
+			"code": "sdohcc-hl7t-20204281629",
+			"display": "Solicited Communication",
+			"definition": "A response to a communication request"
+		},
+		{
+			"code": "sdohcc-hl7t-202004190731",
+			"display": "Request data",
+			"definition": "Indicates data is requested to be communicated used in conjunction with a communication request"
+		},
+		{
+			"code": "sdohcc-hl7t-202004190730",
+			"display": "Request document",
+			"definition": "Indicates a document is requested to be communicated used in conjunction with a communication request"
 		}
 	]
 }

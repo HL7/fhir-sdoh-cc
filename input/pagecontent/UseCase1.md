@@ -181,6 +181,93 @@ In Use Case 1 part 2, the PMEHR allows the user to gather other SDOH related inf
 ### Use Case 1, Part 3
 In Use Case 1, part 3, an outside systems queries for or requests information to be communicated from the clinical setting. Two options are supported. First, FHIR RESTful mechanisms can be used to query and retrieve the relevant data or documents.  Second, a Communication Request message can be used to request the data or encounter documents. The Communication message can be used to respond to a Communication Request (solicited communication). Alternatively, a Communication message can be used  to send the documents to a known recipient (unsolicited communication).
 
+### Data Representation Reference Information
 
+#### Structured Document Clinical Note Types
+
+Use this information to request clinical note(s) (DocumentReference or Composition, DiagnosticReport, CarePlan).
+
+The Pull (Solicited Request) information exchange mechanism enables Information Request Sender to request a general type of document and permits the Information Request Recipient to respond with any of the more specific document types defined to be in that note type category.
+
+The Pull (GET) information exchange mechanism requires the Information Client to use specific codes when querying the Information Source. 
+
+Reference the various types of clinical note types via the concepts in the associated value sets.
+
+| Clinical Note Type          | General Code (LOINC) | Specific Types Value Set Name    | Value Set Reference (available in VSAC)    |
+|-----------------------------|----------------------|----------------------------------|--------------------------------------------|
+| History and Physical Note   | 34117-2              | HPDocumentType                   | 2.16.840.1.113883.1.11.20.22               |
+| Progress Note               | 11506-3              | ProgressNoteDocumentTypeCode     | 2.16.840.1.113883.11.20.8.1                |
+| Referral Note               | 57133-1              | ReferralDocumentType             | 2.16.840.1.113883.1.11.20.2.3              |
+| Consultation Note           | 11488-4              | ConsultDocumentType              | 2.16.840.1.113883.11.20.9.31               |
+| Procedure Note              | 28570-0              | ProcedureNoteDocumentTypeCodes   | 2.16.840.1.113883.11.20.6.1                |
+| Care Plan                   | 18776-5              | Care Plan Document Type          | 2.16.840.1.113762.1.4.1099.10              |
+| Continuity of Care Document | 34133-9              | N/A                              | N/A                                        |
+{:class="table table-bordered"}
+{:.table-striped}
+
+#### Helpful Communication Request Recipient Organization Endpoint format codes (this in only relevant for the Request (Solicited Communication) Information Exchange mechanism.
+
+
+|       Profile                                    |    Format Code                           |    Media Type    |    When to use                                                           |   |   |
+|--------------------------------------------------|------------------------------------------|------------------|--------------------------------------------------------------------------|---|---|
+| HL7 C-CDA R2.1 using a structured body           | urn:hl7-org:sdwg:ccda-structuredBody:2.1 | text/xml         | To receive document bundles that contain C-CDA R2.1 structured documents |   |   |
+| HL7 C-CDA R2.1 using a non-structured body       | urn:hl7-org:sdwg:ccda-nonXMLBody:2.1     | text/xml         | binary resource                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a structured Composition |                                          | text/xml         |                                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a structured Composition |                                          | text/json        |                                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a non-structured body    |                                          | text/xml         |                                                                          |   |   |
+| HL7 C-CDA-On-FHIR using a non-structured body    |                                          | text/json        |                                                                          |   |   |
+{:class="table table-bordered"}
+{:.table-striped}
+
+
+#### Sample Structured Data Codes
+
+Note: there are many search parameters and other details for the FHIR search API.  Refer to the FHIR specification for [details](http://hl7.org/fhir/search.html).
+
+|    Data Element Description                                                                                    | C-CDA Entry Template                       | C-CDA data coding                                                                           | FHIR Resource |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------|---------------------------------------------------------------------------------------------|---------------|
+| **What are the A1C results after 2018-01-01 for this patient?**                                                    |                                            |                                                                                             |               |
+| FHIR Query String:                                                                                             |                                            |                                                                                             |               |
+| Observation?patient=[the patient's id]&date=ge2018-01-01&code=4548-4                                           |                                            |                                                                                             |               |
+| Test Result: A1C                                                                                               |                                            | 4548-4 Hemoglobin A1c/Hemoglobin.total in Blood (LOINC)                                     |               |
+| **What are the patient's vital sign measurements in reverse chronological order?**                                 |                                            |                                                                                             |               |
+| FHIR Query String:                                                                                             |                                            |                                                                                             |               |
+| Observation?_sort=-date&patient=[this patient's id]&category=vital-signs                                       |                                            |                                                                                             |               |
+| Vital Sign: weight                                                                                             | Vital Sign Observation                     | 29463-7 Weight (LOINC)                                                                      |               |
+| Vital Sign: height                                                                                             | Vital Sign Observation                     | 8302-2 Height (LOINC)                                                                       |               |
+| Vital Sign: BMI                                                                                                | Vital Sign Observation                     | 39156-5 Body Mass Index (BMI)                                                               |               |
+| **What are the patient's active conditions?**                                                                      |                                            |                                                                                             |               |
+| FHIR Query String:                                                                                             |                                            |                                                                                             |               |
+| Condition?patient=[this patient's id]&clinicalstatus=active                                                    |                                            |                                                                                             |               |
+| Condition/Diagnosis: Type II Diabetes                                                                          | Problem Concern                            | E11 (ICD-10) Type 2 diabetes mellitus                                                       |               |
+| Condition/diagnosis: Amputated left foot                                                                       | Problem Concern                            | Z89.432 Acquired absence left foot (ICD-10)                                                 | Condition     |
+| Condition/diagnosis: Hypertension                                                                              | Problem Concern                            | I10 (ICD-10)                                                                                | Condition     |
+| **What is the patient's current smoking status?**                                                                  |                                            |                                                                                             |               |
+| Observation?patient=1032702&code=72166-2&_sort=-date&_count=1                                                  |                                            |                                                                                             |               |
+| Social History: Smoking Status                                                                                 | Social History Observation                 | 72166-2 Tobacco Smoking Status (LOINC)                                                      |               |
+| **What medications is the patient taking?**                                                                        |                                            |                                                                                             |               |
+| MedicationStatement?patient=[this patient's id]                                                                |                                            |                                                                                             |               |
+|                                                                                                                | Medication Activity                        |                                                                                             |               |
+| Medication:                                                                                                    | Medication Information                     | 316151 Lisinopril 10 MG (RxNorm)                                                            |               |
+|                                                                                                                | Indication                                 | 38341003 | Hypertensive disorder,systemic arterial (disorder) (SCT)                         |               |
+| **What devices does the patient have?**                                                                            |                                            |                                                                                             |               |
+| Device?patient=[this patient's id]                                                                             |                                            |                                                                                             |               |
+| Device: Wheel chair                                                                                            | Non-medicinal Supply/product instance      | 58938008 | Wheelchair device (physical object) | (SCT)                                      |               |
+| Device: Crutches                                                                                               | Non-medicinal Supply                       | 363753007 | Crutches (physical object) | (SCT)                                              |               |
+| Device: Prosthetic left foot                                                                                   | Non-medicinal Supply                       | 449694008 | Implantation of prosthetic device of lower leg (procedure) | (SCT)              |               |
+| **What procedures has the patient had?**                                                                      |                                            |                                                                                             |               |
+| Procedure?patient=[this patient's id]                                                                          |                                            |                                                                                             |               |
+| Procedures                                                                                                     | Diabetic Retinal Exam                      | 67028 Diabetic Retinal Exam (CPT)                                                           |               |
+| Procedures:                                                                                                    | Procedure activity Procedure               | 46786008 | Fitting of prosthesis or prosthetic device of leg below knee (procedure) | (SCT) |               |
+| Procedures:                                                                                                    |                                            | Implantation of prosthetic device of lower leg (CPT)                                        |               |
+| **Who is the patient's Primary Care Provider?**                                                                    |                                            |                                                                                             |               |
+| Patient/this patient's id (note: parse the generalPractitioner field)                                          |                                            |                                                                                             |               |
+| Primary Care Provider for Patient                                                                              | Performer or ResponsibleParty functionCode | 446050000 Primary Care Provider (SCT)                                                       |               |
+|                                                                                                                |                                            | or PCP Primary Care Provider (ParticipationFunction)                                        |               |
+| **What type of health insurance does the patient have?**                                                           |                                            |                                                                                             |               |
+| Coverage?patient=[this patient's id]&status=active (note: parse coverage resource to get the fields you need.) |                                            |                                                                                             |               |
+| Coverage: Health Insurance type                                                                                | Coverage Activity / Policy Activity        | Need help                                                                                   |               |
+{:class="table table-bordered"}
+{:.table-striped}
 
 [Next Page - Use Case 2](UseCase2.html)

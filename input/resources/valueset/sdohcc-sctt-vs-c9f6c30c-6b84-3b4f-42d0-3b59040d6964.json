@@ -1,15 +1,15 @@
 {
 	"resourceType": "ValueSet",
-	"id": "sdohcc-foodinsecurityintervention-1",
+	"id": "sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
 	"meta": {
-		"versionId": "8",
-		"lastUpdated": "2020-04-27T14:33:15.554+00:00",
-		"source": "#izD4deYhk9RKVoP3"
+		"versionId": "5",
+		"lastUpdated": "2020-04-30T21:30:58.112+00:00",
+		"source": "#xWnY3dmjzoUWsTBd"
 	},
-	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurityintervention-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
 	"name": "SDOHCC_ValueSet_FoodInsecurityIntervention_1",
-	"title": "SDOHCC ValueSet FoodInsecurityIntervention 1",
 	"status": "draft",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document activities that might be performed to address food insecurity conditions/observations. Data Element Scope is Procedure.code. It is defined extensionally to include procedure concepts that address food insecurity conditions/observations.",
 	"compose": {
 		"include": [
 			{
@@ -35,5 +35,6 @@
 				]
 			}
 		]
-	}
+	},
+	"title": "SDOHCC_ValueSet_FoodInsecurityIntervention_1"
 }

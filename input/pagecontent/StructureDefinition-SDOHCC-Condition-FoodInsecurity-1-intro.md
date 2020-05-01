@@ -21,7 +21,7 @@ To align this food insecurity condition with the food insecurity observation tha
 
 ### Condition.code
 
-This element references SDOHCC_ValueSet_FoodInsecurity_1. The profile requires a code from this value set which contains the existing and temporary SNOMED CT codes listed below.
+This element references sdohcc_ValueSet_FoodInsecurity_1. The profile requires a code from this value set which contains the existing and temporary SNOMED CT codes listed below.
 
 | Code                    | Display                            |
 |-------------------------|--------------------|

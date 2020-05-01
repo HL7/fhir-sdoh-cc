@@ -1,14 +1,13 @@
 {
 	"resourceType": "ValueSet",
-	"id": "sdohcc-contextvalue-1",
+	"id": "sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2020-04-28T14:40:57.958+00:00",
-		"source": "#I7jW3kUmweXamqVO"
+		"versionId": "8",
+		"lastUpdated": "2020-04-30T15:32:24.319+00:00",
+		"source": "#rs9YTEHeGGdLpWRl"
 	},
-	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-contextvalue-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-f82a9dd7-ba64-18d1-bc19-98ab4a9d02fa",
 	"name": "SDOHCC_ValueSet_ContextValue_1",
-	"title": "SDOHCC ValueSet ContextValue 1",
 	"status": "draft",
 	"description": "Clinical Focus: Concepts in this Value Set are used to document the presence or absence of food insecurity as a clinical finding (simple assertion). Data Element Scope is Observation.value. It is defined extensionally to include the concepts of \"Known present\" or \"Known absent\".",
 	"compose": {
@@ -27,5 +26,6 @@
 				]
 			}
 		]
-	}
+	},
+	"title": "SDOHCC_ValueSet_ContextValue_1"
 }

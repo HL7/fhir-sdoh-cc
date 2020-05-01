@@ -1,16 +1,15 @@
 {
 	"resourceType": "ValueSet",
-	"id": "sdohcc-foodinsecurity-2",
+	"id": "sdohcc-i10cmt-vs-202004291638",
 	"meta": {
-		"versionId": "9",
-		"lastUpdated": "2020-04-28T10:25:21.493+00:00",
-		"source": "#hqqnIEKKtNEpuyFD"
+		"versionId": "2",
+		"lastUpdated": "2020-04-30T11:29:43.998+00:00",
+		"source": "#Qujk4L56kYgTuHY8"
 	},
-	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-foodinsecurity-2",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-i10cmt-vs-202004291638",
 	"name": "SDOHCC_ValueSet_FoodInsecurity_2",
-	"title": "SDOHCC ValueSet FoodInsecurity 2",
 	"status": "draft",
-	"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity conditions for the purpose of billing using ICD-10. Data Element Scope is Condition.code. It is defined extensionally to include the concepts of “Lack of adequate food and safe drinking water”, “Food insecurity” and “Lack of adequate food”.",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document food insecurity conditions for the purpose of billing using ICD-10. Data Element Scope is Condition.code. It is defined extensionally to include the concepts of \"Lack of adequate food and safe drinking water\", \"Food insecurity\" and \"Lack of adequate food\".",
 	"compose": {
 		"include": [
 			{
@@ -37,5 +36,6 @@
 				]
 			}
 		]
-	}
+	},
+	"title": "SDOHCC_ValueSet_FoodInsecurity_2"
 }

@@ -31,9 +31,11 @@ Any actor acting a FHIR Client in this IG SHALL:
 *	Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profiles StructureDefinition.
 *	Conform to the US Core Client Capability Statement expectations for that profiles type.
 
+<br>
 #### US Core Profile Exceptions
 US Core Profiles were designed for use cases where a range of RESTful search requirements were needed which are not applicable for use cases in scope for SDOH-CC. The table below summarizes differences between the search requirements of SDOH-CC and the search requirements of US Core.
 
+TBD
 
 
 [Next Page - Overview of Capability Statements](OverviewofCapabilityStatements.html)

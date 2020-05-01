@@ -1,5 +1,3 @@
-[Previous Page - Table of Contents](TableofContents.html)
-
 
 The influence of social determinants on health outcomes is increasingly recognized in emerging payment reform programs, federal and state-based policies, and information technology initiatives.  Social determinants of health (SDOH) are defined by the World Health Organization as the conditions in which people are born, live, work, and age.  
 

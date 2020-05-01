@@ -2,9 +2,9 @@
 	"resourceType": "Observation",
 	"id": "SDOHCC-Observation-FoodInsecurity-1-Example-1",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2020-04-23T21:24:10.626+00:00",
-		"source": "#imoMVSdevkGAWXdQ"
+		"versionId": "6",
+		"lastUpdated": "2020-04-30T11:30:11.751+00:00",
+		"source": "#IQ4zBX8ZjGm9aEOP"
 	},
 	"text": {
 		"status": "generated"
@@ -32,10 +32,10 @@
 		"text": "Food insecurity"
 	},
 	"subject": {
-		"reference": "Patient/pat1"
+		"reference": "Patient/SDOHCC-Patient-pat1-Example-1"
 	},
 	"encounter": {
-		"reference": "Encounter/example"
+		"reference": "Encounter/SDOHCC-Encounter-Enc1-Example-1"
 	},
 	"effectivePeriod": {
 		"start": "2019-05",
@@ -43,7 +43,7 @@
 	},
 	"performer": [
 		{
-			"reference": "Practitioner/f007"
+			"reference": "Practitioner/SDOHCC-Practitioner-f007-Example-1"
 		}
 	],
 	"valueCodeableConcept": {

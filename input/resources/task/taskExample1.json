@@ -1,0 +1,20 @@
+{
+	"resourceType": "Task",
+	"id": "taskExample1",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-04-29T22:30:07.565+00:00",
+		"source": "#4yRiERGNt0AAI6VH"
+	},
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example3</p><p><b>status</b>: draft</p><p><b>intent</b>: order</p><p><b>code</b>: Refill Request <span>(Details )</span></p><p><b>focus</b>: <a>MedicationRequest/medrx002</a></p><p><b>for</b>: <a>Patient/f001</a></p><p><b>authoredOn</b>: 10/03/2016 10:39:32 PM</p><p><b>lastModified</b>: 10/03/2016 10:39:32 PM</p><p><b>requester</b>: <a>Patient/example</a></p><p><b>owner</b>: <a>Practitioner/example</a></p></div>"
+	},
+	"status": "draft",
+	"intent": "order",
+	"code": {
+		"text": "Refill Request"
+	},
+	"authoredOn": "2016-03-10T22:39:32-04:00",
+	"lastModified": "2016-03-10T22:39:32-04:00"
+}

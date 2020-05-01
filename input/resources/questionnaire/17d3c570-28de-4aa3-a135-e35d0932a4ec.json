@@ -2,16 +2,16 @@
 	"resourceType": "Questionnaire",
 	"id": "17d3c570-28de-4aa3-a135-e35d0932a4ec",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2020-03-17T13:16:18.108+00:00",
-		"source": "#xd09g68tcUyhlqGZ",
+		"versionId": "3",
+		"lastUpdated": "2020-04-30T17:26:53.920+00:00",
+		"source": "#BDawMLQuMcqEUKDp",
 		"profile": [
 			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
 		]
 	},
 	"extension": [
 		{
-			"url": "http://hl7.org/fhir/us/sdc/StructureDefinition/sdc-questionnaire-endpoint",
+			"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint",
 			"valueString": "https://ehr-sandbox.directmdemail.com:8443/fhir/baseR4"
 		},
 		{
@@ -61,7 +61,7 @@
 			"value": "local-ehr-65d310b8-6235-4f47-8d45"
 		}
 	],
-	"name": "Food Insecurity (Hunger Vital Sign)",
+	"name": "Food_Insecurity_Hunger_Vital_Sign",
 	"title": "Food Insecurity",
 	"status": "active",
 	"subjectType": [
@@ -92,8 +92,9 @@
 			"linkId": "/88122-7",
 			"code": [
 				{
+					"system": "http://loinc.org",
 					"code": "88122-7",
-					"display": "Within the past 12Mo we worried whether our food would run out before we got money to buy more"
+					"display": "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"
 				}
 			],
 			"text": "Within the past 12Mo we worried whether our food would run out before we got money to buy more",
@@ -102,24 +103,28 @@
 			"answerOption": [
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA28397-0",
 						"display": "Often true"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA6729-3",
 						"display": "Sometimes true"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA28398-8",
 						"display": "Never true"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA15775-2",
 						"display": "Don't know/refused"
 					}
@@ -145,8 +150,9 @@
 			"linkId": "/88123-5",
 			"code": [
 				{
+					"system": "http://loinc.org",
 					"code": "88123-5",
-					"display": "Within the past 12Mo the food we bought just didn't last and we didn't have money to get more"
+					"display": "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"
 				}
 			],
 			"text": "Within the past 12Mo the food we bought just didn't last and we didn't have money to get more",
@@ -155,24 +161,28 @@
 			"answerOption": [
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA28397-0",
 						"display": "Often true"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA6729-3",
 						"display": "Sometimes true"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA28398-8",
 						"display": "Never true"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA15775-2",
 						"display": "Don't know/refused"
 					}
@@ -234,8 +244,9 @@
 			"linkId": "/88124-3",
 			"code": [
 				{
+					"system": "http://loinc.org",
 					"code": "88124-3",
-					"display": "Food insecurity risk"
+					"display": "Food insecurity risk [HVS]"
 				}
 			],
 			"text": "Food insecurity risk",
@@ -245,12 +256,14 @@
 			"answerOption": [
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA19952-3",
 						"display": "At risk"
 					}
 				},
 				{
 					"valueCoding": {
+						"system": "http://loinc.org",
 						"code": "LA19983-8",
 						"display": "No risk"
 					}

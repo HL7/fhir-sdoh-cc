@@ -2,9 +2,9 @@
 	"resourceType": "Procedure",
 	"id": "SDOHCC-Procedure-FoodInsecurity-1-Example-1",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2020-04-24T20:16:54.188+00:00",
-		"source": "#egarhkhX4sD7YLU7"
+		"versionId": "8",
+		"lastUpdated": "2020-04-30T11:29:29.140+00:00",
+		"source": "#Mx6Q8aoiUIHUcb09"
 	},
 	"text": {
 		"status": "generated"
@@ -31,16 +31,16 @@
 		"text": "Assistance with application for food program"
 	},
 	"subject": {
-		"reference": "Patient/pat1"
+		"reference": "Patient/SDOHCC-Patient-pat1-Example-1"
 	},
 	"encounter": {
-		"reference": "Encounter/f203"
+		"reference": "Encounter/SDOHCC-Encounter-f203-Example-1"
 	},
 	"performedDateTime": "2019-07-30",
 	"performer": [
 		{
 			"actor": {
-				"reference": "Practitioner/f005"
+				"reference": "Practitioner/SDOHCC-Practitioner-f005-Example-1"
 			}
 		}
 	],

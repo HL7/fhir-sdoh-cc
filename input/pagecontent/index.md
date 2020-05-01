@@ -17,7 +17,7 @@
 | HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |
 | Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |
 | C-CDA on FHIR R4     |     [C-CDA on FHIR](http://hl7.org/fhir/us/ccda/STU1)           | Version 1.0.0              |
-| DaVinci Clinical Data exchange            | [CDex](http://hl7.org/fhir/us/davinci-cdex/2019Jun) | Version 1.0.0              |
+| DaVinci Clinical Data exchange            | [CDex](http://hl7.org/fhir/us/davinci-cdex/2019Jun) | Version 0.1.0              |
 | Bidirectional Services eReferrals                      |  [BSer](http://hl7.org/fhir/us/bser) | Version 1.0.0 |
 {:.table-striped}
 
@@ -72,17 +72,19 @@ Use the IG to:
 * Plan to utilize standards-based data exchange as you look at making future investments
 * Influence the development of products that are not aligned with where the industry and the nation are headed, **and** where individuals want health data exchange to go
 * Advocate personally for information sharing that integrates into everyday life and improves the experience of care for individuals and families
+<br>
 
 #### For implementers interested in using existing standards to make incremental progress in the planned direction
 * Apply the information exchange patterns and workflows developed in the IG to shape the flow of information available through the use of existing standards
 * Use standardized content for FHIR messages and data payloads to populate the message content carried by existing transport standards
+<br>
 
-#### For implementers who are not yet sharing data using standardbased exchange
+#### For implementers who are not yet sharing data using standards-based data exchange
 * Develop APIs that support planned directions to make it easier to access and share information that will need to be exchanged
 * Begin aligning internal data concepts with standard data elements, adopting the standard definitions and constraining values to adopted answer sets
 * Be diligent about understanding definitions associated with codes and make accurate mappings between local concepts and standard codes
 
-
+<br>
 
 ### Notes to Reviewers and Balloters
 
@@ -110,6 +112,8 @@ Feedback on V0.0.4 of the IG should be sent to gravityproject@emiadvisors.net be
 
 * Some examples do not come from US Core because they did not validate in Trifolia. Therefore, we used examples from HL7. In v0.0.5 examples will be based on US Core.
 
+* Some example ids do not conform to the current naming convention and will be updated in v0.0.5.
+
   
 
 
@@ -117,7 +121,7 @@ Feedback on V0.0.4 of the IG should be sent to gravityproject@emiadvisors.net be
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
-| 25         |       |
+| 25         | Updates to naming conventions       |
 | 24         | How to create screening instruments, use of temporary codes       |
 | 23         | Expanded the ValueSet for coded Procedure      |
 | 22          | Improved naming conventions      |
@@ -175,6 +179,7 @@ The Placeholder Code Creation process was originally developed for Elimu profile
 | Lynette Elliott| EMI Advisors, LLC |
 | Rob Hausam |        |
 | Cheng Liu | MaxMD|
+| Natasha Kreisle | MaxMD|
 {:class="table table-bordered"}
 {:.table-striped}
 
@@ -202,6 +207,3 @@ The Placeholder Code Creation process was originally developed for Elimu profile
 </table>
 
 
-
-
-[Next Page - Table of Contents](TableofContents.html)
