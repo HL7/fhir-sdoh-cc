@@ -1,0 +1,29 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-Consent-FoodInsecurity-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-05-04T14:01:13.173+00:00",
+		"source": "#MsuK96iaIsfq7LK0"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent-FoodInsecurity-1",
+	"version": "0.0.1",
+	"name": "SDOHCC_Consent_FoodInsecurity_1",
+	"title": "SDOHCC Consent Food Insecurity 1",
+	"status": "draft",
+	"date": "2020-05-04",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Consent",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Consent",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Consent",
+				"path": "Consent"
+			}
+		]
+	}
+}

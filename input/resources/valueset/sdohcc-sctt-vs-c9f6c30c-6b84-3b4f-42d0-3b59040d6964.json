@@ -2,16 +2,45 @@
 	"resourceType": "ValueSet",
 	"id": "sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2020-04-30T21:30:58.112+00:00",
-		"source": "#xWnY3dmjzoUWsTBd"
+		"versionId": "7",
+		"lastUpdated": "2020-05-13T12:05:04.623+00:00",
+		"source": "#ZkKIyS8PhaS0Ll3Y"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964",
 	"name": "SDOHCC_ValueSet_FoodInsecurityIntervention_1",
 	"status": "draft",
-	"description": "Clinical Focus: Concepts in this Value Set are used to document activities that might be performed to address food insecurity conditions/observations. Data Element Scope is Procedure.code. It is defined extensionally to include procedure concepts that address food insecurity conditions/observations.",
+	"description": "Clinical Focus: Concepts in this Value Set are used to document activities that might be performed to address food insecurity conditions/observations. Data Element Scope is Procedure.code and ServiceRequest.code. It is defined extensionally to include procedure concepts that address food insecurity conditions/observations.",
 	"compose": {
 		"include": [
+			{
+				"system": "http://snomed.info/sct",
+				"concept": [
+					{
+						"code": "710824005",
+						"display": "Assessment of health and social care needs (procedure)"
+					},
+					{
+						"code": "225343006",
+						"display": "Assessment of needs (procedure)"
+					},
+					{
+						"code": "445536008",
+						"display": "Assessment using assessment scale (procedure)"
+					},
+					{
+						"code": "445988008",
+						"display": "Assessment using health assessment questionnaire (procedure)"
+					},
+					{
+						"code": "10830002",
+						"display": "Physician administration and interpretation of instrument of health risk assessment (procedure)"
+					},
+					{
+						"code": "225338004",
+						"display": "Risk assessment (procedure)"
+					}
+				]
+			},
 			{
 				"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-codes",
 				"version": "0.0.3",
@@ -21,16 +50,68 @@
 						"display": "Assistance with application for food program (procedure)"
 					},
 					{
+						"code": "sdohcc-sctt-191000243103",
+						"display": "Assistance with application for food program and nutrition program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-181000243100",
+						"display": "Assistance with application for nutrition program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-171000243102",
+						"display": "Assistance with application for program (procedure)"
+					},
+					{
 						"code": "sdohcc-sctt-141000243105",
 						"display": "Education about food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-221000243107",
+						"display": "Education about food program and nutrition program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-211000243104",
+						"display": "Education about nutrition program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-201000243101",
+						"display": "Education about program (procedure)"
 					},
 					{
 						"code": "sdohcc-sctt-131000243104",
 						"display": "Evaluation of eligibility for food program (procedure)"
 					},
 					{
+						"code": "sdohcc-sctt-251000243100",
+						"display": "Evaluation of eligibility for food program and nutrition program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-241000243103",
+						"display": "Evaluation of eligibility for nutrition program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-231000243109",
+						"display": "Evaluation of eligibility for program (procedure)"
+					},
+					{
 						"code": "sdohcc-sctt-161000243106",
 						"display": "Provision of food from food program (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-261000243102",
+						"display": "Provision of food voucher (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-271000243106",
+						"display": "Provision of fresh fruit and vegetable voucher (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-281000243108",
+						"display": "Provision of Home-Delivered Meals (procedure)"
+					},
+					{
+						"code": "sdohcc-sctt-291000243105",
+						"display": "Provision of Medically Tailored Meals (procedure)"
 					}
 				]
 			}

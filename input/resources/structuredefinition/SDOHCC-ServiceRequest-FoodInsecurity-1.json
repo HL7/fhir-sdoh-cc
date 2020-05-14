@@ -1,0 +1,328 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-ServiceRequest-FoodInsecurity-1",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-05-13T14:30:08.839+00:00",
+		"source": "#Rh7Y5lvWOmFLjPrL"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-ServiceRequest-FoodInsecurity-1",
+	"name": "SDOHCC_ServiceRequest_FoodInsecurity_1",
+	"status": "draft",
+	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Service Requests related to: Food Insecurity.",
+	"fhirVersion": "4.0.1",
+	"mapping": [
+		{
+			"identity": "workflow",
+			"uri": "http://hl7.org/fhir/workflow",
+			"name": "Workflow Pattern"
+		},
+		{
+			"identity": "v2",
+			"uri": "http://hl7.org/v2",
+			"name": "HL7 v2 Mapping"
+		},
+		{
+			"identity": "rim",
+			"uri": "http://hl7.org/v3",
+			"name": "RIM Mapping"
+		},
+		{
+			"identity": "w5",
+			"uri": "http://hl7.org/fhir/fivews",
+			"name": "FiveWs Pattern Mapping"
+		},
+		{
+			"identity": "quick",
+			"uri": "http://siframework.org/cqf",
+			"name": "Quality Improvement and Clinical Knowledge (QUICK)"
+		}
+	],
+	"kind": "resource",
+	"abstract": false,
+	"type": "ServiceRequest",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ServiceRequest.identifier",
+				"path": "ServiceRequest.identifier",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "type"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 1,
+				"max": "2"
+			},
+			{
+				"id": "ServiceRequest.identifier:referralInitiatorServiceRequestIdentifier",
+				"path": "ServiceRequest.identifier",
+				"sliceName": "referralInitiatorServiceRequestIdentifier",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "ServiceRequest.identifier:referralInitiatorServiceRequestIdentifier.type",
+				"path": "ServiceRequest.identifier.type",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+							"code": "PLAC"
+						}
+					]
+				}
+			},
+			{
+				"id": "ServiceRequest.identifier:referralInitiatorServiceRequestIdentifier.value",
+				"path": "ServiceRequest.identifier.value",
+				"min": 1
+			},
+			{
+				"id": "ServiceRequest.identifier:referralInitiatorServiceRequestIdentifier.assigner",
+				"path": "ServiceRequest.identifier.assigner",
+				"min": 1
+			},
+			{
+				"id": "ServiceRequest.identifier:referralRecipientServiceRequestIdentifier",
+				"path": "ServiceRequest.identifier",
+				"sliceName": "referralRecipientServiceRequestIdentifier",
+				"max": "1"
+			},
+			{
+				"id": "ServiceRequest.identifier:referralRecipientServiceRequestIdentifier.type",
+				"path": "ServiceRequest.identifier.type",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+							"code": "FILL"
+						}
+					]
+				}
+			},
+			{
+				"id": "ServiceRequest.identifier:referralRecipientServiceRequestIdentifier.value",
+				"path": "ServiceRequest.identifier.value",
+				"min": 1
+			},
+			{
+				"id": "ServiceRequest.identifier:referralRecipientServiceRequestIdentifier.assigner",
+				"path": "ServiceRequest.identifier.assigner",
+				"min": 1
+			},
+			{
+				"id": "ServiceRequest.basedOn",
+				"path": "ServiceRequest.basedOn",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
+						]
+					}
+				]
+			},
+			{
+				"id": "ServiceRequest.status",
+				"path": "ServiceRequest.status",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.intent",
+				"path": "ServiceRequest.intent",
+				"mustSupport": true,
+				"binding": {
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+							"valueString": "ServiceRequestIntent"
+						}
+					],
+					"strength": "required",
+					"description": "Clinical Focus: Concepts in this Value Set are used to document the intent of service requests related to food insecurity. Data Element Scope is ServiceRequest.intent. It is defined extensionally to include the concepts of \"Plan\" and \"Order\".",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-hl7t-vs-202005111338"
+				}
+			},
+			{
+				"id": "ServiceRequest.code",
+				"path": "ServiceRequest.code",
+				"min": 1,
+				"mustSupport": true,
+				"binding": {
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+							"valueString": "ServiceRequestCode"
+						}
+					],
+					"strength": "preferred",
+					"description": "Clinical Focus: Concepts in this Value Set are used to document activities that might be performed to address food insecurity conditions/observations. Data Element Scope is Procedure.code and ServiceRequest.code. It is defined extensionally to include procedure concepts that address food insecurity conditions/observations.",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964"
+				}
+			},
+			{
+				"id": "ServiceRequest.orderDetail",
+				"path": "ServiceRequest.orderDetail",
+				"mustSupport": true,
+				"binding": {
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+							"valueString": "OrderDetail"
+						}
+					],
+					"strength": "preferred",
+					"description": "Clinical Focus: Concepts in this Value Set are used to document programs that might address food insecurity. Data Element Scope is ServiceRequest.orderDetail. It is defined extensionally to include concepts that represent social service programs.",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-sctt-vs-865262b9-31a0-edb6-45b3-ee91933130fa"
+				}
+			},
+			{
+				"id": "ServiceRequest.subject",
+				"path": "ServiceRequest.subject",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Group",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.encounter",
+				"path": "ServiceRequest.encounter",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				]
+			},
+			{
+				"id": "ServiceRequest.occurrence[x]",
+				"path": "ServiceRequest.occurrence[x]",
+				"min": 1,
+				"type": [
+					{
+						"code": "dateTime"
+					},
+					{
+						"code": "Period"
+					}
+				]
+			},
+			{
+				"id": "ServiceRequest.asNeeded[x]",
+				"path": "ServiceRequest.asNeeded[x]",
+				"max": "0"
+			},
+			{
+				"id": "ServiceRequest.authoredOn",
+				"path": "ServiceRequest.authoredOn",
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.requester",
+				"path": "ServiceRequest.requester",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.performer",
+				"path": "ServiceRequest.performer",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Practitioner",
+							"http://hl7.org/fhir/StructureDefinition/HealthcareService",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+							"http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.locationReference",
+				"path": "ServiceRequest.locationReference",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+						]
+					}
+				]
+			},
+			{
+				"id": "ServiceRequest.reasonReference",
+				"path": "ServiceRequest.reasonReference",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+							"http://hl7.org/fhir/StructureDefinition/Observation",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Observation-FoodInsecurity-1"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ServiceRequest.specimen",
+				"path": "ServiceRequest.specimen",
+				"max": "0"
+			},
+			{
+				"id": "ServiceRequest.bodySite",
+				"path": "ServiceRequest.bodySite",
+				"max": "0"
+			},
+			{
+				"id": "ServiceRequest.relevantHistory",
+				"path": "ServiceRequest.relevantHistory",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+						]
+					}
+				]
+			}
+		]
+	},
+	"title": "SDOHCC_ServiceRequest_FoodInsecurity_1"
+}

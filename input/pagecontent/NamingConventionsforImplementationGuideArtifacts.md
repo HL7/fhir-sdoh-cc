@@ -190,7 +190,7 @@ The pattern for meaningless value set ids is as follows (all in lowercase):
 | Value Set Name                               | Value Set Title                   | Value Set id                                        |
 |----------------------------------------------|-----------------------------------|-----------------------------------------------------|
 | SDOHCC_ValueSet_FoodInsecurity_2             | SDOHCC ValueSet Food Insecurity 2 | sdohcc-i10cmt-vs-202004291638                       |
-| SDOHCC_ValueSet_FoodInsecurityIntervention_1 | SDOHCC ValueSet Food Insecurity 2   | sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964 |
+| SDOHCC_ValueSet_FoodInsecurityIntervention_1 | SDOHCC ValueSet Food Insecurity Intervention 2   | sdohcc-sctt-vs-c9f6c30c-6b84-3b4f-42d0-3b59040d6964 |
 {:class="table table-bordered"}
 {:.table-striped}
 

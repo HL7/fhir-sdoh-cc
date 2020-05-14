@@ -1,6 +1,6 @@
 ### Overview
 
-| IG Characteristic  |     Value |
+|IG Characteristic  |     Value |
 |------------------------------------------------------|--------------------------------------------|
 |**FHIR Version:** |    FHIR R4 |
 |**IG Realm:** |    US |
@@ -12,7 +12,7 @@
 
 
 
-| Related IG Name         |  IG Code         | Version                      |
+|IG Dependencies         |  IG Code         | Version                      |
 |----------------------------------|-------------------------|---------------|
 | HL7 FHIR US Core               |  [US Core](http://hl7.org/fhir/us/core/STU3.1)                | Version 3.1.0     |
 | Structured Data Capture                         |   [SDC](http://hl7.org/fhir/uv/sdc/2019May)        | Version 2.7.0                     |
@@ -121,6 +121,8 @@ Feedback on V0.0.4 of the IG should be sent to gravityproject@emiadvisors.net be
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
+| 27         | New chapter on how examples relate       |
+| 26         | Additional profile       |
 | 25         | Updates to naming conventions       |
 | 24         | How to create screening instruments, use of temporary codes       |
 | 23         | Expanded the ValueSet for coded Procedure      |
