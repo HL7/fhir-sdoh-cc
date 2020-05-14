@@ -10,3 +10,5 @@ Certain resources, such a Questionnaires used for screening patients, need to be
 <br>
 ### Implementer Guidance for Temporary IdentifierSystem 
 The Temporary Identifier System used in examples within this IG need to be replaced by actual identifier system namespaces. 
+
+[Next Page - About SDOH-CC Food Insecurity Standardized Data Exchange Examples](AboutSDOH-CCFoodInsecurityStandardizedDataExchangeExamples.html)

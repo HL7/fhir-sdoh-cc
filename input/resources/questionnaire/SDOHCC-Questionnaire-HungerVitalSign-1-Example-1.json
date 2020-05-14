@@ -1,19 +1,15 @@
 {
 	"resourceType": "Questionnaire",
-	"id": "17d3c570-28de-4aa3-a135-e35d0932a4ec",
+	"id": "SDOHCC-Questionnaire-HungerVitalSign-1-Example-1",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2020-04-30T17:26:53.920+00:00",
-		"source": "#BDawMLQuMcqEUKDp",
+		"versionId": "2",
+		"lastUpdated": "2020-05-06T20:35:52.088+00:00",
+		"source": "#GEBZRkOKyeplHRAi",
 		"profile": [
-			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+			"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 		]
 	},
 	"extension": [
-		{
-			"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint",
-			"valueString": "https://ehr-sandbox.directmdemail.com:8443/fhir/baseR4"
-		},
 		{
 			"url": "http://hl7.org/fhir/StructureDefinition/variable",
 			"valueExpression": {
@@ -57,12 +53,12 @@
 	],
 	"identifier": [
 		{
-			"system": "http://www.maxmddirect.com/hl7/fhir/grv-locali-screenings",
+			"system": "http://hl7.org/fhir/us/sdoh-cc/CodeSystem/sdohcc-temporary-identifiers",
 			"value": "local-ehr-65d310b8-6235-4f47-8d45"
 		}
 	],
-	"name": "Food_Insecurity_Hunger_Vital_Sign",
-	"title": "Food Insecurity",
+	"name": "Food Insecurity",
+	"title": "Food Insecurity (Hunger Vital Sign)",
 	"status": "active",
 	"subjectType": [
 		"Patient"
@@ -94,7 +90,7 @@
 				{
 					"system": "http://loinc.org",
 					"code": "88122-7",
-					"display": "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"
+					"display": "Within the past 12Mo we worried whether our food would run out before we got money to buy more"
 				}
 			],
 			"text": "Within the past 12Mo we worried whether our food would run out before we got money to buy more",
@@ -152,7 +148,7 @@
 				{
 					"system": "http://loinc.org",
 					"code": "88123-5",
-					"display": "Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]"
+					"display": "Within the past 12Mo the food we bought just didn't last and we didn't have money to get more"
 				}
 			],
 			"text": "Within the past 12Mo the food we bought just didn't last and we didn't have money to get more",
@@ -246,7 +242,7 @@
 				{
 					"system": "http://loinc.org",
 					"code": "88124-3",
-					"display": "Food insecurity risk [HVS]"
+					"display": "Food insecurity risk"
 				}
 			],
 			"text": "Food insecurity risk",
