@@ -14,7 +14,7 @@ The sections that follow provide additional guidance on 1) rules to improve the 
 * SDOHCC_Goal_FoodInsecurity_1
 
 ### Observation.code
-This element references sdohcc_ValueSet_FoodInsecurity_1. This value set contains the existing and temporary SNOMED CT codes listed below.
+This element references SDOHCC_ValueSet_FoodInsecurity_1. This value set contains the existing and temporary SNOMED CT codes listed below.
 
 
 | Code | Display |

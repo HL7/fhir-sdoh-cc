@@ -2,13 +2,13 @@
 	"resourceType": "ImplementationGuide",
 	"id": "SDOH-CC",
 	"meta": {
-		"versionId": "942",
-		"lastUpdated": "2020-05-14T12:38:19.342+00:00",
-		"source": "#3u0IexxZ6mhGOyev"
+		"versionId": "947",
+		"lastUpdated": "2020-05-15T12:55:01.945+00:00",
+		"source": "#SlRsYkOBvUstEsDN"
 	},
 	"contained": [],
 	"url": "http://hl7.org/fhir/us/ImplementationGuide/SDOH-CC",
-	"version": "0.0.4C1",
+	"version": "0.0.4C2",
 	"name": "SDOH_CC",
 	"title": "SDOH Clinical Care",
 	"status": "draft",

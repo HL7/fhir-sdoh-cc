@@ -10,8 +10,12 @@ The example demonstrates how the SDOH-CC profiles supports four common uses of c
 4. Gather SDOH information at the point of care and re-use the data to support quality measurement, research, and public or population health
 5. Align with financial models, support claims payment, and the accelerate the shift toward value-based care <br>
  
-**Patient is screened for food insecurity prior to appointment. Screening informaiton is available to clinicaian at point care to support clinical assessment of the patient's conditions.**<br>
-1. [SDOHCC-QuestionnaireResponse-HungerVitalSign-1-Example-1](List-b1f72528-5501-4a6c-a5f3-9b86ec84264b.html) is used as an instrument to assess food insecurity.
+###Example 1:
+
+Initiate Screening [SDOHCC-Questionnaire-HungerVitalSign-1-Example-1](Questionnaire-SDOHCC-Questionnaire-HungerVitalSign-1-Example-1.html) is used as an instrument to assess food insecurity.
+ 
+**Patient is screened for food insecurity prior to appointment. Screening information is available to clinician at point care to support clinical assessment of the patient's conditions.**<br>
+1. [SDOHCC-QuestionnaireResponse-HungerVitalSign-1-Example-1](List-b1f72528-5501-4a6c-a5f3-9b86ec84264b.html) is used to hold the patient's responses to the Questionnaire screening instrument. 
 2. SDOHCC_Observation_Foodinsecurity_1_Example_0 (STILL IN DEVELOPMENT) is a computed observation based on QuestionnaireResponse.<br>**Patient is seen in the office, 5/1/2019, and reports food insecurity that began about a month ago.**<br>
 3. [SDOHCC_Observation_FoodInsecurity_1_Example_1](Observation-SDOHCC-Observation-FoodInsecurity-1-Example-1.html) is created.
 4. [SDOHCC_Condition_FoodInsecurity_1_Example_1](Condition-SDOHCC-Condition-FoodInsecurity-1-Example-1.html) is created, and references [SDOHCC_Observation_FoodInsecurity_1_Example_1](Observation-SDOHCC-Observation-FoodInsecurity-1-Example-1.html).
