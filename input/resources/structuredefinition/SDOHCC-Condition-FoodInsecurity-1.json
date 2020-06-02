@@ -2,14 +2,14 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Condition-FoodInsecurity-1",
 	"meta": {
-		"versionId": "37",
-		"lastUpdated": "2020-05-04T14:02:10.789+00:00",
-		"source": "#l5dJpECyMSIEy9Cd"
+		"versionId": "38",
+		"lastUpdated": "2020-05-28T22:21:04.358+00:00",
+		"source": "#HQilvkRWFH5QIESM"
 	},
 	"extension": [],
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Condition-FoodInsecurity-1",
 	"name": "SDOHCC_Condition_FoodInsecurity_1",
-	"title": "SDOHCC Condition Food Insecurity 1",
+	"title": "SDOHCC_Condition_FoodInsecurity_1",
 	"status": "draft",
 	"description": "This profile supports Gravity Project data elements that focus on the Food Insecurity domain. The profile constrains Conditions related to: Food insecurity, Mild food insecurity, Moderate food insecurity, or Severe food insecurity.",
 	"fhirVersion": "4.0.1",

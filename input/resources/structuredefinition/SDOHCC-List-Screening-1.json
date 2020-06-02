@@ -1,15 +1,15 @@
 {
 	"resourceType": "StructureDefinition",
-	"id": "SDOHCC-List-FoodInsecurity-1",
+	"id": "SDOHCC-List-Screening-1",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2020-06-01T22:02:28.262+00:00",
-		"source": "#yNIiGnBvEOJ1xlbJ"
+		"versionId": "1",
+		"lastUpdated": "2020-06-02T11:30:34.876+00:00",
+		"source": "#sxLs4Dn4gSKPjxGT"
 	},
-	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-List-FoodInsecurity-1",
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-List-Screening-1",
 	"version": "0.0.1",
-	"name": "SDOHCC_List_FoodInsecurity_1",
-	"title": "SDOHCC List FoodInsecurity 1",
+	"name": "SDOHCC_List_Screening_1",
+	"title": "SDOHCC List Screening 1",
 	"status": "active",
 	"description": "This profile constrains the List Resource for representing a patient or list of patients to be screened.",
 	"fhirVersion": "4.0.1",

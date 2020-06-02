@@ -114,13 +114,18 @@ Feedback on V0.0.4 of the IG should be sent to gravityproject@emiadvisors.net be
 
 * Some example ids do not conform to the current naming convention and will be updated in v0.0.5.
 
-  
+* Additional review of the expected values to be used in Task.status is requested.
+ 
+* Additional review of the expected values to be used in Consent.category is requested.
 
 
 ### History of Document Changes
 
 | Number         | Description                                                                                                                                                   |
 |---------------|----------------------------------------------------------------------------------------------------|
+| 30         |         |
+| 29         | Updated profile for List        |
+| 28         | Updated profile for Task and Consent      |
 | 27         | New chapter on how examples relate       |
 | 26         | Additional profile       |
 | 25         | Updates to naming conventions       |

@@ -1,0 +1,203 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "SDOHCC-Task-Screening-1",
+	"meta": {
+		"versionId": "13",
+		"lastUpdated": "2020-06-01T22:03:38.586+00:00",
+		"source": "#qUdxLLs0cThDa500"
+	},
+	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Task-Screening-1",
+	"version": "0.0.1",
+	"name": "SDOHCC_Task_Screening_1",
+	"title": "SDOHCC_Task_Screening_1",
+	"status": "draft",
+	"description": "This profile constrains the Task Resource for representing a patient screening task.",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Task",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Task",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Task",
+				"path": "Task"
+			},
+			{
+				"id": "Task.identifier",
+				"path": "Task.identifier",
+				"comment": "In order to query for the correct Task between systems, the system initiating the task must assign a contextually unique identifier in the Task.identifier field.  This identifier includes a system element to set the context for the identifier. The identifier makes it possible to query for the Task to determine the needed Task.id on any system where data is being exchanged, e.g. the query can be Task?identifier={uniqueIdentifier}&identifier.system={systemIdentifier}.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Task.identifier.system",
+				"path": "Task.identifier.system",
+				"comment": "When using identifiers, the system must be included to establish the context for understanding and using the identifier.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Task.basedOn",
+				"path": "Task.basedOn",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.status",
+				"path": "Task.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.intent",
+				"path": "Task.intent",
+				"code": [
+					{
+						"system": "http://hl7.org/fhir/request-intent",
+						"code": "order",
+						"display": "Order"
+					},
+					{
+						"system": "http://hl7.org/fhir/request-intent",
+						"code": "original-order",
+						"display": "Original Order"
+					},
+					{
+						"system": "http://hl7.org/fhir/request-intent",
+						"code": "reflex-order",
+						"display": "Reflex Order"
+					},
+					{
+						"system": "http://hl7.org/fhir/request-intent",
+						"code": "filler-order",
+						"display": "Filler Order"
+					},
+					{
+						"system": "http://hl7.org/fhir/request-intent",
+						"code": "instance-order",
+						"display": "Instance Order"
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.code",
+				"path": "Task.code",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Task.description",
+				"path": "Task.description",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.focus",
+				"path": "Task.focus",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.for",
+				"path": "Task.for",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-List-FoodInsecurity-1",
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.encounter",
+				"path": "Task.encounter",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+						]
+					}
+				]
+			},
+			{
+				"id": "Task.executionPeriod",
+				"path": "Task.executionPeriod",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.authoredOn",
+				"path": "Task.authoredOn",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Task.lastModified",
+				"path": "Task.lastModified",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Task.requester",
+				"path": "Task.requester",
+				"comment": "Not referencing http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole because US Core PractitionerRole incorrectly binds PractitionerRole.code to a value set based on NUCC Code System. ",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+							"http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Task.note",
+				"path": "Task.note",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.focus.display",
+				"path": "Task.focus.display",
+				"mustSupport": true
+			},
+			{
+				"id": "Task.code.coding",
+				"path": "Task.code.coding",
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/sdoh-cc/ValueSet/sdohcc-task-1"
+				}
+			},
+			{
+				"id": "Task.code.text",
+				"path": "Task.code.text",
+				"mustSupport": true
+			}
+		]
+	},
+	"fhirVersion": "4.0.1"
+}

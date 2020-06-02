@@ -5,7 +5,7 @@ The Gravity Project community collaborated to develop a list of data elements ne
 
 The Master List also includes codes needed to facilitate the information exchange workflows covered by the Use Cases covered by the SDOH-CC IG.
 
-Download the current master list of data elements identified for potential representation in the Gravity project including codes (permanent or temporary) used in this version of the SDOH CC IG: [Master and Temporary Codes](https://confluence.hl7.org/display/GRAV/SDOH-CC+Master+and+Temporary+Code+List)
+Download the current master list of data elements identified for potential representation in the Gravity project including codes (permanent or temporary) used in this version of the SDOH CC IG: [Master and Temporary Codes](SDOHCC Master and Temporary Code List v0.0.3.xlsx)
  
  
  
