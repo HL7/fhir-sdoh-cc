@@ -2,14 +2,14 @@
 	"resourceType": "StructureDefinition",
 	"id": "SDOHCC-Consent-FoodInsecurity-1",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2020-05-04T14:01:13.173+00:00",
-		"source": "#MsuK96iaIsfq7LK0"
+		"versionId": "11",
+		"lastUpdated": "2020-06-01T20:01:07.158+00:00",
+		"source": "#8hrMjBgZnT9XnW70"
 	},
 	"url": "http://hl7.org/fhir/us/sdoh-cc/StructureDefinition/SDOHCC-Consent-FoodInsecurity-1",
 	"version": "0.0.1",
 	"name": "SDOHCC_Consent_FoodInsecurity_1",
-	"title": "SDOHCC Consent Food Insecurity 1",
+	"title": "SDOHCC_Consent_FoodInsecurity_1",
 	"status": "draft",
 	"date": "2020-05-04",
 	"fhirVersion": "4.0.1",
@@ -23,6 +23,81 @@
 			{
 				"id": "Consent",
 				"path": "Consent"
+			},
+			{
+				"id": "Consent.status",
+				"path": "Consent.status",
+				"mustSupport": true
+			},
+			{
+				"id": "Consent.scope",
+				"path": "Consent.scope",
+				"code": [
+					{
+						"system": "http://terminology.hl7.org/CodeSystem/consentscope",
+						"code": "patient-privacy",
+						"display": "Privacy Consent"
+					}
+				],
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Consent.category",
+				"path": "Consent.category",
+				"comment": "For the category element, specifications will needs to comply with local agreements and legal requirements.  We recommend considering use of the following category codes:\n<br>\n<br>\nFor consent to collect information, use:\n<br>\nICOL - Information Collection\n<br>\n<br>\nFor non-research related re-distribution of data, use:\n<br>\n1. IDSCL - information disclosure\n<br>\n2. INFASO - access and save only\n<br>\n<br>\nFor research related re-distribution of data, use:\n<br>\n1. research - Research Information Access\n<br>\n2. rsdid - De-identified Information Access\n<br>\n3. rsreid - Re-identifiable Information Access\n<br>",
+				"mustSupport": true
+			},
+			{
+				"id": "Consent.patient",
+				"path": "Consent.patient",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Consent.dateTime",
+				"path": "Consent.dateTime",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Consent.performer",
+				"path": "Consent.performer",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Consent.organization",
+				"path": "Consent.organization",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation"
+						]
+					}
+				],
+				"mustSupport": true
 			}
 		]
 	}
